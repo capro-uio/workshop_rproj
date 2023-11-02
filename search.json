@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "sections/prep.html",
+    "href": "sections/prep.html",
+    "title": "Project management in R",
+    "section": "",
+    "text": "For this workshop will be instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"      # data-wrangling\n))"
+  },
+  {
+    "objectID": "sections/prep.html#preparations",
+    "href": "sections/prep.html#preparations",
+    "title": "Project management in R",
+    "section": "",
+    "text": "For this workshop will be instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"      # data-wrangling\n))"
+  },
+  {
+    "objectID": "sections/schedule.html",
+    "href": "sections/schedule.html",
+    "title": "Project management in R",
+    "section": "",
+    "text": "Saving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nR package management\n2 hours"
+  },
+  {
+    "objectID": "sections/schedule.html#schedule-schedule-1",
+    "href": "sections/schedule.html#schedule-schedule-1",
+    "title": "Project management in R",
+    "section": "",
+    "text": "Saving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nR package management\n2 hours"
+  },
+  {
+    "objectID": "sections/schedule.html#footnotes",
+    "href": "sections/schedule.html#footnotes",
+    "title": "Project management in R",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R.↩︎"
+  },
+  {
+    "objectID": "sections/aims.html",
+    "href": "sections/aims.html",
+    "title": "Project management in R",
+    "section": "",
+    "text": "Aims\n\n\n\n\nUnderstand what a working environment is and how R deals with them\nSuccessfully implement a project-oriented workflow\nUnderstand best-practice naming of files\nKnow how to practice safe paths from R\nUnderstand basics of R package management"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project management with R",
+    "section": "",
+    "text": "As researchers grow in their skills, eventually the infrastructure surrounding the analysis will become an important catalyst for the reproducibility and longevity of analysis artefacts. Researchers are capable of creating complex and impressive projects, but it is unlikely to have benefited from any formal training or mentorship related to topics regarding project management. As a result of this, reproducibility and longevity of projects are likely to suffer. Learning aspects of project management is a vital, but rarely taught, skill when working on a project. While project management has some general guidelines that traverse fields, there are specific aspects to think about when working R, given R’s idiosyncrasies."
+  },
+  {
+    "objectID": "index.html#schedule-schedule-1",
+    "href": "index.html#schedule-schedule-1",
+    "title": "Project management with R",
+    "section": "Schedule 1",
+    "text": "Schedule 1\n\n\n\nSaving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nR package management\n2 hours"
+  },
+  {
+    "objectID": "index.html#preparations",
+    "href": "index.html#preparations",
+    "title": "Project management with R",
+    "section": "Preparations",
+    "text": "Preparations\nFor this workshop will be instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\nR packages\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"      # data-wrangling\n))"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Project management with R",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R.↩︎"
+  },
+  {
+    "objectID": "sections/resources.html",
+    "href": "sections/resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Resources\n\nWorkshop website: https://github.com/posit-conf-2023/wtf\nWhat They Forgot to Teach you about R\nHappy Git With R book"
+  },
+  {
+    "objectID": "sections/intro.html",
+    "href": "sections/intro.html",
+    "title": "Project management in R",
+    "section": "",
+    "text": "As researchers grow in their skills, eventually the infrastructure surrounding the analysis will become an important catalyst for the reproducibility and longevity of analysis artefacts. Researchers are capable of creating complex and impressive projects, but it is unlikely to have benefited from any formal training or mentorship related to topics regarding project management. As a result of this, reproducibility and longevity of projects are likely to suffer. Learning aspects of project management is a vital, but rarely taught, skill when working on a project. While project management has some general guidelines that traverse fields, there are specific aspects to think about when working R, given R’s idiosyncrasies."
+  }
+]
