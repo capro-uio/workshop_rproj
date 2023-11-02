@@ -79,6 +79,19 @@
       ],
       "Hash": "89e6d8219950eac806ae0c489052048a"
     },
+    "countdown": {
+      "Package": "countdown",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "htmltools",
+        "prismatic",
+        "utils",
+        "whisker"
+      ],
+      "Hash": "b44ad5a5e287637c3b8ca0e9bb64bb18"
+    },
     "digest": {
       "Package": "digest",
       "Version": "0.6.33",
@@ -111,6 +124,13 @@
         "methods"
       ],
       "Hash": "d59f3b464e8da1aef82dc04b588b8dfb"
+    },
+    "farver": {
+      "Package": "farver",
+      "Version": "2.1.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "8106d78941f34855c440ddb946b8f7a5"
     },
     "fastmap": {
       "Package": "fastmap",
@@ -261,6 +281,19 @@
       ],
       "Hash": "18e9c28c1d3ca1560ce30658b22ce104"
     },
+    "prismatic": {
+      "Package": "prismatic",
+      "Version": "1.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "farver",
+        "grDevices",
+        "graphics"
+      ],
+      "Hash": "faa2193fdec94a45b4390aefc1280a62"
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -383,6 +416,13 @@
         "rlang"
       ],
       "Hash": "d0ef2856b83dc33ea6e255caf6229ee2"
+    },
+    "whisker": {
+      "Package": "whisker",
+      "Version": "0.4.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c6abfa47a46d281a7d5159d0a8891e88"
     },
     "xfun": {
       "Package": "xfun",
