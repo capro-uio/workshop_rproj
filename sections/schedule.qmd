@@ -1,0 +1,10 @@
+## Schedule [^schedule-1]
+
+[^schedule-1]: This course relies heavily on materials from [What They Forgot to Teach you about R](https://rstats.wtf/), which is an excellent resource to dig deeper into to improve the way you work in R.
+
+|                                           |         |
+|-------------------------------------------|---------|
+| Saving source and blank slates            | 1 hour  |
+| Project-oriented workflow                 | 1 hour  |
+| How to name files & practicing safe paths | 1 hour  |
+| R package management                      | 2 hours |

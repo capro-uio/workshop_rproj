@@ -1,0 +1,21 @@
+{
+  "hash": "205d1f74703c320960faa24b50ec7c80",
+  "result": {
+    "markdown": "---\ntitle: \"Introduction\"\nsubtitle: \"Working in R and RStudio\"\nauthor: \"Athanasia Mo Mowinckel\"\nfooter:  \"Workshop Overview\"\n#logo: \"img/wtf-logo-square-transparent.png\"\nformat: \n  revealjs: \n    height: 900\n    width: 1600\n    theme: \n      - night\n      - capro-reveal.scss\n    highlight-style: a11y\n    transition: fade\n    slide-number: true\n    chalkboard: true\neditor: visual\nexecute:\n  freeze: auto\n---\n\n::: {.cell}\n\n:::\n\n\n# CAPRO\n\nWe specialize in data processing and capture of large life science data for social sciences and humanities\n\n::: footer\n<https://www.capro.dev/>\n:::\n\n# CAPRO\n\n::: {style=\"text-align: right;\"}\n-   Data flow and processing\n\n-   Data capture\n\n-   Project data management\n\n-   Registry data handling\n\n-   HPC analyses\n:::\n\n::: footer\n<https://www.capro.dev/>\n:::\n\n# Meet your neighbors\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"countdown\" id=\"timer_d5ed2070\" data-update-every=\"1\" tabindex=\"0\" style=\"right:0;bottom:0%;\">\n<div class=\"countdown-controls\"><button class=\"countdown-bump-down\">&minus;</button><button class=\"countdown-bump-up\">&plus;</button></div>\n<code class=\"countdown-time\"><span class=\"countdown-digits minutes\">03</span><span class=\"countdown-digits colon\">:</span><span class=\"countdown-digits seconds\">00</span></code>\n</div>\n```\n\n:::\n:::\n\n\n# Pre-workshop checklist\n\n<br><br>\n\n<https://github.com/posit-conf-2023/wtf#prework>\n\n# Asking for help\n\n::: columns\n::: column\n::: {data-id=\"box1\" style=\"background: #CC4C4C; width: 500px; height: 150px; margin: 20px; padding: 20px; padding-top: 70px; text-align: center;\"}\nI'm stuck or need help\n:::\n:::\n\n::: column\n::: {data-id=\"box2\" style=\"background: #37765d; width: 500px; height: 150px; margin: 20px; padding: 20px; padding-top: 70px; text-align: center;\"}\nAll good, ready to move on\n:::\n:::\n:::\n\n# Completion survey\n\n<br>\n\nAt the conclusion of the workshop, please submit <https://pos.it/conf-workshop-survey>.\n\n<br>\n\nYour feedback is crucial! Data from the survey informs curriculum and format decisions for future conf workshops, and we really appreciate you taking the time to provide it.\n\n# Go here now\n\n<br><br>\n\n<https://github.com/posit-conf-2023/wtf#schedule>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../site_libs/countdown-0.4.0/countdown.css\" rel=\"stylesheet\" />\n<script src=\"../site_libs/countdown-0.4.0/countdown.js\"></script>\n"
+      ],
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

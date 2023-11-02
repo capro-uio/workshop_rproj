@@ -1,0 +1,4 @@
+-   Workshop website: <https://github.com/posit-conf-2023/wtf>
+-   [What They Forgot to Teach you about R](https://rstats.wtf/)
+- [Happy Git With R book](https://happygitwithr.com)
+

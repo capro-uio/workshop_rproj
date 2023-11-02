@@ -1,0 +1,22 @@
+---
+title: "Project management with R"
+subtitle: Workshop for scientists
+author: 
+  - name: Athanasia Monika Mowinckel
+    orcid: 0000-0002-5756-0223
+    affiliations:
+      - name: CAPRO
+        url: https://www.capro.dev/
+---
+
+```{r child="sections/intro.qmd"}
+```
+
+```{r child="sections/aims.qmd"}
+```
+
+```{r child="sections/schedule.qmd"}
+```
+
+```{r child="sections/prep.qmd"}
+```

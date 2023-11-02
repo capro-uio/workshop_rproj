@@ -1,0 +1,4 @@
+As researchers grow in their skills, eventually the infrastructure surrounding the analysis will become an important catalyst for the reproducibility and longevity of analysis artefacts. 
+Researchers are capable of creating complex and impressive projects, but it is unlikely to have benefited from any formal training or mentorship related to topics regarding project management. 
+As a result of this, reproducibility and longevity of projects are likely to suffer. Learning aspects of project management is a vital, but rarely taught, skill when working on a project. 
+While project management has some general guidelines that traverse fields, there are specific aspects to think about when working R, given R's idiosyncrasies.

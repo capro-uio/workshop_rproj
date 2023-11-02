@@ -1,0 +1,30 @@
+## Preparations
+
+For this workshop will be instructed using R and RStudio. 
+It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.
+
+::: callout-note
+### Install summary
+
+-   install/update [R](https://cran.rstudio.com/)
+
+-   install/update [RStudio](https://posit.co/download/rstudio-desktop/)
+:::
+
+A new version of RStudio and R is recommended. 
+Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.
+
+### R packages
+
+In addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.
+
+``` r
+# Run in R
+install.packages(c(
+  "rmarkdown",    # rendering reports
+  "fs",           # file system
+  "here",         # navigating paths
+  "usethis",      # for course materials
+  "tidyverse"      # data-wrangling
+))
+```

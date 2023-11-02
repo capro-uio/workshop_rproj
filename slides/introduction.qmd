@@ -1,0 +1,101 @@
+---
+title: "Introduction"
+subtitle: "Working in R and RStudio"
+author: "Athanasia Mo Mowinckel"
+footer:  "Workshop Overview"
+#logo: "img/wtf-logo-square-transparent.png"
+format: 
+  revealjs: 
+    height: 900
+    width: 1600
+    theme: 
+      - night
+      - capro-reveal.scss
+    highlight-style: a11y
+    transition: fade
+    slide-number: true
+    chalkboard: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+```{r}
+library(countdown)
+```
+
+# CAPRO
+
+We specialize in data processing and capture of large life science data for social sciences and humanities
+
+::: footer
+<https://www.capro.dev/>
+:::
+
+# CAPRO
+
+::: {style="text-align: right;"}
+-   Data flow and processing
+
+-   Data capture
+
+-   Project data management
+
+-   Registry data handling
+
+-   HPC analyses
+:::
+
+::: footer
+<https://www.capro.dev/>
+:::
+
+# Meet your neighbors
+
+```{r}
+countdown(
+  color_background = "#CC4C4C",
+  color_text = "#d2d2d2",
+  color_finished_background = "#CC4C4C",
+  minutes = 3,
+  bottom = "0%"
+  )
+```
+
+# Pre-workshop checklist
+
+<br><br>
+
+<https://github.com/posit-conf-2023/wtf#prework>
+
+# Asking for help
+
+::: columns
+::: column
+::: {data-id="box1" style="background: #CC4C4C; width: 500px; height: 150px; margin: 20px; padding: 20px; padding-top: 70px; text-align: center;"}
+I'm stuck or need help
+:::
+:::
+
+::: column
+::: {data-id="box2" style="background: #37765d; width: 500px; height: 150px; margin: 20px; padding: 20px; padding-top: 70px; text-align: center;"}
+All good, ready to move on
+:::
+:::
+:::
+
+# Completion survey
+
+<br>
+
+At the conclusion of the workshop, please submit <https://pos.it/conf-workshop-survey>.
+
+<br>
+
+Your feedback is crucial! Data from the survey informs curriculum and format decisions for future conf workshops, and we really appreciate you taking the time to provide it.
+
+# Go here now
+
+<br><br>
+
+<https://github.com/posit-conf-2023/wtf#schedule>

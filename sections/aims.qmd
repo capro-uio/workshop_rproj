@@ -1,0 +1,13 @@
+::: callout-tip
+## Aims
+
+-   Understand what a working environment is and how R deals with them
+
+-   Successfully implement a project-oriented workflow
+
+-   Understand best-practice naming of files
+
+-   Know how to practice safe paths from R
+
+-   Understand basics of R package management
+:::
