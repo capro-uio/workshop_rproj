@@ -1,5 +1,5 @@
 ---
-title: "Project Oriented Workflows"
+title: "Project Structure"
 subtitle: "Working in R and RStudio"
 author: "Athanasia Mo Mowinckel"
 #logo: "img/wtf-logo-square-transparent.png"
@@ -27,8 +27,6 @@ library(countdown)
 # fill for font awesome icons
 fa_fill <- "#CC4C4C"
 ```
-
-# Project structure
 
 ## Break logic and output into pieces
 

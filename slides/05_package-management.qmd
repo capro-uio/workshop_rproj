@@ -1,0 +1,167 @@
+---
+title: "Project Structure"
+subtitle: "Working in R and RStudio"
+author: "Athanasia Mo Mowinckel"
+#logo: "img/wtf-logo-square-transparent.png"
+format: 
+  revealjs: 
+    height: 900
+    width: 1600
+    theme: 
+      - night
+      - capro-reveal.scss
+    highlight-style: github-dark
+    transition: fade
+    slide-number: true
+    chalkboard: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+```{r}
+library(countdown)
+```
+
+```{r font-awesome-color}
+# fill for font awesome icons
+fa_fill <- "#CC4C4C"
+```
+
+## What are packages / libraries in R?
+
+-   Extensions to the programming language
+    -   contains functions & documentation of these\
+    -   standardised for easier install and use across users\
+-   Often written by other users to solve specific tasks in R
+    -   solving particular statistical problems
+    -   new types of data visualisation
+
+## Common package issues in pipelines
+
+> A package masks the function of another package I use\*\*
+
+-   example: `select()` from {dplyr} being masked by `select()` from {MASS}
+
+## Common package issues in pipelines
+
+> A package masks the function of another package I use\*\*
+
+-   example: `select()` from {dplyr} being masked by `select()` from {MASS}
+
+### solution 1
+
+load libraries in reverse order of importance.
+
+-   i.e. load {dplyr} last, and its `select()` will be prioritised over the one from {MASS}.
+
+``` r
+library(MASS)
+library(dplyr)
+```
+
+## Common package issues in pipelines
+
+> A package masks the function of another package I use\*\*
+
+-   example: `select()` from {dplyr} being masked by `select()` from {MASS}
+
+### solution 2:
+
+if you only need a single function from another package, call the function directly, rather than loading the entire library.
+
+-   i.e. run `MASS::lm.gls()` rather than `library(MASS); lm.gls()`.
+
+-   the double colon `::` enables you to access a library's. functions without loading the entire library.
+
+    -   this is called `namespacing`
+
+## Common package issues in pipelines
+
+**Preventative measures:** 
+
+::: columns
+::: {.column width="50%"}
+
+
+- load all libraries you need at the top of your scripts 
+
+- this helps you control the order things are loaded and possible function masking 
+
+- makes it clear to anyone else running the script what the dependencies are
+:::
+
+::: {.column width="50%"}
+ - When introducing a new package to your script 
+ 
+ - add it to the top of the script 
+ 
+ - restart your R session so it is clean 
+ 
+ - start re-running your code to make sure everything still works as expected 
+ 
+ - if it doesn't, make sure its the first library to be loaded, and try again in a fresh R session
+:::
+
+:::
+
+## Common package issues in pipelines
+
+> The package I used 1 year ago no longer exists
+
+
+There are archives of packages, like [MRAN](https://mran.microsoft.com/), that will likely help you.
+But you'll need to know which version you used, etc.
+
+
+Can be tricky, but the {[checkpoint](https://github.com/RevolutionAnalytics/checkpoint)} package might be of great assistance!
+
+## R package managers
+
+- [RStudio package manager](https://www.rstudio.com/products/package-manager/)
+
+  - RStudio enterprise solution
+  
+- [packrat](https://rstudio.github.io/packrat/walkthrough.html)
+
+  - one of the first
+  
+  - a little complicated to use, requiring some knowledge of package paths etc.
+  
+- [checkpoint](https://github.com/RevolutionAnalytics/checkpoint)
+
+  - I have no experience with it, but it looks decent
+  
+- [renv](https://rstudio.github.io/renv/articles/renv.html)
+
+  - new and widely used
+  
+  - developed by RStudio
+  
+  - creates fairly simple procedures to follow
+
+
+## Use renv to make your R projects more:
+
+- **Isolated**
+  - installing or updating a package for one project won't break other projects
+  - gives each project its own private package library
+
+- **Portable**
+  - transport your projects from one computer to another
+  - makes it easy to install the packages your project depends on.
+
+- **Reproducible**
+  - records the exact package versions you depend on
+  - ensures those exact versions are the ones that get installed wherever you go.
+
+
+```{r}
+countdown(
+   minutes = 15,
+   color_background = "#CC4C4C",
+  color_text = "#d2d2d2",
+  color_finished_background = "#CC4C4C",
+  bottom = "0%"
+  )
+```

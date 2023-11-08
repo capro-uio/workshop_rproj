@@ -19,7 +19,6 @@ execute:
   freeze: auto
 ---
 
-
 ```{r}
 library(countdown)
 ```
@@ -60,18 +59,15 @@ fa_fill <- "#CC4C4C"
 :::
 :::
 
-
-
 ## Project workflows
 
-- All necessary files contained in the project and referenced relatively
+-   All necessary files contained in the project and referenced relatively
 
-- All necessary outputs are created by code in the project
+-   All necessary outputs are created by code in the project
 
-- All code can be run in fresh sessions and produce the same output
+-   All code can be run in fresh sessions and produce the same output
 
-- Does not force other users to alter their own work setup
-
+-   Does not force other users to alter their own work setup
 
 ## If the top of your script is
 
@@ -89,8 +85,7 @@ Jenny will come into your your office and SET YOUR COMPUTER ON FIRE 🔥.
 <br>
 
 ::: {.fragment fragment-index="1"}
-Project-oriented workflow designs this away.
-🙌
+Project-oriented workflow designs this away. 🙌
 :::
 
 ::: footer
@@ -103,14 +98,14 @@ Project-oriented workflow designs this away.
 
 ## Which persist after rm(list = ls())?
 
-| Option                               | Persists?                                      |
-|-------------------------------------------------------|-----------------|
-| A. library(dplyr)                    |  |
-| B. summary \<- head                  |  |
-| C. options(stringsAsFactors = FALSE) |  |
-| D. Sys.setenv(LANGUAGE = "fr")       |  |
-| E. x \<- 1:5                         |  |
-| F. attach(iris)                      |  |
+| Option                               | Persists? |
+|--------------------------------------|-----------|
+| A. library(dplyr)                    |           |
+| B. summary \<- head                  |           |
+| C. options(stringsAsFactors = FALSE) |           |
+| D. Sys.setenv(LANGUAGE = "fr")       |           |
+| E. x \<- 1:5                         |           |
+| F. attach(iris)                      |           |
 
 ```{r}
 countdown(
@@ -125,7 +120,7 @@ countdown(
 ## Which persist after rm(list = ls())?
 
 | Option                               | Persists?                                    |
-|-------------------------------------------------------|-----------------|
+|--------------------------------------|----------------------------------------------|
 | A. library(dplyr)                    | `r fontawesome::fa("check", fill = fa_fill)` |
 | B. summary \<- head                  | `r fontawesome::fa("xmark", fill = "white")` |
 | C. options(stringsAsFactors = FALSE) | `r fontawesome::fa("check", fill = fa_fill)` |
@@ -202,21 +197,21 @@ Mac
 :::
 :::
 
-## Project initiation: the local case 
+## Project initiation: the local case
 
 1.  New folder + make it an RStudio Project
 
-* `usethis::create_project("~/i_am_new")`
+-   `usethis::create_project("~/i_am_new")`
 
-* File -\> New Project -\> New Directory -\> New Project
+-   File -\> New Project -\> New Directory -\> New Project
 
 . . .
 
 2.  Make existing folder into an RStudio Project
 
-* `usethis::create_project("~/i_exist")`
+-   `usethis::create_project("~/i_exist")`
 
-* File -\> New Project -\> Existing Directory
+-   File -\> New Project -\> Existing Directory
 
 . . .
 
@@ -249,9 +244,7 @@ countdown(
 :::
 
 ::: {.column width="46%"}
-<br> A large-scale study on research code quality and execution.
-<br> Trisovic, A., Lau, M.K., Pasquier, T.
-et al. <br> *Sci Data* **9**, 60 (2022).
+<br> A large-scale study on research code quality and execution. <br> Trisovic, A., Lau, M.K., Pasquier, T. et al. <br> *Sci Data* **9**, 60 (2022).
 :::
 :::
 
@@ -259,21 +252,16 @@ et al. <br> *Sci Data* **9**, 60 (2022).
 <https://twitter.com/kjhealy/status/1514169782060429320> <br> <https://doi.org/10.1038/s41597-022-01143-6>
 :::
 
-
 ## Do you know where<br> your files are?
 
 ![](img/street-sign.png)
 
-
 ::: notes
 Working directory is associated with a specific process or running application.
 
-For a newly launched process or application instance, the working directory (probably? usually?) defaults to user's home directory.
-Or perhaps the application consults a config file to set the working directory at launch time.
-This is sort of how I would describe launching an RStudio Project.
+For a newly launched process or application instance, the working directory (probably? usually?) defaults to user's home directory. Or perhaps the application consults a config file to set the working directory at launch time. This is sort of how I would describe launching an RStudio Project.
 
-"Working directory" as a concept is not comparable to "home directory".
-"Home directory" is a static, persistent thing.
+"Working directory" as a concept is not comparable to "home directory". "Home directory" is a static, persistent thing.
 :::
 
 ## Practice "safe paths"
@@ -287,7 +275,6 @@ relative to a [stable base]{.important}
 use [file system functions]{.important}
 
     not `paste()`, `strsplit()`, etc.
-
 
 ## Packages with file system functions
 
@@ -480,24 +467,22 @@ countdown(
   )
 ```
 
-
 ## What if my data can't live in my project directory? {.smaller}
 
-1. Are you sure it can't?
+1.  Are you sure it can't?
 
-2. Review the Good Enough Practices paper for tips.
+2.  Review the Good Enough Practices paper for tips.
 
-3. Create a symbolic link to access the data. ([fs::link_create()](https://fs.r-lib.org/reference/create.html), [fs::link_path()](https://fs.r-lib.org/reference/create.html))
+3.  Create a symbolic link to access the data. ([fs::link_create()](https://fs.r-lib.org/reference/create.html), [fs::link_path()](https://fs.r-lib.org/reference/create.html))
 
-4. Put the data in an [R package](https://r-pkgs.org/data.html).
+4.  Put the data in an [R package](https://r-pkgs.org/data.html).
 
-5. Use [pins](https://pins.rstudio.com/).
+5.  Use [pins](https://pins.rstudio.com/).
 
-6. Explore other data warehousing options.
+6.  Explore other data warehousing options.
 
 RStudio Community threads:
 
-* [Project-oriented workflow; setwd(), rm(list = ls()) and computer fires](https://community.rstudio.com/t/project-oriented-workflow-setwd-rm-list-ls-and-computer-fires/3549/1)
+-   [Project-oriented workflow; setwd(), rm(list = ls()) and computer fires](https://community.rstudio.com/t/project-oriented-workflow-setwd-rm-list-ls-and-computer-fires/3549/1)
 
-* [Best way to define paths for a file running on a cron?](https://community.rstudio.com/t/best-way-to-define-paths-for-a-file-running-on-a-cron/2061/7)
-
+-   [Best way to define paths for a file running on a cron?](https://community.rstudio.com/t/best-way-to-define-paths-for-a-file-running-on-a-cron/2061/7)
