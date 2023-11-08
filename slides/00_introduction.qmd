@@ -10,7 +10,7 @@ format:
     theme: 
       - night
       - capro-reveal.scss
-    highlight-style: a11y
+    highlight-style: github-dark
     transition: fade
     slide-number: true
     chalkboard: true
