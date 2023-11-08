@@ -1,0 +1,134 @@
+---
+title: "Project Oriented Workflows"
+subtitle: "Working in R and RStudio"
+author: "Athanasia Mo Mowinckel"
+#logo: "img/wtf-logo-square-transparent.png"
+format: 
+  revealjs: 
+    height: 900
+    width: 1600
+    theme: 
+      - night
+      - capro-reveal.scss
+    highlight-style: github-dark
+    transition: fade
+    slide-number: true
+    chalkboard: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+```{r}
+library(countdown)
+```
+
+```{r font-awesome-color}
+# fill for font awesome icons
+fa_fill <- "#CC4C4C"
+```
+
+# Project structure
+
+## Break logic and output into pieces
+
+![](img/monolith.jpg)
+
+## Process
+
+![](img/process-naked.jpg)
+
+::: footer
+<https://r4ds.had.co.nz/introduction.html#what-you-will-learn>
+:::
+
+## Project code
+
+::: {.columns .v-center-container}
+::: {.column width="30%"}
+smell.test.R
+
+wrangle.R
+
+model.R
+
+make-figs.R
+
+report.Rmd
+:::
+
+::: {.column width="10%"}
+::: r-fit-text
+`>>>`
+:::
+:::
+
+::: {.column width="35%"}
+    everything.R
+:::
+:::
+
+## Process and code
+
+![](img/process-script.jpg)
+
+## Project artifacts
+
+::: {.columns .v-center-container}
+::: {.column width="30%"}
+raw-data.xlsx
+
+data.csv
+
+fit.rds
+
+ests.csv
+:::
+
+::: {.column width="10%"}
+::: r-fit-text
+`>>>`
+:::
+:::
+
+::: {.column .center-x width="30%"}
+.Rdata
+:::
+:::
+
+## Process and artifacts
+
+![](img/process-out.jpg)
+
+## A humane API for analysis
+
+![](img/input-code-output.jpg)
+
+## Your turn
+
+<br>
+
+Create a report that adheres to project organization strategies.
+
+<br>
+
+```{r, echo=TRUE, eval=FALSE}
+library(usethis)
+# saves project on desktop by default for most users
+use_course("rstats-wtf/wtf-packages-report")
+# use_course("rstats-wtf/wtf-packages-report", destdir = "my/new/location")
+# can alternatively download from 
+# https://github.com/rstats-wtf/wtf-packages-report
+```
+
+<br> Read the `README.md` to get started.
+
+```{r}
+countdown(
+   minutes = 15,
+   color_background = "#CC4C4C",
+  color_text = "#d2d2d2",
+  color_finished_background = "#CC4C4C",
+  bottom = "0%"
+  )
+```

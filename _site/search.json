@@ -53,7 +53,7 @@
     "href": "sections/aims.html",
     "title": "Project management in R",
     "section": "",
-    "text": "Aims\n\n\n\n\nUnderstand how R deals with working environments\nSuccessfully implement a project-oriented workflow\nUnderstand best-practice naming of files\nKnow how to practice safe paths from R\nUnderstand basics of R package management"
+    "text": "Aims\n\n\n\n\nUnderstand what a working environment is and how R deals with them\nSuccessfully implement a project-oriented workflow\nUnderstand best-practice naming of files\nKnow how to practice safe paths from R\nUnderstand basics of R package management"
   },
   {
     "objectID": "sections/intro.html",
@@ -67,14 +67,14 @@
     "href": "sections/prep.html",
     "title": "Project management in R",
     "section": "",
-    "text": "For this workshop will be instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop.\n\n\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n# Run in R\ninstall.packages(c(\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"      # data-wrangling\n))"
+    "text": "For this workshop will be instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"      # data-wrangling\n))"
   },
   {
     "objectID": "sections/prep.html#preparations",
     "href": "sections/prep.html#preparations",
     "title": "Project management in R",
     "section": "",
-    "text": "For this workshop will be instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop.\n\n\nIn addition to Quarto, a series of R packages will also be needed to show-case the ways we can use Quarto to generate reports.\n# Run in R\ninstall.packages(c(\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"      # data-wrangling\n))"
+    "text": "For this workshop will be instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"      # data-wrangling\n))"
   },
   {
     "objectID": "sections/schedule.html",
@@ -89,5 +89,887 @@
     "title": "Project management in R",
     "section": "",
     "text": "Saving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nR package management\n2 hours"
+  },
+  {
+    "objectID": "slides/introduction.html#schedule-schedule-1",
+    "href": "slides/introduction.html#schedule-schedule-1",
+    "title": "Introduction",
+    "section": "Schedule 1",
+    "text": "Schedule 1\n\n\n\nSaving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nR package management\n2 hours\n\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R."
+  },
+  {
+    "objectID": "slides/infra_support.html",
+    "href": "slides/infra_support.html",
+    "title": "Letter of support from CAPRO",
+    "section": "",
+    "text": "CAPRO, the UiO core facility that specializes in data processing and capture of large life science data for social sciences and humanities, are thrilled to be a part of the application for the implementation of population-wide MRI coverage in Norway and to provide processing pipelines and workflows for dealing with data.\nOur team at CAPRO has for more than 10 years been working with MRI and registry data, assisting researchers to meed their project deliverables. We understand the importance of capturing and processing large data sets, especially in social sciences and humanities, with the legal and ethical considerations needed when working with sensitive human data. Our expertise has helped provide both standardized and customized solutions to meet project needs and help researchers succeed, while still maintaining important data management principles like FAIR.\nAs part of our commitment to the research community, in addition to working directly with researchers for their specific needs, we develop software and publish it freely online for anyone to use. Our team has a passion for serving the research community and is excited about the possibility of partnering to make this infrastructure a success. We are especially excited about the opportunity to enable researchers without prior experience with MRI to use this method in their research, and unlock new exciting research ideas with them.\nImagingSociety aligns well with our interests and future prospects. We believe that this infrastructure will have a significant impact on research in social sciences and humanities and will create a great surge in excellent research using MRI in Norway.\nIn conclusion, we fully support the application for the implementation of population-wide MRI coverage in Norway, and we look forward to collaborating with you and the research community to bring this project to fruition."
+  },
+  {
+    "objectID": "sections/resources.html",
+    "href": "sections/resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Resources\n\nWorkshop website: https://github.com/posit-conf-2023/wtf\nWhat They Forgot to Teach you about R\nHappy Git With R book"
+  },
+  {
+    "objectID": "slides/project-oriented.html#schedule-schedule-1",
+    "href": "slides/project-oriented.html#schedule-schedule-1",
+    "title": "Project Oriented Workflows",
+    "section": "Schedule 1",
+    "text": "Schedule 1\n\n\n\nSaving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nR package management\n2 hours\n\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R."
+  },
+  {
+    "objectID": "slides/project-oriented.html#checklist",
+    "href": "slides/project-oriented.html#checklist",
+    "title": "Project Oriented Workflows",
+    "section": "Checklist",
+    "text": "Checklist\n\n R installed? Pretty recent?\n     Recommended R ≥ 4.3.0\n RStudio installed?\n     I’m on 2023.06.1 Build 524     \n Packages?\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"usethis\", \"fs\", \"here\"))"
+  },
+  {
+    "objectID": "slides/project-oriented.html#resources",
+    "href": "slides/project-oriented.html#resources",
+    "title": "Project Oriented Workflows",
+    "section": "Resources",
+    "text": "Resources\n\nBook: https://rstats.wtf"
+  },
+  {
+    "objectID": "slides/project-oriented.html#section",
+    "href": "slides/project-oriented.html#section",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "What Did They Forget  to Teach You?"
+  },
+  {
+    "objectID": "slides/project-oriented.html#learning-objectives",
+    "href": "slides/project-oriented.html#learning-objectives",
+    "title": "Project Oriented Workflows",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nEstablish the concept of the project as the basic organizational unit of work.\nApply best practices in and leverage benefits of working in RStudio projects, including\n\n\nCreating robust file paths that travel well in time and space.\nConstructing human and machine readable file names that sort nicely.\nDifferentiating workflow elements, analysis inputs, and analysis outputs in project structure to create navigable programming interfaces.\nRestarting R frequently, with a blank slate."
+  },
+  {
+    "objectID": "slides/project-oriented.html#be-organized-as-you-go-not-tomorrow",
+    "href": "slides/project-oriented.html#be-organized-as-you-go-not-tomorrow",
+    "title": "Project Oriented Workflows",
+    "section": "Be organized as you go,  not “tomorrow”",
+    "text": "Be organized as you go,  not “tomorrow”\n\n\nDon’t fret over past mistakes.\n\n\n\n\nRaise the bar for new work."
+  },
+  {
+    "objectID": "slides/project-oriented.html#be-organized-1",
+    "href": "slides/project-oriented.html#be-organized-1",
+    "title": "Project Oriented Workflows",
+    "section": "Be organized",
+    "text": "Be organized\n\n\n\nself-explaining &gt;&gt;&gt; wordy, needy explainers"
+  },
+  {
+    "objectID": "slides/project-oriented.html#be-organized-2",
+    "href": "slides/project-oriented.html#be-organized-2",
+    "title": "Project Oriented Workflows",
+    "section": "Be organized",
+    "text": "Be organized\n\n\n\n\n\n&gt;&gt;&gt;\n\n\n  file salad    + an out of date README"
+  },
+  {
+    "objectID": "slides/project-oriented.html#good-enough-practices-in-scientific-computing",
+    "href": "slides/project-oriented.html#good-enough-practices-in-scientific-computing",
+    "title": "Project Oriented Workflows",
+    "section": "Good enough practices in scientific computing",
+    "text": "Good enough practices in scientific computing\n\n\n\n\n\n\nPLOS Computational Biology\nWilson, Bryan, Cranston, Kitzes, Nederbragt, Teal (2017)\nhttps://doi.org/10.1371/journal.pcbi.1005510\nhttp://bit.ly/good-enuff"
+  },
+  {
+    "objectID": "slides/project-oriented.html#your-r-installation",
+    "href": "slides/project-oriented.html#your-r-installation",
+    "title": "Project Oriented Workflows",
+    "section": "Your R installation",
+    "text": "Your R installation\n\nR packages\n\nthe natural unit for distributing R code\n\n\n\nbase R\n\n14 base + 15 recommended packages\nships with all binary distributions of R\n\n\n\nFor example, have you used lattice recently? 🤷\n\nit came with your R installation, can use out of the box\nlibrary(lattice)"
+  },
+  {
+    "objectID": "slides/project-oriented.html#additional-packages",
+    "href": "slides/project-oriented.html#additional-packages",
+    "title": "Project Oriented Workflows",
+    "section": "Additional packages",
+    "text": "Additional packages\n\n\n\nCRAN, ~20k packages\n\n# install from CRAN\ninstall.packages(\"remotes\")\n# attach\nlibrary(remotes)\n\n\n\n\nGitHub, ??? packages\n\n# install via remotes\nremotes::install_github(\"rstats-wtf/wtfdbg\")\n# attach\nlibrary(wtfdbg)\n\n\n\n\nwe’ll use wtfdbg later in Debugging"
+  },
+  {
+    "objectID": "slides/project-oriented.html#where-do-packages-live-locally",
+    "href": "slides/project-oriented.html#where-do-packages-live-locally",
+    "title": "Project Oriented Workflows",
+    "section": "Where do packages live locally?",
+    "text": "Where do packages live locally?\n\nBy default, in the default library\n.Library\n\nAll libraries for the current session\n.libPaths()\n\nAll installed packages\ninstalled.packages()"
+  },
+  {
+    "objectID": "slides/project-oriented.html#syntax-aside-pipes",
+    "href": "slides/project-oriented.html#syntax-aside-pipes",
+    "title": "Project Oriented Workflows",
+    "section": "Syntax aside: pipes",
+    "text": "Syntax aside: pipes\n\n2014+ magrittr pipe %&gt;%\n2021+ (R \\(\\geq\\) 4.1.0) native R pipe |&gt;\n\n2022 Isabella Velásquez Understanding the native R pipe |&gt; https://ivelasq.rbind.io/blog/understanding-the-r-pipe/\n\n\n\n\n\nwhatever(arg1, arg2, arg3, ...)\narg1 |&gt;  \n  whatever(arg2, arg3)\n\n\n\n\n\nmean(0:10)\n0:10 |&gt; \n  mean()\n\n\n\n\nChange CTRL + Shift + M shortcut to native pipe:\nTools -&gt; Global Options -&gt; Code -&gt;\n   Editing -&gt; check Use Native Pipe Operator"
+  },
+  {
+    "objectID": "slides/project-oriented.html#syntax-aside-namespacing",
+    "href": "slides/project-oriented.html#syntax-aside-namespacing",
+    "title": "Project Oriented Workflows",
+    "section": "Syntax aside: namespacing",
+    "text": "Syntax aside: namespacing\ndplyr::select()\n\ntells R explicitly to use the function select from the package dplyr\ncan help to avoid name conflicts (e.g., MASS::select())\ndoes not require library(dplyr)\n\n\n\n\n\nlibrary(dplyr)\nselect(mtcars, mpg, cyl) \nmtcars |&gt;  \n  select(mpg, cyl) \n\n\n\n\n\n# library(dplyr) not needed\ndplyr::select(mtcars, mpg, cyl) \nmtcars |&gt;  \n  dplyr::select(mpg, cyl)"
+  },
+  {
+    "objectID": "slides/project-oriented.html#explore-your-r-installation",
+    "href": "slides/project-oriented.html#explore-your-r-installation",
+    "title": "Project Oriented Workflows",
+    "section": "🧐 Explore your R installation",
+    "text": "🧐 Explore your R installation\n\ninstall.packages(\"usethis\")\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-explore-libraries\")\n# use_course(\"rstats-wtf/wtf-explore-libraries\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-explore-libraries\n\n\nRead the README.md to get started.\n\n01_explore-libraries_spartan.R  (directions to explore without suggested code)\n01_explore-libraries_comfy.R (directions to explore with suggested code)\n01_explore-libraries_solution.R (directions to explore with code solutions)\n\n\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "slides/project-oriented.html#adopt-a-project-oriented-workflow",
+    "href": "slides/project-oriented.html#adopt-a-project-oriented-workflow",
+    "title": "Project Oriented Workflows",
+    "section": "Adopt a project-oriented workflow",
+    "text": "Adopt a project-oriented workflow\n\n\n\nWhy\n\nwork on more than 1 thing at a time\ncollaborate, communicate, distribute\nstart and stop\n\n\n\n\n\nHow\n\ndedicated directory\nRStudio Project\nGit repo, probably syncing to a remote"
+  },
+  {
+    "objectID": "slides/project-oriented.html#if-the-top-of-your-script-is",
+    "href": "slides/project-oriented.html#if-the-top-of-your-script-is",
+    "title": "Project Oriented Workflows",
+    "section": "If the top of your script is",
+    "text": "If the top of your script is\n\n\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nrm(list = ls())\n\n\nJenny will come into your your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\nProject-oriented workflow designs this away. 🙌\n\n\nhttps://twitter.com/hadleywickham/status/940021008764846080\nhttps://www.tidyverse.org/articles/2017/12/workflow-vs-script/\nhttps://rstats.wtf/project-oriented-workflow.html"
+  },
+  {
+    "objectID": "slides/project-oriented.html#which-persist-after-rmlist-ls",
+    "href": "slides/project-oriented.html#which-persist-after-rmlist-ls",
+    "title": "Project Oriented Workflows",
+    "section": "Which persist after rm(list = ls())?",
+    "text": "Which persist after rm(list = ls())?\n\n\n\n\n\n\n\nOption\nPersists?\n\n\n\n\nA. library(dplyr)\n\n\n\nB. summary &lt;- head\n\n\n\nC. options(stringsAsFactors = FALSE)\n\n\n\nD. Sys.setenv(LANGUAGE = “fr”)\n\n\n\nE. x &lt;- 1:5\n\n\n\nF. attach(iris)\n\n\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/project-oriented.html#which-persist-after-rmlist-ls-1",
+    "href": "slides/project-oriented.html#which-persist-after-rmlist-ls-1",
+    "title": "Project Oriented Workflows",
+    "section": "Which persist after rm(list = ls())?",
+    "text": "Which persist after rm(list = ls())?\n\n\n\n\n\n\n\nOption\nPersists?\n\n\n\n\nA. library(dplyr)\n\n\n\nB. summary &lt;- head\n\n\n\nC. options(stringsAsFactors = FALSE)\n\n\n\nD. Sys.setenv(LANGUAGE = “fr”)\n\n\n\nE. x &lt;- 1:5\n\n\n\nF. attach(iris)"
+  },
+  {
+    "objectID": "slides/project-oriented.html#what-does-it-mean-to-be-an-rstudio-project",
+    "href": "slides/project-oriented.html#what-does-it-mean-to-be-an-rstudio-project",
+    "title": "Project Oriented Workflows",
+    "section": "What does it mean to be an RStudio Project?",
+    "text": "What does it mean to be an RStudio Project?\n\nRStudio leaves notes to itself in foo.Rproj\n\n\nOpen Project = dedicated instance of RStudio\n\ndedicated R process\nfile browser pointed at Project directory\nworking directory set to Project directory"
+  },
+  {
+    "objectID": "slides/project-oriented.html#many-projects-open",
+    "href": "slides/project-oriented.html#many-projects-open",
+    "title": "Project Oriented Workflows",
+    "section": "Many projects open",
+    "text": "Many projects open"
+  },
+  {
+    "objectID": "slides/project-oriented.html#use-a-blank-slate",
+    "href": "slides/project-oriented.html#use-a-blank-slate",
+    "title": "Project Oriented Workflows",
+    "section": "Use a “blank slate”",
+    "text": "Use a “blank slate”\n\n\nusethis::use_blank_slate()\n\n\nOR\n\nTools -&gt; Global Options"
+  },
+  {
+    "objectID": "slides/project-oriented.html#restart-r-often",
+    "href": "slides/project-oriented.html#restart-r-often",
+    "title": "Project Oriented Workflows",
+    "section": "Restart R often",
+    "text": "Restart R often\n\n\n\nSession -&gt; Restart R\n\n\n\n\nWindows\n\nCtrl + Shift + F10\n\nMac\n\nCmd + Shift + 0\nCmd + Shift + F10"
+  },
+  {
+    "objectID": "slides/project-oriented.html#project-initiation-the-local-case",
+    "href": "slides/project-oriented.html#project-initiation-the-local-case",
+    "title": "Project Oriented Workflows",
+    "section": "Project initiation: the local case",
+    "text": "Project initiation: the local case\n\nNew folder + make it an RStudio Project\n\n\nusethis::create_project(\"~/i_am_new\")\nFile -&gt; New Project -&gt; New Directory -&gt; New Project\n\n\n\nMake existing folder into an RStudio Project\n\n\nusethis::create_project(\"~/i_exist\")\nFile -&gt; New Project -&gt; Existing Directory\n\n\n\n\nTry option 2 now for wtf-explore-libraries.\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/project-oriented.html#on-reproducibility-of-code",
+    "href": "slides/project-oriented.html#on-reproducibility-of-code",
+    "title": "Project Oriented Workflows",
+    "section": "On reproducibility of code",
+    "text": "On reproducibility of code\n\n\n\n\n\n\n A large-scale study on research code quality and execution.  Trisovic, A., Lau, M.K., Pasquier, T. et al.  Sci Data 9, 60 (2022).\n\n\n\nhttps://twitter.com/kjhealy/status/1514169782060429320  https://doi.org/10.1038/s41597-022-01143-6"
+  },
+  {
+    "objectID": "slides/project-oriented.html#do-you-know-where-your-files-are",
+    "href": "slides/project-oriented.html#do-you-know-where-your-files-are",
+    "title": "Project Oriented Workflows",
+    "section": "Do you know where your files are?",
+    "text": "Do you know where your files are?\n\n\nWorking directory is associated with a specific process or running application.\nFor a newly launched process or application instance, the working directory (probably? usually?) defaults to user’s home directory. Or perhaps the application consults a config file to set the working directory at launch time. This is sort of how I would describe launching an RStudio Project.\n“Working directory” as a concept is not comparable to “home directory”. “Home directory” is a static, persistent thing."
+  },
+  {
+    "objectID": "slides/project-oriented.html#practice-safe-paths",
+    "href": "slides/project-oriented.html#practice-safe-paths",
+    "title": "Project Oriented Workflows",
+    "section": "Practice “safe paths”",
+    "text": "Practice “safe paths”\n\nrelative to a stable base\n\nuse file system functions\n    not paste(), strsplit(), etc."
+  },
+  {
+    "objectID": "slides/project-oriented.html#packages-with-file-system-functions",
+    "href": "slides/project-oriented.html#packages-with-file-system-functions",
+    "title": "Project Oriented Workflows",
+    "section": "Packages with file system functions",
+    "text": "Packages with file system functions\n\n\ninstall.packages(\"fs\")\n\nfs = file path handling\n\n\n\ninstall.packages(\"here\")\n\nhere = project-relative paths"
+  },
+  {
+    "objectID": "slides/project-oriented.html#examples-of-a-stable-base",
+    "href": "slides/project-oriented.html#examples-of-a-stable-base",
+    "title": "Project Oriented Workflows",
+    "section": "Examples of a stable base",
+    "text": "Examples of a stable base\n\nProject directory\n\nhere::here(\"data\", \"raw-data.csv\")\nhere::here(\"data/raw-data.csv\")\n\nAutomatically complete paths with Tab.\n\n\nUser’s home directory\n\nfile.path(\"~\", ...)\nfs::path_home(...)\n\n\n\n\nOfficial location for installed software\n\nlibrary(thingy)\nsystem.file(..., package = \"thingy\")\n\nSee example in gapminder readme.\n\nsee where tilde goes with fs::path_expand(file.path(“~”))"
+  },
+  {
+    "objectID": "slides/project-oriented.html#absolute-paths",
+    "href": "slides/project-oriented.html#absolute-paths",
+    "title": "Project Oriented Workflows",
+    "section": "Absolute paths",
+    "text": "Absolute paths\nI have nothing against absolute paths.\nSome of my best friends are absolute paths!\nBut don’t hard-wire them into your scripts.\nInstead, form at runtime relative to a stable base\n\n\n&gt; (BAD &lt;- \"/Users/shannon/tmp/test.csv\")\n[1] \"/Users/shannon/tmp/test.csv\"\n\n\n\n\n&gt; (GOOD &lt;- fs::path_home(\"tmp/test.csv\")\n[1] \"/Users/shannon/tmp/test.csv\""
+  },
+  {
+    "objectID": "slides/project-oriented.html#practice-safe-paths-1",
+    "href": "slides/project-oriented.html#practice-safe-paths-1",
+    "title": "Project Oriented Workflows",
+    "section": "Practice safe paths",
+    "text": "Practice safe paths\n\n\n\n\n\n\n\nUse the here package to build paths inside a project.\nLeave working directory at top-level at all times, during development.\nAbsolute paths are formed at runtime.\n\n\n\n\nArtwork by @allison_horst."
+  },
+  {
+    "objectID": "slides/project-oriented.html#here-example",
+    "href": "slides/project-oriented.html#here-example",
+    "title": "Project Oriented Workflows",
+    "section": "here example",
+    "text": "here example\n\nggsave(here::here(\"figs\", \"built-barchart.png\"))\n\n\nWorks on my machine, works on yours!\nWorks even if working directory is in a sub-folder.\nWorks for RStudio Projects, Git repos, R packages, etc.\nWorks with knitr / rmarkdown."
+  },
+  {
+    "objectID": "slides/project-oriented.html#herehere",
+    "href": "slides/project-oriented.html#herehere",
+    "title": "Project Oriented Workflows",
+    "section": "here::here()",
+    "text": "here::here()\nThe here package is designed to work inside a project, where that could mean:\n\nRStudio Project\nGit repo\nR package\nFolder with a file named .here\n\nhere::here() does not create directories; that’s your job."
+  },
+  {
+    "objectID": "slides/project-oriented.html#kinds-of-paths",
+    "href": "slides/project-oriented.html#kinds-of-paths",
+    "title": "Project Oriented Workflows",
+    "section": "Kinds of paths",
+    "text": "Kinds of paths\nAbsolute path.\n\ndat &lt;- read.csv(\"C:/Users/pileggis/Documents/wtf-fix-paths/data/installed-packages.csv\")\n\n\nRelative path to working directory, established by the RStudio Project.\n\ndat &lt;- read.csv(\"data/installed-packages.csv\")\n\n\nRelative path within the RStudio Project directory.\n\ndat &lt;- read.csv(here::here(\"data/installed-packages.csv\"))"
+  },
+  {
+    "objectID": "slides/project-oriented.html#your-turn",
+    "href": "slides/project-oriented.html#your-turn",
+    "title": "Project Oriented Workflows",
+    "section": "Your turn",
+    "text": "Your turn\n\nPractice calling here::here() in a project  to get a feel for it.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-fix-paths\")\n# use_course(\"rstats-wtf/wtf-fix-paths\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-fix-paths\n\n Read the README.md to get started.\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "slides/project-oriented.html#what-if-my-data-cant-live-in-my-project-directory",
+    "href": "slides/project-oriented.html#what-if-my-data-cant-live-in-my-project-directory",
+    "title": "Project Oriented Workflows",
+    "section": "What if my data can’t live in my project directory?",
+    "text": "What if my data can’t live in my project directory?\n\nAre you sure it can’t?\nReview the Good Enough Practices paper for tips.\nCreate a symbolic link to access the data. (fs::link_create(), fs::link_path())\nPut the data in an R package.\nUse pins.\nExplore other data warehousing options.\n\nRStudio Community threads:\n\nProject-oriented workflow; setwd(), rm(list = ls()) and computer fires\nBest way to define paths for a file running on a cron?"
+  },
+  {
+    "objectID": "slides/project-oriented.html#section-5",
+    "href": "slides/project-oriented.html#section-5",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "’Tis but thy name that is my enemy; Thou art thyself, though not a Montague. What’s Montague? It is nor hand, nor foot, Nor arm, nor face, nor any other part Belonging to a man. O, be some other name! What’s in a name? That which we call a rose By any other name would smell as sweet; So Romeo would, were he not Romeo call’d, Retain that dear perfection which he owes Without that title. Romeo, doff thy name; And for thy name, which is no part of thee, Take all myself.\n\n\n\nThis\nis\nnot\ntrue\nfor\nfile\nnames.\n\n\n\nFrom Danielle Navarro’s Project Structure slides\nhttps://slides.djnavarro.net/"
+  },
+  {
+    "objectID": "slides/project-oriented.html#names-matter-1",
+    "href": "slides/project-oriented.html#names-matter-1",
+    "title": "Project Oriented Workflows",
+    "section": "Names matter",
+    "text": "Names matter\n\nmachine readable\n\nhuman readable\n\nsort nicely"
+  },
+  {
+    "objectID": "slides/project-oriented.html#section-6",
+    "href": "slides/project-oriented.html#section-6",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "What features differentiate 😔 vs 😍?\n\n\n\n\n\n😔\n\n\n\n\n😍\n\n\n\n\nmyabstract.docx\nJoe’s Filenames Use Spaces and Punctuation.xlsx\nfigure 1.png\nhomework1.R\nJW7d^(2sl@deletethisandyourcareerisoverWx2*.txt\n\n2018-01_bryan-abstract-rstudio-conf.docx\njoes-filenames-are-getting-better.xlsx\nfig01_scatterplot-talk-length-vs-interest.png\nbryan_hw01.R\n1986-01-28_raw-data-from-challenger-o-rings.txt\n\n\n\n\n\n−+\n01:00"
+  },
+  {
+    "objectID": "slides/project-oriented.html#names-machines-like",
+    "href": "slides/project-oriented.html#names-machines-like",
+    "title": "Project Oriented Workflows",
+    "section": "Names machines like",
+    "text": "Names machines like\n\ndon’t leave white space\n\n\n\nuse letters, numbers, hyphens and underscores… that’s it  (characters like ^.*?+|$ can have a special meaning)\n\n\n\n\nbe consistent with case  (some operating systems treat a and A the same, some differently).\n\n\n\n\nuse separator characters wisely\n\n    use underscore _ to separate different chunks\n    use hyphen - for words in the same chunk\n\n\n\nThis creates names that are regular expression and globbing friendly, and easy to compute on! 🎉\n\nAdapted from  https://djnavarro.net/slides-project-structure/#1."
+  },
+  {
+    "objectID": "slides/project-oriented.html#names-humans-like",
+    "href": "slides/project-oriented.html#names-humans-like",
+    "title": "Project Oriented Workflows",
+    "section": "Names humans like",
+    "text": "Names humans like\n\nname contains info on content\nname anticipates context\nconcept of a slug 🐌 from user-friendly URLs\n\n1986-01-28_raw-data-from-challenger-o-rings.txt\nconcise, meaningful description\nusually appended to the end\n\n\nNote: A URL slug is the part of the URL after the last backslash - important for keyword SEO"
+  },
+  {
+    "objectID": "slides/project-oriented.html#names-that-sort-nicely",
+    "href": "slides/project-oriented.html#names-that-sort-nicely",
+    "title": "Project Oriented Workflows",
+    "section": "Names that sort nicely",
+    "text": "Names that sort nicely\n\nput something numeric in there\nleft pad with zeros for constant width, nice sorting, 01\nuse the ISO 8601 standard for dates, YYYY-MM-DD\norder = chronological or … consider common sense"
+  },
+  {
+    "objectID": "slides/project-oriented.html#iso-8601",
+    "href": "slides/project-oriented.html#iso-8601",
+    "title": "Project Oriented Workflows",
+    "section": "ISO 8601",
+    "text": "ISO 8601\n\n\n\n\n\n\n\nYYYY-MM-DD\nISO 8601\n\nhttps://www.iso.org/iso-8601-date-and-time-format.html\n\n\n\nhttps://twitter.com/JennyBryan/status/816143967695687684"
+  },
+  {
+    "objectID": "slides/project-oriented.html#file-names",
+    "href": "slides/project-oriented.html#file-names",
+    "title": "Project Oriented Workflows",
+    "section": "👍 file names",
+    "text": "👍 file names\n\n\nAnyone can guess at file’s purpose"
+  },
+  {
+    "objectID": "slides/project-oriented.html#file-names-1",
+    "href": "slides/project-oriented.html#file-names-1",
+    "title": "Project Oriented Workflows",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nEasy to filter in R (or the shell or whatever)"
+  },
+  {
+    "objectID": "slides/project-oriented.html#file-names-2",
+    "href": "slides/project-oriented.html#file-names-2",
+    "title": "Project Oriented Workflows",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nIntentional delimiters means meta-data is easily recovered.\n_ delimits fields; - delimits words"
+  },
+  {
+    "objectID": "slides/project-oriented.html#file-names-3",
+    "href": "slides/project-oriented.html#file-names-3",
+    "title": "Project Oriented Workflows",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nSorts in the same order as you  experience in real life."
+  },
+  {
+    "objectID": "slides/project-oriented.html#names-matter-2",
+    "href": "slides/project-oriented.html#names-matter-2",
+    "title": "Project Oriented Workflows",
+    "section": "Names matter",
+    "text": "Names matter\n\nmachine readable, human readable, and sort nicely\n\n\neasy to implement NOW\n\npayoffs accumulate as your skills evolve and  projects get more complex"
+  },
+  {
+    "objectID": "slides/project-oriented.html#break-logic-and-output-into-pieces",
+    "href": "slides/project-oriented.html#break-logic-and-output-into-pieces",
+    "title": "Project Oriented Workflows",
+    "section": "Break logic and output into pieces",
+    "text": "Break logic and output into pieces"
+  },
+  {
+    "objectID": "slides/project-oriented.html#process",
+    "href": "slides/project-oriented.html#process",
+    "title": "Project Oriented Workflows",
+    "section": "Process",
+    "text": "Process\n\n\nhttps://r4ds.had.co.nz/introduction.html#what-you-will-learn"
+  },
+  {
+    "objectID": "slides/project-oriented.html#project-code",
+    "href": "slides/project-oriented.html#project-code",
+    "title": "Project Oriented Workflows",
+    "section": "Project code",
+    "text": "Project code\n\n\nsmell.test.R\nwrangle.R\nmodel.R\nmake-figs.R\nreport.Rmd\n\n\n&gt;&gt;&gt;\n\n\n    everything.R"
+  },
+  {
+    "objectID": "slides/project-oriented.html#process-and-code",
+    "href": "slides/project-oriented.html#process-and-code",
+    "title": "Project Oriented Workflows",
+    "section": "Process and code",
+    "text": "Process and code"
+  },
+  {
+    "objectID": "slides/project-oriented.html#project-artifacts",
+    "href": "slides/project-oriented.html#project-artifacts",
+    "title": "Project Oriented Workflows",
+    "section": "Project artifacts",
+    "text": "Project artifacts\n\n\nraw-data.xlsx\ndata.csv\nfit.rds\nests.csv\n\n\n&gt;&gt;&gt;\n\n\n.Rdata"
+  },
+  {
+    "objectID": "slides/project-oriented.html#process-and-artifacts",
+    "href": "slides/project-oriented.html#process-and-artifacts",
+    "title": "Project Oriented Workflows",
+    "section": "Process and artifacts",
+    "text": "Process and artifacts"
+  },
+  {
+    "objectID": "slides/project-oriented.html#a-humane-api-for-analysis",
+    "href": "slides/project-oriented.html#a-humane-api-for-analysis",
+    "title": "Project Oriented Workflows",
+    "section": "A humane API for analysis",
+    "text": "A humane API for analysis"
+  },
+  {
+    "objectID": "slides/project-oriented.html#your-turn-1",
+    "href": "slides/project-oriented.html#your-turn-1",
+    "title": "Project Oriented Workflows",
+    "section": "Your turn",
+    "text": "Your turn\n\nCreate a report that adheres to project organization strategies.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-packages-report\")\n# use_course(\"rstats-wtf/wtf-packages-report\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-packages-report\n\n Read the README.md to get started.\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "slides/project-oriented.html#why-do-we-care-about-project-management-in-r",
+    "href": "slides/project-oriented.html#why-do-we-care-about-project-management-in-r",
+    "title": "Project Oriented Workflows",
+    "section": "Why do we care about project management (in R)?",
+    "text": "Why do we care about project management (in R)?\n\n\nWhy\nPortability\nThe ability to move the project without breaking code or needing adapting\n\nyou will change computers\nyou will reorganise your file structure\nyou will share your code with others\n\n\n\n\nReproducibility\nThe ability to rerun the entire process from scratch\n\nnot just for reviews\nnot just for best-practice science\nalso for future (or even present) you\nand for your collaborators/helpers"
+  },
+  {
+    "objectID": "slides/project-oriented.html#project-workflows",
+    "href": "slides/project-oriented.html#project-workflows",
+    "title": "Project Oriented Workflows",
+    "section": "Project workflows",
+    "text": "Project workflows\n\nAll necessary files contained in the project and referenced relatively\nAll necessary outputs are created by code in the project\nAll code can be run in fresh sessions and produce the same output\nDoes not force other users to alter their own work setup"
+  },
+  {
+    "objectID": "slides/project-oriented.html#why-do-we-care-about-project-management",
+    "href": "slides/project-oriented.html#why-do-we-care-about-project-management",
+    "title": "Project Oriented Workflows",
+    "section": "Why do we care about project management?",
+    "text": "Why do we care about project management?\n\n\nPortability\nThe ability to move the project without breaking code or needing adapting\n\nyou will change computers\nyou will reorganise your file structure\nyou will share your code with others\n\n\n\n\n\nReproducibility\nThe ability to rerun the entire process from scratch\n\nnot just for reviews\nnot just for best-practice science\nalso for future (or even present) you\nand for your collaborators/helpers"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#checklist",
+    "href": "slides/02_project-oriented.html#checklist",
+    "title": "Project Oriented Workflows",
+    "section": "Checklist",
+    "text": "Checklist\n\n R installed? Pretty recent?\n     Recommended R ≥ 4.3.0\n RStudio installed?\n     I’m on 2023.06.1 Build 524     \n Packages?\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"usethis\", \"fs\", \"here\"))"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#resources",
+    "href": "slides/02_project-oriented.html#resources",
+    "title": "Project Oriented Workflows",
+    "section": "Resources",
+    "text": "Resources\n\nBook: https://rstats.wtf"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#section",
+    "href": "slides/02_project-oriented.html#section",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "What Did They Forget  to Teach You?"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#learning-objectives",
+    "href": "slides/02_project-oriented.html#learning-objectives",
+    "title": "Project Oriented Workflows",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nEstablish the concept of the project as the basic organizational unit of work.\nApply best practices in and leverage benefits of working in RStudio projects, including\n\n\nCreating robust file paths that travel well in time and space.\nConstructing human and machine readable file names that sort nicely.\nDifferentiating workflow elements, analysis inputs, and analysis outputs in project structure to create navigable programming interfaces.\nRestarting R frequently, with a blank slate."
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#why-do-we-care-about-project-management",
+    "href": "slides/02_project-oriented.html#why-do-we-care-about-project-management",
+    "title": "Project Oriented Workflows",
+    "section": "Why do we care about project management?",
+    "text": "Why do we care about project management?\n\n\nPortability\nThe ability to move the project without breaking code or needing adapting\n\nyou will change computers\nyou will reorganise your file structure\nyou will share your code with others\n\n\n\n\n\nReproducibility\nThe ability to rerun the entire process from scratch\n\nnot just for reviews\nnot just for best-practice science\nalso for future (or even present) you\nand for your collaborators/helpers"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#be-organized-as-you-go-not-tomorrow",
+    "href": "slides/02_project-oriented.html#be-organized-as-you-go-not-tomorrow",
+    "title": "Project Oriented Workflows",
+    "section": "Be organized as you go,  not “tomorrow”",
+    "text": "Be organized as you go,  not “tomorrow”\n\n\nDon’t fret over past mistakes.\n\n\n\n\nRaise the bar for new work."
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#be-organized-1",
+    "href": "slides/02_project-oriented.html#be-organized-1",
+    "title": "Project Oriented Workflows",
+    "section": "Be organized",
+    "text": "Be organized\n\n\n\nself-explaining &gt;&gt;&gt; wordy, needy explainers"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#be-organized-2",
+    "href": "slides/02_project-oriented.html#be-organized-2",
+    "title": "Project Oriented Workflows",
+    "section": "Be organized",
+    "text": "Be organized\n\n\n\n\n\n&gt;&gt;&gt;\n\n\n  file salad    + an out of date README"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#good-enough-practices-in-scientific-computing",
+    "href": "slides/02_project-oriented.html#good-enough-practices-in-scientific-computing",
+    "title": "Project Oriented Workflows",
+    "section": "Good enough practices in scientific computing",
+    "text": "Good enough practices in scientific computing\n\n\n\n\n\n\nPLOS Computational Biology\nWilson, Bryan, Cranston, Kitzes, Nederbragt, Teal (2017)\nhttps://doi.org/10.1371/journal.pcbi.1005510\nhttp://bit.ly/good-enuff"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#your-r-installation",
+    "href": "slides/02_project-oriented.html#your-r-installation",
+    "title": "Project Oriented Workflows",
+    "section": "Your R installation",
+    "text": "Your R installation\n\nR packages\n\nthe natural unit for distributing R code\n\n\n\nbase R\n\n14 base + 15 recommended packages\nships with all binary distributions of R\n\n\n\nFor example, have you used lattice recently? 🤷\n\nit came with your R installation, can use out of the box\nlibrary(lattice)"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#additional-packages",
+    "href": "slides/02_project-oriented.html#additional-packages",
+    "title": "Project Oriented Workflows",
+    "section": "Additional packages",
+    "text": "Additional packages\n\n\n\nCRAN, ~20k packages\n\n# install from CRAN\ninstall.packages(\"remotes\")\n# attach\nlibrary(remotes)\n\n\n\n\nGitHub, ??? packages\n\n# install via remotes\nremotes::install_github(\"rstats-wtf/wtfdbg\")\n# attach\nlibrary(wtfdbg)\n\n\n\n\nwe’ll use wtfdbg later in Debugging"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#where-do-packages-live-locally",
+    "href": "slides/02_project-oriented.html#where-do-packages-live-locally",
+    "title": "Project Oriented Workflows",
+    "section": "Where do packages live locally?",
+    "text": "Where do packages live locally?\n\nBy default, in the default library\n.Library\n\nAll libraries for the current session\n.libPaths()\n\nAll installed packages\ninstalled.packages()"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#syntax-aside-pipes",
+    "href": "slides/02_project-oriented.html#syntax-aside-pipes",
+    "title": "Project Oriented Workflows",
+    "section": "Syntax aside: pipes",
+    "text": "Syntax aside: pipes\n\n2014+ magrittr pipe %&gt;%\n2021+ (R \\(\\geq\\) 4.1.0) native R pipe |&gt;\n\n2022 Isabella Velásquez Understanding the native R pipe |&gt; https://ivelasq.rbind.io/blog/understanding-the-r-pipe/\n\n\n\n\n\nwhatever(arg1, arg2, arg3, ...)\narg1 |&gt;  \n  whatever(arg2, arg3)\n\n\n\n\n\nmean(0:10)\n0:10 |&gt; \n  mean()\n\n\n\n\nChange CTRL + Shift + M shortcut to native pipe:\nTools -&gt; Global Options -&gt; Code -&gt;\n   Editing -&gt; check Use Native Pipe Operator"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#syntax-aside-namespacing",
+    "href": "slides/02_project-oriented.html#syntax-aside-namespacing",
+    "title": "Project Oriented Workflows",
+    "section": "Syntax aside: namespacing",
+    "text": "Syntax aside: namespacing\ndplyr::select()\n\ntells R explicitly to use the function select from the package dplyr\ncan help to avoid name conflicts (e.g., MASS::select())\ndoes not require library(dplyr)\n\n\n\n\n\nlibrary(dplyr)\nselect(mtcars, mpg, cyl) \nmtcars |&gt;  \n  select(mpg, cyl) \n\n\n\n\n\n# library(dplyr) not needed\ndplyr::select(mtcars, mpg, cyl) \nmtcars |&gt;  \n  dplyr::select(mpg, cyl)"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#explore-your-r-installation",
+    "href": "slides/02_project-oriented.html#explore-your-r-installation",
+    "title": "Project Oriented Workflows",
+    "section": "🧐 Explore your R installation",
+    "text": "🧐 Explore your R installation\n\ninstall.packages(\"usethis\")\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-explore-libraries\")\n# use_course(\"rstats-wtf/wtf-explore-libraries\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-explore-libraries\n\n\nRead the README.md to get started.\n\n01_explore-libraries_spartan.R  (directions to explore without suggested code)\n01_explore-libraries_comfy.R (directions to explore with suggested code)\n01_explore-libraries_solution.R (directions to explore with code solutions)\n\n\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#adopt-a-project-oriented-workflow",
+    "href": "slides/02_project-oriented.html#adopt-a-project-oriented-workflow",
+    "title": "Project Oriented Workflows",
+    "section": "Adopt a project-oriented workflow",
+    "text": "Adopt a project-oriented workflow\n\n\n\nWhy\n\nwork on more than 1 thing at a time\ncollaborate, communicate, distribute\nstart and stop\n\n\n\n\n\nHow\n\ndedicated directory\nRStudio Project\nGit repo, probably syncing to a remote"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#project-workflows",
+    "href": "slides/02_project-oriented.html#project-workflows",
+    "title": "Project Oriented Workflows",
+    "section": "Project workflows",
+    "text": "Project workflows\n\nAll necessary files contained in the project and referenced relatively\nAll necessary outputs are created by code in the project\nAll code can be run in fresh sessions and produce the same output\nDoes not force other users to alter their own work setup"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#if-the-top-of-your-script-is",
+    "href": "slides/02_project-oriented.html#if-the-top-of-your-script-is",
+    "title": "Project Oriented Workflows",
+    "section": "If the top of your script is",
+    "text": "If the top of your script is\n\n\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nrm(list = ls())\n\n\nJenny will come into your your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\nProject-oriented workflow designs this away. 🙌\n\n\nhttps://twitter.com/hadleywickham/status/940021008764846080\nhttps://www.tidyverse.org/articles/2017/12/workflow-vs-script/\nhttps://rstats.wtf/project-oriented-workflow.html"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#which-persist-after-rmlist-ls",
+    "href": "slides/02_project-oriented.html#which-persist-after-rmlist-ls",
+    "title": "Project Oriented Workflows",
+    "section": "Which persist after rm(list = ls())?",
+    "text": "Which persist after rm(list = ls())?\n\n\n\n\n\n\n\nOption\nPersists?\n\n\n\n\nA. library(dplyr)\n\n\n\nB. summary &lt;- head\n\n\n\nC. options(stringsAsFactors = FALSE)\n\n\n\nD. Sys.setenv(LANGUAGE = “fr”)\n\n\n\nE. x &lt;- 1:5\n\n\n\nF. attach(iris)\n\n\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#which-persist-after-rmlist-ls-1",
+    "href": "slides/02_project-oriented.html#which-persist-after-rmlist-ls-1",
+    "title": "Project Oriented Workflows",
+    "section": "Which persist after rm(list = ls())?",
+    "text": "Which persist after rm(list = ls())?\n\n\n\n\n\n\n\nOption\nPersists?\n\n\n\n\nA. library(dplyr)\n\n\n\nB. summary &lt;- head\n\n\n\nC. options(stringsAsFactors = FALSE)\n\n\n\nD. Sys.setenv(LANGUAGE = “fr”)\n\n\n\nE. x &lt;- 1:5\n\n\n\nF. attach(iris)"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#what-does-it-mean-to-be-an-rstudio-project",
+    "href": "slides/02_project-oriented.html#what-does-it-mean-to-be-an-rstudio-project",
+    "title": "Project Oriented Workflows",
+    "section": "What does it mean to be an RStudio Project?",
+    "text": "What does it mean to be an RStudio Project?\n\nRStudio leaves notes to itself in foo.Rproj\n\n\nOpen Project = dedicated instance of RStudio\n\ndedicated R process\nfile browser pointed at Project directory\nworking directory set to Project directory"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#many-projects-open",
+    "href": "slides/02_project-oriented.html#many-projects-open",
+    "title": "Project Oriented Workflows",
+    "section": "Many projects open",
+    "text": "Many projects open"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#use-a-blank-slate",
+    "href": "slides/02_project-oriented.html#use-a-blank-slate",
+    "title": "Project Oriented Workflows",
+    "section": "Use a “blank slate”",
+    "text": "Use a “blank slate”\n\n\nusethis::use_blank_slate()\n\n\nOR\n\nTools -&gt; Global Options"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#restart-r-often",
+    "href": "slides/02_project-oriented.html#restart-r-often",
+    "title": "Project Oriented Workflows",
+    "section": "Restart R often",
+    "text": "Restart R often\n\n\n\nSession -&gt; Restart R\n\n\n\n\nWindows\n\nCtrl + Shift + F10\n\nMac\n\nCmd + Shift + 0\nCmd + Shift + F10"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#project-initiation-the-local-case",
+    "href": "slides/02_project-oriented.html#project-initiation-the-local-case",
+    "title": "Project Oriented Workflows",
+    "section": "Project initiation: the local case",
+    "text": "Project initiation: the local case\n\nNew folder + make it an RStudio Project\n\n\nusethis::create_project(\"~/i_am_new\")\nFile -&gt; New Project -&gt; New Directory -&gt; New Project\n\n\n\nMake existing folder into an RStudio Project\n\n\nusethis::create_project(\"~/i_exist\")\nFile -&gt; New Project -&gt; Existing Directory\n\n\n\n\nTry option 2 now for wtf-explore-libraries.\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#on-reproducibility-of-code",
+    "href": "slides/02_project-oriented.html#on-reproducibility-of-code",
+    "title": "Project Oriented Workflows",
+    "section": "On reproducibility of code",
+    "text": "On reproducibility of code\n\n\n\n\n\n\n A large-scale study on research code quality and execution.  Trisovic, A., Lau, M.K., Pasquier, T. et al.  Sci Data 9, 60 (2022).\n\n\n\nhttps://twitter.com/kjhealy/status/1514169782060429320  https://doi.org/10.1038/s41597-022-01143-6"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#do-you-know-where-your-files-are",
+    "href": "slides/02_project-oriented.html#do-you-know-where-your-files-are",
+    "title": "Project Oriented Workflows",
+    "section": "Do you know where your files are?",
+    "text": "Do you know where your files are?\n\n\nWorking directory is associated with a specific process or running application.\nFor a newly launched process or application instance, the working directory (probably? usually?) defaults to user’s home directory. Or perhaps the application consults a config file to set the working directory at launch time. This is sort of how I would describe launching an RStudio Project.\n“Working directory” as a concept is not comparable to “home directory”. “Home directory” is a static, persistent thing."
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#practice-safe-paths",
+    "href": "slides/02_project-oriented.html#practice-safe-paths",
+    "title": "Project Oriented Workflows",
+    "section": "Practice “safe paths”",
+    "text": "Practice “safe paths”\n\nrelative to a stable base\n\nuse file system functions\n    not paste(), strsplit(), etc."
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#packages-with-file-system-functions",
+    "href": "slides/02_project-oriented.html#packages-with-file-system-functions",
+    "title": "Project Oriented Workflows",
+    "section": "Packages with file system functions",
+    "text": "Packages with file system functions\n\n\ninstall.packages(\"fs\")\n\nfs = file path handling\n\n\n\ninstall.packages(\"here\")\n\nhere = project-relative paths"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#examples-of-a-stable-base",
+    "href": "slides/02_project-oriented.html#examples-of-a-stable-base",
+    "title": "Project Oriented Workflows",
+    "section": "Examples of a stable base",
+    "text": "Examples of a stable base\n\nProject directory\n\nhere::here(\"data\", \"raw-data.csv\")\nhere::here(\"data/raw-data.csv\")\n\nAutomatically complete paths with Tab.\n\n\nUser’s home directory\n\nfile.path(\"~\", ...)\nfs::path_home(...)\n\n\n\n\nOfficial location for installed software\n\nlibrary(thingy)\nsystem.file(..., package = \"thingy\")\n\nSee example in gapminder readme.\n\nsee where tilde goes with fs::path_expand(file.path(“~”))"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#absolute-paths",
+    "href": "slides/02_project-oriented.html#absolute-paths",
+    "title": "Project Oriented Workflows",
+    "section": "Absolute paths",
+    "text": "Absolute paths\nI have nothing against absolute paths.\nSome of my best friends are absolute paths!\nBut don’t hard-wire them into your scripts.\nInstead, form at runtime relative to a stable base\n\n\n&gt; (BAD &lt;- \"/Users/shannon/tmp/test.csv\")\n[1] \"/Users/shannon/tmp/test.csv\"\n\n\n\n\n&gt; (GOOD &lt;- fs::path_home(\"tmp/test.csv\")\n[1] \"/Users/shannon/tmp/test.csv\""
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#practice-safe-paths-1",
+    "href": "slides/02_project-oriented.html#practice-safe-paths-1",
+    "title": "Project Oriented Workflows",
+    "section": "Practice safe paths",
+    "text": "Practice safe paths\n\n\n\n\n\n\n\nUse the here package to build paths inside a project.\nLeave working directory at top-level at all times, during development.\nAbsolute paths are formed at runtime.\n\n\n\n\nArtwork by @allison_horst."
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#here-example",
+    "href": "slides/02_project-oriented.html#here-example",
+    "title": "Project Oriented Workflows",
+    "section": "here example",
+    "text": "here example\n\nggsave(here::here(\"figs\", \"built-barchart.png\"))\n\n\nWorks on my machine, works on yours!\nWorks even if working directory is in a sub-folder.\nWorks for RStudio Projects, Git repos, R packages, etc.\nWorks with knitr / rmarkdown."
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#herehere",
+    "href": "slides/02_project-oriented.html#herehere",
+    "title": "Project Oriented Workflows",
+    "section": "here::here()",
+    "text": "here::here()\nThe here package is designed to work inside a project, where that could mean:\n\nRStudio Project\nGit repo\nR package\nFolder with a file named .here\n\nhere::here() does not create directories; that’s your job."
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#kinds-of-paths",
+    "href": "slides/02_project-oriented.html#kinds-of-paths",
+    "title": "Project Oriented Workflows",
+    "section": "Kinds of paths",
+    "text": "Kinds of paths\nAbsolute path.\n\ndat &lt;- read.csv(\"C:/Users/pileggis/Documents/wtf-fix-paths/data/installed-packages.csv\")\n\n\nRelative path to working directory, established by the RStudio Project.\n\ndat &lt;- read.csv(\"data/installed-packages.csv\")\n\n\nRelative path within the RStudio Project directory.\n\ndat &lt;- read.csv(here::here(\"data/installed-packages.csv\"))"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#your-turn",
+    "href": "slides/02_project-oriented.html#your-turn",
+    "title": "Project Oriented Workflows",
+    "section": "Your turn",
+    "text": "Your turn\n\nPractice calling here::here() in a project  to get a feel for it.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-fix-paths\")\n# use_course(\"rstats-wtf/wtf-fix-paths\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-fix-paths\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#what-if-my-data-cant-live-in-my-project-directory",
+    "href": "slides/02_project-oriented.html#what-if-my-data-cant-live-in-my-project-directory",
+    "title": "Project Oriented Workflows",
+    "section": "What if my data can’t live in my project directory?",
+    "text": "What if my data can’t live in my project directory?\n\nAre you sure it can’t?\nReview the Good Enough Practices paper for tips.\nCreate a symbolic link to access the data. (fs::link_create(), fs::link_path())\nPut the data in an R package.\nUse pins.\nExplore other data warehousing options.\n\nRStudio Community threads:\n\nProject-oriented workflow; setwd(), rm(list = ls()) and computer fires\nBest way to define paths for a file running on a cron?"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#section-5",
+    "href": "slides/02_project-oriented.html#section-5",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "’Tis but thy name that is my enemy; Thou art thyself, though not a Montague. What’s Montague? It is nor hand, nor foot, Nor arm, nor face, nor any other part Belonging to a man. O, be some other name! What’s in a name? That which we call a rose By any other name would smell as sweet; So Romeo would, were he not Romeo call’d, Retain that dear perfection which he owes Without that title. Romeo, doff thy name; And for thy name, which is no part of thee, Take all myself.\n\n\n\nThis\nis\nnot\ntrue\nfor\nfile\nnames.\n\n\n\nFrom Danielle Navarro’s Project Structure slides\nhttps://slides.djnavarro.net/"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#names-matter-1",
+    "href": "slides/02_project-oriented.html#names-matter-1",
+    "title": "Project Oriented Workflows",
+    "section": "Names matter",
+    "text": "Names matter\n\nmachine readable\n\nhuman readable\n\nsort nicely"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#section-6",
+    "href": "slides/02_project-oriented.html#section-6",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "What features differentiate 😔 vs 😍?\n\n\n\n\n\n😔\n\n\n\n\n😍\n\n\n\n\nmyabstract.docx\nJoe’s Filenames Use Spaces and Punctuation.xlsx\nfigure 1.png\nhomework1.R\nJW7d^(2sl@deletethisandyourcareerisoverWx2*.txt\n\n2018-01_bryan-abstract-rstudio-conf.docx\njoes-filenames-are-getting-better.xlsx\nfig01_scatterplot-talk-length-vs-interest.png\nbryan_hw01.R\n1986-01-28_raw-data-from-challenger-o-rings.txt\n\n\n\n\n\n−+\n01:00"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#names-machines-like",
+    "href": "slides/02_project-oriented.html#names-machines-like",
+    "title": "Project Oriented Workflows",
+    "section": "Names machines like",
+    "text": "Names machines like\n\ndon’t leave white space\n\n\n\nuse letters, numbers, hyphens and underscores… that’s it  (characters like ^.*?+|$ can have a special meaning)\n\n\n\n\nbe consistent with case  (some operating systems treat a and A the same, some differently).\n\n\n\n\nuse separator characters wisely\n\n    use underscore _ to separate different chunks\n    use hyphen - for words in the same chunk\n\n\n\nThis creates names that are regular expression and globbing friendly, and easy to compute on! 🎉\n\nAdapted from  https://djnavarro.net/slides-project-structure/#1."
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#names-humans-like",
+    "href": "slides/02_project-oriented.html#names-humans-like",
+    "title": "Project Oriented Workflows",
+    "section": "Names humans like",
+    "text": "Names humans like\n\nname contains info on content\nname anticipates context\nconcept of a slug 🐌 from user-friendly URLs\n\n1986-01-28_raw-data-from-challenger-o-rings.txt\nconcise, meaningful description\nusually appended to the end\n\n\nNote: A URL slug is the part of the URL after the last backslash - important for keyword SEO"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#names-that-sort-nicely",
+    "href": "slides/02_project-oriented.html#names-that-sort-nicely",
+    "title": "Project Oriented Workflows",
+    "section": "Names that sort nicely",
+    "text": "Names that sort nicely\n\nput something numeric in there\nleft pad with zeros for constant width, nice sorting, 01\nuse the ISO 8601 standard for dates, YYYY-MM-DD\norder = chronological or … consider common sense"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#iso-8601",
+    "href": "slides/02_project-oriented.html#iso-8601",
+    "title": "Project Oriented Workflows",
+    "section": "ISO 8601",
+    "text": "ISO 8601\n\n\n\n\n\n\n\nYYYY-MM-DD\nISO 8601\n\nhttps://www.iso.org/iso-8601-date-and-time-format.html\n\n\n\nhttps://twitter.com/JennyBryan/status/816143967695687684"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#file-names",
+    "href": "slides/02_project-oriented.html#file-names",
+    "title": "Project Oriented Workflows",
+    "section": "👍 file names",
+    "text": "👍 file names\n\n\nAnyone can guess at file’s purpose"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#file-names-1",
+    "href": "slides/02_project-oriented.html#file-names-1",
+    "title": "Project Oriented Workflows",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nEasy to filter in R (or the shell or whatever)"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#file-names-2",
+    "href": "slides/02_project-oriented.html#file-names-2",
+    "title": "Project Oriented Workflows",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nIntentional delimiters means meta-data is easily recovered.\n_ delimits fields; - delimits words"
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#file-names-3",
+    "href": "slides/02_project-oriented.html#file-names-3",
+    "title": "Project Oriented Workflows",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nSorts in the same order as you  experience in real life."
+  },
+  {
+    "objectID": "slides/02_project-oriented.html#names-matter-2",
+    "href": "slides/02_project-oriented.html#names-matter-2",
+    "title": "Project Oriented Workflows",
+    "section": "Names matter",
+    "text": "Names matter\n\nmachine readable, human readable, and sort nicely\n\n\neasy to implement NOW\n\npayoffs accumulate as your skills evolve and  projects get more complex"
+  },
+  {
+    "objectID": "slides/introduction.html#checklist",
+    "href": "slides/introduction.html#checklist",
+    "title": "Introduction",
+    "section": "Checklist",
+    "text": "Checklist\n\n R installed? Pretty recent?\n     Recommended R ≥ 4.3.0\n RStudio installed?\n     I’m on 2023.06.1 Build 524     \n Packages?\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"usethis\", \"fs\", \"here\"))"
+  },
+  {
+    "objectID": "slides/introduction.html#resources",
+    "href": "slides/introduction.html#resources",
+    "title": "Introduction",
+    "section": "Resources",
+    "text": "Resources\n\nBook: https://rstats.wtf"
+  },
+  {
+    "objectID": "slides/introduction.html#section",
+    "href": "slides/introduction.html#section",
+    "title": "Introduction",
+    "section": "",
+    "text": "What Did They Forget  to Teach You?"
+  },
+  {
+    "objectID": "slides/introduction.html#learning-objectives",
+    "href": "slides/introduction.html#learning-objectives",
+    "title": "Introduction",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nEstablish the concept of the project as the basic organizational unit of work.\nApply best practices in and leverage benefits of working in RStudio projects, including\n\n\nCreating robust file paths that travel well in time and space.\nConstructing human and machine readable file names that sort nicely.\nDifferentiating workflow elements, analysis inputs, and analysis outputs in project structure to create navigable programming interfaces.\nRestarting R frequently, with a blank slate."
+  },
+  {
+    "objectID": "slides/introduction.html#why-do-we-care-about-project-management",
+    "href": "slides/introduction.html#why-do-we-care-about-project-management",
+    "title": "Introduction",
+    "section": "Why do we care about project management?",
+    "text": "Why do we care about project management?\n\n\nPortability\nThe ability to move the project without breaking code or needing adapting\n\nyou will change computers\nyou will reorganise your file structure\nyou will share your code with others\n\n\n\n\n\nReproducibility\nThe ability to rerun the entire process from scratch\n\nnot just for reviews\nnot just for best-practice science\nalso for future (or even present) you\nand for your collaborators/helpers"
+  },
+  {
+    "objectID": "slides/introduction.html#be-organized-as-you-go-not-tomorrow",
+    "href": "slides/introduction.html#be-organized-as-you-go-not-tomorrow",
+    "title": "Introduction",
+    "section": "Be organized as you go,  not “tomorrow”",
+    "text": "Be organized as you go,  not “tomorrow”\n\n\nDon’t fret over past mistakes.\n\n\n\n\nRaise the bar for new work."
+  },
+  {
+    "objectID": "slides/introduction.html#be-organized-1",
+    "href": "slides/introduction.html#be-organized-1",
+    "title": "Introduction",
+    "section": "Be organized",
+    "text": "Be organized\n\n\n\nself-explaining &gt;&gt;&gt; wordy, needy explainers"
+  },
+  {
+    "objectID": "slides/introduction.html#be-organized-2",
+    "href": "slides/introduction.html#be-organized-2",
+    "title": "Introduction",
+    "section": "Be organized",
+    "text": "Be organized\n\n\n\n\n\n&gt;&gt;&gt;\n\n\n  file salad    + an out of date README"
+  },
+  {
+    "objectID": "slides/introduction.html#good-enough-practices-in-scientific-computing",
+    "href": "slides/introduction.html#good-enough-practices-in-scientific-computing",
+    "title": "Introduction",
+    "section": "Good enough practices in scientific computing",
+    "text": "Good enough practices in scientific computing\n\n\n\n\n\n\nPLOS Computational Biology\nWilson, Bryan, Cranston, Kitzes, Nederbragt, Teal (2017)\nhttps://doi.org/10.1371/journal.pcbi.1005510\nhttp://bit.ly/good-enuff"
+  },
+  {
+    "objectID": "slides/introduction.html#your-r-installation",
+    "href": "slides/introduction.html#your-r-installation",
+    "title": "Introduction",
+    "section": "Your R installation",
+    "text": "Your R installation\n\nR packages\n\nthe natural unit for distributing R code\n\n\n\nbase R\n\n14 base + 15 recommended packages\nships with all binary distributions of R\n\n\n\nFor example, have you used lattice recently? 🤷\n\nit came with your R installation, can use out of the box\nlibrary(lattice)"
+  },
+  {
+    "objectID": "slides/introduction.html#additional-packages",
+    "href": "slides/introduction.html#additional-packages",
+    "title": "Introduction",
+    "section": "Additional packages",
+    "text": "Additional packages\n\n\n\nCRAN, ~20k packages\n\n# install from CRAN\ninstall.packages(\"remotes\")\n# attach\nlibrary(remotes)\n\n\n\n\nGitHub, ??? packages\n\n# install via remotes\nremotes::install_github(\"rstats-wtf/wtfdbg\")\n# attach\nlibrary(wtfdbg)\n\n\n\n\nwe’ll use wtfdbg later in Debugging"
+  },
+  {
+    "objectID": "slides/introduction.html#where-do-packages-live-locally",
+    "href": "slides/introduction.html#where-do-packages-live-locally",
+    "title": "Introduction",
+    "section": "Where do packages live locally?",
+    "text": "Where do packages live locally?\n\nBy default, in the default library\n.Library\n\nAll libraries for the current session\n.libPaths()\n\nAll installed packages\ninstalled.packages()"
+  },
+  {
+    "objectID": "slides/introduction.html#syntax-aside-pipes",
+    "href": "slides/introduction.html#syntax-aside-pipes",
+    "title": "Introduction",
+    "section": "Syntax aside: pipes",
+    "text": "Syntax aside: pipes\n\n2014+ magrittr pipe %&gt;%\n2021+ (R \\(\\geq\\) 4.1.0) native R pipe |&gt;\n\n2022 Isabella Velásquez Understanding the native R pipe |&gt; https://ivelasq.rbind.io/blog/understanding-the-r-pipe/\n\n\n\n\n\nwhatever(arg1, arg2, arg3, ...)\narg1 |&gt;  \n  whatever(arg2, arg3)\n\n\n\n\n\nmean(0:10)\n0:10 |&gt; \n  mean()\n\n\n\n\nChange CTRL + Shift + M shortcut to native pipe:\nTools -&gt; Global Options -&gt; Code -&gt;\n   Editing -&gt; check Use Native Pipe Operator"
+  },
+  {
+    "objectID": "slides/introduction.html#syntax-aside-namespacing",
+    "href": "slides/introduction.html#syntax-aside-namespacing",
+    "title": "Introduction",
+    "section": "Syntax aside: namespacing",
+    "text": "Syntax aside: namespacing\ndplyr::select()\n\ntells R explicitly to use the function select from the package dplyr\ncan help to avoid name conflicts (e.g., MASS::select())\ndoes not require library(dplyr)\n\n\n\n\n\nlibrary(dplyr)\nselect(mtcars, mpg, cyl) \nmtcars |&gt;  \n  select(mpg, cyl) \n\n\n\n\n\n# library(dplyr) not needed\ndplyr::select(mtcars, mpg, cyl) \nmtcars |&gt;  \n  dplyr::select(mpg, cyl)"
+  },
+  {
+    "objectID": "slides/introduction.html#explore-your-r-installation",
+    "href": "slides/introduction.html#explore-your-r-installation",
+    "title": "Introduction",
+    "section": "🧐 Explore your R installation",
+    "text": "🧐 Explore your R installation\n\ninstall.packages(\"usethis\")\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-explore-libraries\")\n# use_course(\"rstats-wtf/wtf-explore-libraries\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-explore-libraries\n\n\nRead the README.md to get started.\n\n01_explore-libraries_spartan.R  (directions to explore without suggested code)\n01_explore-libraries_comfy.R (directions to explore with suggested code)\n01_explore-libraries_solution.R (directions to explore with code solutions)\n\n\n\n\n\n−+\n15:00"
   }
 ]

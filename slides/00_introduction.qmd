@@ -83,10 +83,8 @@ All good, ready to move on
 :::
 :::
 
-
 ```{r child="../sections/schedule.qmd"}
 ```
-
 
 # Completion survey
 

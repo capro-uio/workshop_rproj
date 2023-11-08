@@ -1,0 +1,503 @@
+---
+title: "Project Oriented Workflows"
+subtitle: "Working in R and RStudio"
+author: "Athanasia Mo Mowinckel"
+#logo: "img/wtf-logo-square-transparent.png"
+format: 
+  revealjs: 
+    height: 900
+    width: 1600
+    theme: 
+      - night
+      - capro-reveal.scss
+    highlight-style: github-dark
+    transition: fade
+    slide-number: true
+    chalkboard: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+
+```{r}
+library(countdown)
+```
+
+```{r font-awesome-color}
+# fill for font awesome icons
+fa_fill <- "#CC4C4C"
+```
+
+# Project-oriented workflows
+
+## Adopt a project-oriented workflow
+
+<br>
+
+::: columns
+::: {.column width="48%"}
+### Why
+
+-   work on more than 1 thing at a time
+
+-   collaborate, communicate, distribute
+
+-   start and stop
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column .fragment width="48%"}
+### How
+
+-   dedicated directory
+
+-   RStudio <ins>**P**</ins>roject
+
+-   Git repo, probably syncing to a remote
+:::
+:::
+
+
+
+## Project workflows
+
+- All necessary files contained in the project and referenced relatively
+
+- All necessary outputs are created by code in the project
+
+- All code can be run in fresh sessions and produce the same output
+
+- Does not force other users to alter their own work setup
+
+
+## If the top of your script is
+
+<br>
+
+```{r, eval=FALSE, echo=TRUE}
+setwd("C:\Users\jenny\path\that\only\I\have")
+rm(list = ls())
+```
+
+<br>
+
+Jenny will come into your your office and SET YOUR COMPUTER ON FIRE 🔥.
+
+<br>
+
+::: {.fragment fragment-index="1"}
+Project-oriented workflow designs this away.
+🙌
+:::
+
+::: footer
+<https://twitter.com/hadleywickham/status/940021008764846080>
+
+<https://www.tidyverse.org/articles/2017/12/workflow-vs-script/>
+
+<https://rstats.wtf/project-oriented-workflow.html>
+:::
+
+## Which persist after rm(list = ls())?
+
+| Option                               | Persists?                                      |
+|-------------------------------------------------------|-----------------|
+| A. library(dplyr)                    |  |
+| B. summary \<- head                  |  |
+| C. options(stringsAsFactors = FALSE) |  |
+| D. Sys.setenv(LANGUAGE = "fr")       |  |
+| E. x \<- 1:5                         |  |
+| F. attach(iris)                      |  |
+
+```{r}
+countdown(
+  color_background = "#CC4C4C",
+  color_text = "#d2d2d2",
+  color_finished_background = "#CC4C4C",
+  minutes = 3,
+  bottom = "0%"
+  )
+```
+
+## Which persist after rm(list = ls())?
+
+| Option                               | Persists?                                    |
+|-------------------------------------------------------|-----------------|
+| A. library(dplyr)                    | `r fontawesome::fa("check", fill = fa_fill)` |
+| B. summary \<- head                  | `r fontawesome::fa("xmark", fill = "white")` |
+| C. options(stringsAsFactors = FALSE) | `r fontawesome::fa("check", fill = fa_fill)` |
+| D. Sys.setenv(LANGUAGE = "fr")       | `r fontawesome::fa("check", fill = fa_fill)` |
+| E. x \<- 1:5                         | `r fontawesome::fa("xmark", fill = "white")` |
+| F. attach(iris)                      | `r fontawesome::fa("check", fill = fa_fill)` |
+
+## What does it mean to be an RStudio <ins>**P**</ins>roject?
+
+<br>
+
+RStudio leaves notes to itself in foo.Rproj
+
+. . .
+
+<br>
+
+Open Project = dedicated instance of RStudio
+
+-   dedicated R process
+
+-   file browser pointed at Project directory
+
+-   working directory set to Project directory
+
+## Many projects open
+
+<br>
+
+![](img/many-projects.jpg)
+
+## Use a "blank slate"
+
+<br>
+
+```{r, eval=FALSE, echo=TRUE}
+usethis::use_blank_slate()
+```
+
+<br>
+
+OR
+
+<br>
+
+Tools -\> Global Options
+
+![](img/workspace.PNG)
+
+## Restart R often
+
+<br>
+
+::: columns
+::: {.column width="48%"}
+Session -\> Restart R
+
+![](img/restart.jpg)
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+Windows
+
+-   Ctrl + Shift + F10
+
+Mac
+
+-   Cmd + Shift + 0
+
+-   Cmd + Shift + F10
+:::
+:::
+
+## Project initiation: the local case 
+
+1.  New folder + make it an RStudio Project
+
+* `usethis::create_project("~/i_am_new")`
+
+* File -\> New Project -\> New Directory -\> New Project
+
+. . .
+
+2.  Make existing folder into an RStudio Project
+
+* `usethis::create_project("~/i_exist")`
+
+* File -\> New Project -\> Existing Directory
+
+. . .
+
+::: question
+Try option 2 now for wtf-explore-libraries.
+:::
+
+```{r}
+countdown(
+  color_background = "#CC4C4C",
+  color_text = "#d2d2d2",
+  color_finished_background = "#CC4C4C",
+  minutes = 5,
+  bottom = "0%"
+  )
+```
+
+# Safe paths
+
+##  {background-image="img/deep_thoughts.PNG"}
+
+## On reproducibility of code
+
+::: columns
+::: {.column width="50%"}
+![](img/kieran-healy-setwd.PNG)
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="46%"}
+<br> A large-scale study on research code quality and execution.
+<br> Trisovic, A., Lau, M.K., Pasquier, T.
+et al. <br> *Sci Data* **9**, 60 (2022).
+:::
+:::
+
+::: footer
+<https://twitter.com/kjhealy/status/1514169782060429320> <br> <https://doi.org/10.1038/s41597-022-01143-6>
+:::
+
+
+## Do you know where<br> your files are?
+
+![](img/street-sign.png)
+
+
+::: notes
+Working directory is associated with a specific process or running application.
+
+For a newly launched process or application instance, the working directory (probably? usually?) defaults to user's home directory.
+Or perhaps the application consults a config file to set the working directory at launch time.
+This is sort of how I would describe launching an RStudio Project.
+
+"Working directory" as a concept is not comparable to "home directory".
+"Home directory" is a static, persistent thing.
+:::
+
+## Practice "safe paths"
+
+<br>
+
+relative to a [stable base]{.important}
+
+<br>
+
+use [file system functions]{.important}
+
+    not `paste()`, `strsplit()`, etc.
+
+
+## Packages with file system functions
+
+<br>
+
+```{r, eval=FALSE, echo=TRUE}
+install.packages("fs")
+```
+
+`fs` = file path handling
+
+<br>
+
+. . .
+
+```{r, eval=FALSE, echo=TRUE}
+install.packages("here")
+```
+
+`here` = project-relative paths
+
+## Examples of a stable base
+
+<brshort>
+
+Project directory
+
+```{r, echo=TRUE, eval=FALSE}
+here::here("data", "raw-data.csv")
+here::here("data/raw-data.csv")
+```
+
+*Automatically complete paths with `Tab`.*
+
+<brshort>
+
+. . .
+
+User's home directory
+
+```{r, echo=TRUE, eval=FALSE}
+file.path("~", ...)
+fs::path_home(...)
+```
+
+. . .
+
+<brshort>
+
+Official location for installed software
+
+```{r, echo=TRUE, eval=FALSE}
+library(thingy)
+system.file(..., package = "thingy")
+```
+
+*See example in [gapminder readme](https://github.com/jennybc/gapminder#plain-text-delimited-files).*
+
+::: notes
+see where tilde goes with fs::path_expand(file.path("\~"))
+:::
+
+## Absolute paths
+
+I have nothing against absolute paths.
+
+Some of my best friends are absolute paths!
+
+But don't hard-wire them into your scripts.
+
+Instead, form at runtime relative to a [stable base]{.important}
+
+<brshort>
+
+```{r, echo=TRUE, eval=FALSE}
+> (BAD <- "/Users/shannon/tmp/test.csv")
+[1] "/Users/shannon/tmp/test.csv"
+```
+
+. . .
+
+<brshort>
+
+```{r, echo=TRUE, eval=FALSE}
+> (GOOD <- fs::path_home("tmp/test.csv")
+[1] "/Users/shannon/tmp/test.csv"
+```
+
+## Practice safe paths
+
+::: columns
+::: {.column width="50%"}
+![](img/here.png)
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column .fragment width="46%"}
+-   Use the `here` package to build paths inside a project.
+
+-   Leave working directory at top-level at all times, during development.
+
+-   Absolute paths are formed at runtime.
+:::
+:::
+
+::: footer
+Artwork by [\@allison_horst](https://twitter.com/allison_horst).
+:::
+
+## here example
+
+```{r, echo=TRUE, eval=FALSE}
+ggsave(here::here("figs", "built-barchart.png"))
+```
+
+-   Works on my machine, works on yours!
+
+-   Works even if working directory is in a sub-folder.
+
+-   Works for RStudio <ins>**P**</ins>rojects, Git repos, R packages, etc.
+
+-   Works with knitr / rmarkdown.
+
+## here::here()
+
+The `here` package is designed to work inside a project, where that could mean:
+
+-   RStudio <ins>**P**</ins>roject
+
+-   Git repo
+
+-   R package
+
+-   Folder with a file named .here
+
+`here::here()` does not create directories; that's your job.
+
+## Kinds of paths
+
+Absolute path.
+
+```{r, echo=TRUE, eval=FALSE}
+dat <- read.csv("C:/Users/pileggis/Documents/wtf-fix-paths/data/installed-packages.csv")
+```
+
+<br>
+
+Relative path to working directory, established by the RStudio <ins>**P**</ins>roject.
+
+```{r, echo=TRUE, eval=FALSE}
+dat <- read.csv("data/installed-packages.csv")
+```
+
+<br>
+
+Relative path within the RStudio <ins>**P**</ins>roject directory.
+
+```{r, echo=TRUE, eval=FALSE}
+dat <- read.csv(here::here("data/installed-packages.csv"))
+```
+
+## Your turn
+
+<br>
+
+Practice calling `here::here()` in a project <br> to get a feel for it.
+
+<br>
+
+```{r, echo=TRUE, eval=FALSE}
+library(usethis)
+# saves project on desktop by default for most users
+use_course("rstats-wtf/wtf-fix-paths")
+# use_course("rstats-wtf/wtf-fix-paths", destdir = "my/new/location")
+# can alternatively download from 
+# https://github.com/rstats-wtf/wtf-fix-paths
+```
+
+<br> Read the `README.md` to get started.
+
+```{r}
+countdown(
+   minutes = 15,
+   color_background = "#CC4C4C",
+  color_text = "#d2d2d2",
+  color_finished_background = "#CC4C4C",
+  bottom = "0%"
+  )
+```
+
+
+## What if my data can't live in my project directory? {.smaller}
+
+1. Are you sure it can't?
+
+2. Review the Good Enough Practices paper for tips.
+
+3. Create a symbolic link to access the data. ([fs::link_create()](https://fs.r-lib.org/reference/create.html), [fs::link_path()](https://fs.r-lib.org/reference/create.html))
+
+4. Put the data in an [R package](https://r-pkgs.org/data.html).
+
+5. Use [pins](https://pins.rstudio.com/).
+
+6. Explore other data warehousing options.
+
+RStudio Community threads:
+
+* [Project-oriented workflow; setwd(), rm(list = ls()) and computer fires](https://community.rstudio.com/t/project-oriented-workflow-setwd-rm-list-ls-and-computer-fires/3549/1)
+
+* [Best way to define paths for a file running on a cron?](https://community.rstudio.com/t/best-way-to-define-paths-for-a-file-running-on-a-cron/2061/7)
+

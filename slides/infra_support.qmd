@@ -1,0 +1,29 @@
+---
+title: "Letter of support from CAPRO"
+execute:
+  message: false
+  warning: false
+  echo: true
+format:
+  html:
+    theme: capro-reveal.scss
+    toc: true
+    toc-location: left
+    code-fold: true
+    code-summary: "Show the code"
+    embed-resources: true
+reference-location: margin
+citation-location: margin
+editor: visual
+---
+
+\
+CAPRO, the UiO core facility that specializes in data processing and capture of large life science data for social sciences and humanities, are thrilled to be a part of the application for the implementation of population-wide MRI coverage in Norway and to provide processing pipelines and workflows for dealing with data.
+
+Our team at CAPRO has for more than 10 years been working with MRI and registry data, assisting researchers to meed their project deliverables. We understand the importance of capturing and processing large data sets, especially in social sciences and humanities, with the legal and ethical considerations needed when working with sensitive human data. Our expertise has helped provide both standardized and customized solutions to meet project needs and help researchers succeed, while still maintaining important data management principles like FAIR.
+
+As part of our commitment to the research community, in addition to working directly with researchers for their specific needs, we develop software and publish it freely online for anyone to use. Our team has a passion for serving the research community and is excited about the possibility of partnering to make this infrastructure a success. We are especially excited about the opportunity to enable researchers without prior experience with MRI to use this method in their research, and unlock new exciting research ideas with them.
+
+ImagingSociety aligns well with our interests and future prospects. We believe that this infrastructure will have a significant impact on research in social sciences and humanities and will create a great surge in excellent research using MRI in Norway.
+
+In conclusion, we fully support the application for the implementation of population-wide MRI coverage in Norway, and we look forward to collaborating with you and the research community to bring this project to fruition.
