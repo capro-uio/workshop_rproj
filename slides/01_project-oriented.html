@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Athanasia Mo Mowinckel">
-  <title>Project management in R - Project Structure</title>
+  <title>Project Oriented Workflows</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -394,7 +394,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Project Structure</h1>
+  <h1 class="title">Project Oriented Workflows</h1>
   <p class="subtitle">Working in R and RStudio</p>
 
 <div class="quarto-title-authors">
@@ -406,151 +406,460 @@ Athanasia Mo Mowinckel
 </div>
 
 </section>
-<section id="what-are-packages-libraries-in-r" class="slide level2">
-<h2>What are packages / libraries in R?</h2>
-<ul>
-<li>Extensions to the programming language
-<ul>
-<li>contains functions &amp; documentation of these<br>
-</li>
-<li>standardised for easier install and use across users<br>
-</li>
-</ul></li>
-<li>Often written by other users to solve specific tasks in R
-<ul>
-<li>solving particular statistical problems</li>
-<li>new types of data visualisation</li>
-</ul></li>
-</ul>
+<section>
+<section id="project-oriented-workflows" class="title-slide slide level1 center">
+<h1>Project-oriented workflows</h1>
+
 </section>
-<section id="common-package-issues-in-pipelines" class="slide level2">
-<h2>Common package issues in pipelines</h2>
-<blockquote>
-<p>A package masks the function of another package I use**</p>
-</blockquote>
-<ul>
-<li>example: <code>select()</code> from {dplyr} being masked by <code>select()</code> from {MASS}</li>
-</ul>
-</section>
-<section id="common-package-issues-in-pipelines-1" class="slide level2">
-<h2>Common package issues in pipelines</h2>
-<blockquote>
-<p>A package masks the function of another package I use**</p>
-</blockquote>
-<ul>
-<li>example: <code>select()</code> from {dplyr} being masked by <code>select()</code> from {MASS}</li>
-</ul>
-<h3 id="solution-1">solution 1</h3>
-<p>load libraries in reverse order of importance.</p>
-<ul>
-<li>i.e.&nbsp;load {dplyr} last, and its <code>select()</code> will be prioritised over the one from {MASS}.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(MASS)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="common-package-issues-in-pipelines-2" class="slide level2">
-<h2>Common package issues in pipelines</h2>
-<blockquote>
-<p>A package masks the function of another package I use**</p>
-</blockquote>
-<ul>
-<li>example: <code>select()</code> from {dplyr} being masked by <code>select()</code> from {MASS}</li>
-</ul>
-<h3 id="solution-2">solution 2:</h3>
-<p>if you only need a single function from another package, call the function directly, rather than loading the entire library.</p>
-<ul>
-<li><p>i.e.&nbsp;run <code>MASS::lm.gls()</code> rather than <code>library(MASS); lm.gls()</code>.</p></li>
-<li><p>the double colon <code>::</code> enables you to access a library’s. functions without loading the entire library.</p>
-<ul>
-<li>this is called <code>namespacing</code></li>
-</ul></li>
-</ul>
-</section>
-<section id="common-package-issues-in-pipelines-3" class="slide level2">
-<h2>Common package issues in pipelines</h2>
-<p><strong>Preventative measures:</strong></p>
+<section id="adopt-a-project-oriented-workflow" class="slide level2">
+<h2>Adopt a project-oriented workflow</h2>
+<p><br></p>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:48%;">
+<h3 id="why">Why</h3>
 <ul>
-<li><p>load all libraries you need at the top of your scripts</p></li>
-<li><p>this helps you control the order things are loaded and possible function masking</p></li>
-<li><p>makes it clear to anyone else running the script what the dependencies are</p></li>
+<li><p>work on more than 1 thing at a time</p></li>
+<li><p>collaborate, communicate, distribute</p></li>
+<li><p>start and stop</p></li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:4%;">
+
+</div><div class="column fragment" style="width:48%;">
+<!-- -->
+<h3 id="how">How</h3>
 <ul>
-<li><p>When introducing a new package to your script</p></li>
-<li><p>add it to the top of the script</p></li>
-<li><p>restart your R session so it is clean</p></li>
-<li><p>start re-running your code to make sure everything still works as expected</p></li>
-<li><p>if it doesn’t, make sure its the first library to be loaded, and try again in a fresh R session</p></li>
+<li><p>dedicated directory</p></li>
+<li><p>RStudio <ins><strong>P</strong></ins>roject</p></li>
+<li><p>Git repo, probably syncing to a remote</p></li>
 </ul>
 </div>
 </div>
 </section>
-<section id="common-package-issues-in-pipelines-4" class="slide level2">
-<h2>Common package issues in pipelines</h2>
-<blockquote>
-<p>The package I used 1 year ago no longer exists</p>
-</blockquote>
-<p>There are archives of packages, like <a href="https://mran.microsoft.com/">MRAN</a>, that will likely help you. But you’ll need to know which version you used, etc.</p>
-<p>Can be tricky, but the {<a href="https://github.com/RevolutionAnalytics/checkpoint">checkpoint</a>} package might be of great assistance!</p>
-</section>
-<section id="r-package-managers" class="slide level2">
-<h2>R package managers</h2>
+<section id="project-workflows" class="slide level2">
+<h2>Project workflows</h2>
 <ul>
-<li><p><a href="https://www.rstudio.com/products/package-manager/">RStudio package manager</a></p>
-<ul>
-<li>RStudio enterprise solution</li>
-</ul></li>
-<li><p><a href="https://rstudio.github.io/packrat/walkthrough.html">packrat</a></p>
-<ul>
-<li><p>one of the first</p></li>
-<li><p>a little complicated to use, requiring some knowledge of package paths etc.</p></li>
-</ul></li>
-<li><p><a href="https://github.com/RevolutionAnalytics/checkpoint">checkpoint</a></p>
-<ul>
-<li>I have no experience with it, but it looks decent</li>
-</ul></li>
-<li><p><a href="https://rstudio.github.io/renv/articles/renv.html">renv</a></p>
-<ul>
-<li><p>new and widely used</p></li>
-<li><p>developed by RStudio</p></li>
-<li><p>creates fairly simple procedures to follow</p></li>
-</ul></li>
+<li><p>All necessary files contained in the project and referenced relatively</p></li>
+<li><p>All necessary outputs are created by code in the project</p></li>
+<li><p>All code can be run in fresh sessions and produce the same output</p></li>
+<li><p>Does not force other users to alter their own work setup</p></li>
 </ul>
 </section>
-<section id="use-renv-to-make-your-r-projects-more" class="slide level2">
-<h2>Use renv to make your R projects more:</h2>
-<ul>
-<li><strong>Isolated</strong>
-<ul>
-<li>installing or updating a package for one project won’t break other projects</li>
-<li>gives each project its own private package library</li>
-</ul></li>
-<li><strong>Portable</strong>
-<ul>
-<li>transport your projects from one computer to another</li>
-<li>makes it easy to install the packages your project depends on.</li>
-</ul></li>
-<li><strong>Reproducible</strong>
-<ul>
-<li>records the exact package versions you depend on</li>
-<li>ensures those exact versions are the ones that get installed wherever you go.</li>
-</ul></li>
-</ul>
+<section id="if-the-top-of-your-script-is" class="slide level2">
+<h2>If the top of your script is</h2>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">setwd</span>(<span class="st">"C:\Users\jenny\path</span><span class="sc">\t</span><span class="st">hat\only\I\have"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<p>Jenny will come into your your office and SET YOUR COMPUTER ON FIRE 🔥.</p>
+<p><br></p>
+<div class="fragment" data-fragment-index="1">
+<p>Project-oriented workflow designs this away. 🙌</p>
+</div>
+<div class="footer">
+<p><a href="https://twitter.com/hadleywickham/status/940021008764846080" class="uri">https://twitter.com/hadleywickham/status/940021008764846080</a></p>
+<p><a href="https://www.tidyverse.org/articles/2017/12/workflow-vs-script/" class="uri">https://www.tidyverse.org/articles/2017/12/workflow-vs-script/</a></p>
+<p><a href="https://rstats.wtf/project-oriented-workflow.html" class="uri">https://rstats.wtf/project-oriented-workflow.html</a></p>
+</div>
+</section>
+<section id="which-persist-after-rmlist-ls" class="slide level2">
+<h2>Which persist after rm(list = ls())?</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>Persists?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A. library(dplyr)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>B. summary &lt;- head</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>C. options(stringsAsFactors = FALSE)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>D. Sys.setenv(LANGUAGE = “fr”)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>E. x &lt;- 1:5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>F. attach(iris)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_44b6cb19" data-update-every="1" tabindex="0" style="right:0;bottom:0%;">
+<div class="countdown" id="timer_8753033a" data-update-every="1" tabindex="0" style="right:0;bottom:0%;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="which-persist-after-rmlist-ls-1" class="slide level2">
+<h2>Which persist after rm(list = ls())?</h2>
+<table>
+<colgroup>
+<col style="width: 45%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>Persists?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A. library(dplyr)</td>
+<td><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#CC4C4C;overflow:visible;position:relative;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></td>
+</tr>
+<tr class="even">
+<td>B. summary &lt;- head</td>
+<td><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg></td>
+</tr>
+<tr class="odd">
+<td>C. options(stringsAsFactors = FALSE)</td>
+<td><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#CC4C4C;overflow:visible;position:relative;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></td>
+</tr>
+<tr class="even">
+<td>D. Sys.setenv(LANGUAGE = “fr”)</td>
+<td><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#CC4C4C;overflow:visible;position:relative;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></td>
+</tr>
+<tr class="odd">
+<td>E. x &lt;- 1:5</td>
+<td><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg></td>
+</tr>
+<tr class="even">
+<td>F. attach(iris)</td>
+<td><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#CC4C4C;overflow:visible;position:relative;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-does-it-mean-to-be-an-rstudio-project" class="slide level2">
+<h2>What does it mean to be an RStudio <ins><strong>P</strong></ins>roject?</h2>
+<p><br></p>
+<p>RStudio leaves notes to itself in foo.Rproj</p>
+<div class="fragment">
+<p><br></p>
+<p>Open Project = dedicated instance of RStudio</p>
+<ul>
+<li><p>dedicated R process</p></li>
+<li><p>file browser pointed at Project directory</p></li>
+<li><p>working directory set to Project directory</p></li>
+</ul>
+</div>
+</section>
+<section id="many-projects-open" class="slide level2">
+<h2>Many projects open</h2>
+<p><br></p>
+
+<img data-src="img/many-projects.jpg" class="r-stretch"></section>
+<section id="use-a-blank-slate" class="slide level2">
+<h2>Use a “blank slate”</h2>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>usethis<span class="sc">::</span><span class="fu">use_blank_slate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<p>OR</p>
+<p><br></p>
+<p>Tools -&gt; Global Options</p>
+
+<img data-src="img/workspace.PNG" class="r-stretch"></section>
+<section id="restart-r-often" class="slide level2">
+<h2>Restart R often</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>Session -&gt; Restart R</p>
+<p><img data-src="img/restart.jpg"></p>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<p>Windows</p>
+<ul>
+<li>Ctrl + Shift + F10</li>
+</ul>
+<p>Mac</p>
+<ul>
+<li><p>Cmd + Shift + 0</p></li>
+<li><p>Cmd + Shift + F10</p></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="project-initiation-the-local-case" class="slide level2">
+<h2>Project initiation: the local case</h2>
+<ol type="1">
+<li>New folder + make it an RStudio Project</li>
+</ol>
+<ul>
+<li><p><code>usethis::create_project("~/i_am_new")</code></p></li>
+<li><p>File -&gt; New Project -&gt; New Directory -&gt; New Project</p></li>
+</ul>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Make existing folder into an RStudio Project</li>
+</ol>
+<ul>
+<li><p><code>usethis::create_project("~/i_exist")</code></p></li>
+<li><p>File -&gt; New Project -&gt; Existing Directory</p></li>
+</ul>
+</div>
+<div class="fragment">
+<div class="question">
+<p>Try option 2 now for wtf-explore-libraries.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_8e79e38d" data-update-every="1" tabindex="0" style="right:0;bottom:0%;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="safe-paths" class="title-slide slide level1 center">
+<h1>Safe paths</h1>
+
+</section>
+<section id="section" class="slide level2" data-background-image="img/deep_thoughts.PNG">
+<h2></h2>
+</section>
+<section id="on-reproducibility-of-code" class="slide level2">
+<h2>On reproducibility of code</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/kieran-healy-setwd.PNG"></p>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:46%;">
+<p><br> A large-scale study on research code quality and execution. <br> Trisovic, A., Lau, M.K., Pasquier, T. et al.&nbsp;<br> <em>Sci Data</em> <strong>9</strong>, 60 (2022).</p>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://twitter.com/kjhealy/status/1514169782060429320" class="uri">https://twitter.com/kjhealy/status/1514169782060429320</a> <br> <a href="https://doi.org/10.1038/s41597-022-01143-6" class="uri">https://doi.org/10.1038/s41597-022-01143-6</a></p>
+</div>
+</section>
+<section id="do-you-know-where-your-files-are" class="slide level2">
+<h2>Do you know where<br> your files are?</h2>
+
+<img data-src="img/street-sign.png" class="r-stretch"><aside class="notes">
+<p>Working directory is associated with a specific process or running application.</p>
+<p>For a newly launched process or application instance, the working directory (probably? usually?) defaults to user’s home directory. Or perhaps the application consults a config file to set the working directory at launch time. This is sort of how I would describe launching an RStudio Project.</p>
+<p>“Working directory” as a concept is not comparable to “home directory”. “Home directory” is a static, persistent thing.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="practice-safe-paths" class="slide level2">
+<h2>Practice “safe paths”</h2>
+<p><br></p>
+<p>relative to a <span class="important">stable base</span></p>
+<p><br></p>
+<p>use <span class="important">file system functions</span></p>
+<p>&nbsp; &nbsp; not <code>paste()</code>, <code>strsplit()</code>, etc.</p>
+</section>
+<section id="packages-with-file-system-functions" class="slide level2">
+<h2>Packages with file system functions</h2>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">install.packages</span>(<span class="st">"fs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>fs</code> = file path handling</p>
+<p><br></p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">install.packages</span>(<span class="st">"here"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><code>here</code> = project-relative paths</p>
+</div>
+</section>
+<section id="examples-of-a-stable-base" class="slide level2">
+<h2>Examples of a stable base</h2>
+<p><brshort></brshort></p>
+<p>Project directory</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"raw-data.csv"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/raw-data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><em>Automatically complete paths with <code>Tab</code>.</em></p>
+<p><brshort></brshort></p>
+<div class="fragment">
+<p>User’s home directory</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">file.path</span>(<span class="st">"~"</span>, ...)</span>
+<span id="cb6-2"><a href="#cb6-2"></a>fs<span class="sc">::</span><span class="fu">path_home</span>(...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p><brshort></brshort></p>
+<p>Official location for installed software</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(thingy)</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">system.file</span>(..., <span class="at">package =</span> <span class="st">"thingy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><em>See example in <a href="https://github.com/jennybc/gapminder#plain-text-delimited-files">gapminder readme</a>.</em></p>
+<aside class="notes">
+<p>see where tilde goes with fs::path_expand(file.path(“~”))</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="absolute-paths" class="slide level2">
+<h2>Absolute paths</h2>
+<p>I have nothing against absolute paths.</p>
+<p>Some of my best friends are absolute paths!</p>
+<p>But don’t hard-wire them into your scripts.</p>
+<p>Instead, form at runtime relative to a <span class="important">stable base</span></p>
+<p><brshort></brshort></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="sc">&gt;</span> (BAD <span class="ot">&lt;-</span> <span class="st">"/Users/shannon/tmp/test.csv"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>[<span class="dv">1</span>] <span class="st">"/Users/shannon/tmp/test.csv"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p><brshort></brshort></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="sc">&gt;</span> (GOOD <span class="ot">&lt;-</span> fs<span class="sc">::</span><span class="fu">path_home</span>(<span class="st">"tmp/test.csv"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2"></a>[<span class="dv">1</span>] <span class="st">"/Users/shannon/tmp/test.csv"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="practice-safe-paths-1" class="slide level2">
+<h2>Practice safe paths</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/here.png"></p>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column fragment" style="width:46%;">
+<ul>
+<li><p>Use the <code>here</code> package to build paths inside a project.</p></li>
+<li><p>Leave working directory at top-level at all times, during development.</p></li>
+<li><p>Absolute paths are formed at runtime.</p></li>
+</ul>
+</div>
+</div>
+<div class="footer">
+<p>Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a>.</p>
+</div>
+</section>
+<section id="here-example" class="slide level2">
+<h2>here example</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggsave</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"figs"</span>, <span class="st">"built-barchart.png"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>Works on my machine, works on yours!</p></li>
+<li><p>Works even if working directory is in a sub-folder.</p></li>
+<li><p>Works for RStudio <ins><strong>P</strong></ins>rojects, Git repos, R packages, etc.</p></li>
+<li><p>Works with knitr / rmarkdown.</p></li>
+</ul>
+</section>
+<section id="herehere" class="slide level2">
+<h2>here::here()</h2>
+<p>The <code>here</code> package is designed to work inside a project, where that could mean:</p>
+<ul>
+<li><p>RStudio <ins><strong>P</strong></ins>roject</p></li>
+<li><p>Git repo</p></li>
+<li><p>R package</p></li>
+<li><p>Folder with a file named .here</p></li>
+</ul>
+<p><code>here::here()</code> does not create directories; that’s your job.</p>
+</section>
+<section id="kinds-of-paths" class="slide level2">
+<h2>Kinds of paths</h2>
+<p>Absolute path.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/pileggis/Documents/wtf-fix-paths/data/installed-packages.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<p>Relative path to working directory, established by the RStudio <ins><strong>P</strong></ins>roject.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/installed-packages.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<p>Relative path within the RStudio <ins><strong>P</strong></ins>roject directory.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data/installed-packages.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your turn</h2>
+<p><br></p>
+<p>Practice calling <code>here::here()</code> in a project <br> to get a feel for it.</p>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="co"># saves project on desktop by default for most users</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="fu">use_course</span>(<span class="st">"rstats-wtf/wtf-fix-paths"</span>)</span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="co"># use_course("rstats-wtf/wtf-fix-paths", destdir = "my/new/location")</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="co"># can alternatively download from </span></span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="co"># https://github.com/rstats-wtf/wtf-fix-paths</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br> Read the <code>README.md</code> to get started.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_a34a723c" data-update-every="1" tabindex="0" style="right:0;bottom:0%;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
+</section>
+<section id="what-if-my-data-cant-live-in-my-project-directory" class="slide level2 smaller">
+<h2>What if my data can’t live in my project directory?</h2>
+<ol type="1">
+<li><p>Are you sure it can’t?</p></li>
+<li><p>Review the Good Enough Practices paper for tips.</p></li>
+<li><p>Create a symbolic link to access the data. (<a href="https://fs.r-lib.org/reference/create.html">fs::link_create()</a>, <a href="https://fs.r-lib.org/reference/create.html">fs::link_path()</a>)</p></li>
+<li><p>Put the data in an <a href="https://r-pkgs.org/data.html">R package</a>.</p></li>
+<li><p>Use <a href="https://pins.rstudio.com/">pins</a>.</p></li>
+<li><p>Explore other data warehousing options.</p></li>
+</ol>
+<p>RStudio Community threads:</p>
+<ul>
+<li><p><a href="https://community.rstudio.com/t/project-oriented-workflow-setwd-rm-list-ls-and-computer-fires/3549/1">Project-oriented workflow; setwd(), rm(list = ls()) and computer fires</a></p></li>
+<li><p><a href="https://community.rstudio.com/t/best-way-to-define-paths-for-a-file-running-on-a-cron/2061/7">Best way to define paths for a file running on a cron?</a></p></li>
+</ul>
 
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

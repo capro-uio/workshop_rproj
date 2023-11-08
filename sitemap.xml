@@ -2,58 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/capro-uio/workshop_rproj/sections/aims.html</loc>
-    <lastmod>2023-11-08T16:41:50.152Z</lastmod>
+    <lastmod>2023-11-08T16:57:36.933Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/capro-uio/workshop_rproj/sections/intro.html</loc>
-    <lastmod>2023-11-08T16:41:49.364Z</lastmod>
+    <lastmod>2023-11-08T16:57:35.917Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/capro-uio/workshop_rproj/sections/resources.html</loc>
-    <lastmod>2023-11-08T16:41:48.756Z</lastmod>
+    <lastmod>2023-11-08T16:57:35.185Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/capro-uio/workshop_rproj/slides/03_project-naming.html</loc>
-    <lastmod>2023-11-08T16:41:47.652Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/capro-uio/workshop_rproj/slides/infra_support.html</loc>
-    <lastmod>2023-11-08T16:41:44.072Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/capro-uio/workshop_rproj/slides/05_package-management.html</loc>
-    <lastmod>2023-11-08T16:41:42.652Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/capro-uio/workshop_rproj/index.html</loc>
-    <lastmod>2023-11-08T16:41:40.140Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/capro-uio/workshop_rproj/slides.html</loc>
-    <lastmod>2023-11-08T16:41:36.144Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/capro-uio/workshop_rproj/slides/02_project-oriented.html</loc>
-    <lastmod>2023-11-08T16:41:42.048Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/capro-uio/workshop_rproj/slides/04-project_structure.html</loc>
-    <lastmod>2023-11-08T16:41:43.180Z</lastmod>
+    <loc>https://github.com/capro-uio/workshop_rproj/slides/03_project-structure.html</loc>
+    <lastmod>2023-11-08T16:57:33.797Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/capro-uio/workshop_rproj/slides/00_introduction.html</loc>
-    <lastmod>2023-11-08T16:41:47.148Z</lastmod>
+    <lastmod>2023-11-08T16:57:31.089Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/capro-uio/workshop_rproj/slides/introduction.html</loc>
-    <lastmod>2023-11-08T16:41:48.448Z</lastmod>
+    <loc>https://github.com/capro-uio/workshop_rproj/index.html</loc>
+    <lastmod>2023-11-08T16:57:28.157Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/capro-uio/workshop_rproj/slides/04_package-management.html</loc>
+    <lastmod>2023-11-08T16:57:30.081Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/capro-uio/workshop_rproj/slides/01_project-oriented.html</loc>
+    <lastmod>2023-11-08T16:57:33.169Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/capro-uio/workshop_rproj/slides/02_file-naming.html</loc>
+    <lastmod>2023-11-08T16:57:34.349Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/capro-uio/workshop_rproj/sections/schedule.html</loc>
-    <lastmod>2023-11-08T16:41:49.052Z</lastmod>
+    <lastmod>2023-11-08T16:57:35.557Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/capro-uio/workshop_rproj/sections/prep.html</loc>
-    <lastmod>2023-11-08T16:41:49.868Z</lastmod>
+    <lastmod>2023-11-08T16:57:36.573Z</lastmod>
   </url>
 </urlset>
