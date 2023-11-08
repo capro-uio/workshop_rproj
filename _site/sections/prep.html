@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project management in R – prep</title>
+<title>Project Oriented Workflows – prep</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Project management in R</span>
+    <span class="navbar-title">Project Oriented Workflows</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -120,10 +120,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Home</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-slides" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Slides</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-slides">    
+        <li>
+    <a class="dropdown-item" href="../slides/00-introduction.html">
+ <span class="dropdown-text">Introduction</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/01-project-oriented.html">
+ <span class="dropdown-text">Project Oriented Workflows</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/02-file-naming.html">
+ <span class="dropdown-text">File Naming</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/03-project-structure.html">
+ <span class="dropdown-text">Project Structure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../slides/04-package-management.html">
+ <span class="dropdown-text">Package Management</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -155,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="preparations" class="level2">
 <h2 class="anchored" data-anchor-id="preparations">Preparations</h2>
-<p>For this workshop will be instructed using R and RStudio. It would be easiest for learners to follow along, and the instructor to help you , if you also use this set-up.</p>
+<p>You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -178,12 +201,13 @@ Install summary
 <p>In addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run in R</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown"</span>,    <span class="co"># rendering reports</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"fs"</span>,           <span class="co"># file system</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"here"</span>,         <span class="co"># navigating paths</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"usethis"</span>,      <span class="co"># for course materials</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyverse"</span>      <span class="co"># data-wrangling</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"remotes"</span>,      <span class="co"># installing packages from GitHub</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rmarkdown"</span>,    <span class="co"># rendering reports</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"fs"</span>,           <span class="co"># file system operations</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"here"</span>,         <span class="co"># navigating paths</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"usethis"</span>,      <span class="co"># for course materials</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyverse"</span>     <span class="co"># data-wrangling</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

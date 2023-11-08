@@ -2,11 +2,21 @@ project:
   type: website
 
 website:
-  title: "Project management in R"
+  title: "Project Oriented Workflows"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - text: Slides
+        menu:
+          - href: slides/00_introduction.html
+            text: Introduction
+          - href: slides/01_project-oriented.html
+            text: Project Oriented Workflows
+          - href: slides/02_file-naming.html
+            text: File Naming
+          - href: slides/03_project-structure.html
+            text: Project Structure
+          - href: slides/04_package-management.html
+            text: Package Management
 
 format:
   html:

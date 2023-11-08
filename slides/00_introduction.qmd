@@ -102,9 +102,7 @@ Your feedback is crucial! Data from the survey informs curriculum and format dec
 
 <https://www.capro.dev/workshop_rproj/>
 
-
----
-
+------------------------------------------------------------------------
 
 # Getting started
 
@@ -117,34 +115,27 @@ library(countdown)
 fa_fill <- "#CC4C4C"
 ```
 
-
 ## Checklist
 
 <br>
 
-`r fontawesome::fa("check", fill = fa_fill)` R installed?
-Pretty recent?
+`r fontawesome::fa("check", fill = fa_fill)` R installed? Pretty recent?
 
      Recommended R ≥ 4.3.0
 
 `r fontawesome::fa("check", fill = fa_fill)` RStudio installed?
 
-     I'm on 2023.06.1 Build 524
-     
+     I'm on 2023.06.1 Build 524     
 
 `r fontawesome::fa("check", fill = fa_fill)` Packages?
 
 `install.packages(c("tidyverse", "rmarkdown", "usethis", "fs", "here"))`
-
 
 ## Resources
 
 <br>
 
 Book: [https://rstats.wtf](https://rstats.wtf/){target="_blank"}
-
-
-
 
 ## 
 
@@ -154,22 +145,21 @@ Book: [https://rstats.wtf](https://rstats.wtf/){target="_blank"}
 What [*Did*]{.important} They Forget <br> to Teach You?
 :::
 
-
 ##  {background-image="img/everything-else.PNG" background-size="contain"}
 
 ## Learning objectives
 
-1. Establish the concept of the project as the basic organizational unit of work.
+1.  Establish the concept of the project as the basic organizational unit of work.
 
-2. Apply best practices in and leverage benefits of working in RStudio projects, including
+2.  Apply best practices in and leverage benefits of working in RStudio projects, including
 
-* Creating robust file paths that travel well in time and space.
+-   Creating robust file paths that travel well in time and space.
 
-* Constructing human and machine readable file names that sort nicely.
+-   Constructing human and machine readable file names that sort nicely.
 
-* Differentiating workflow elements, analysis inputs, and analysis outputs in project structure to create navigable programming interfaces.
+-   Differentiating workflow elements, analysis inputs, and analysis outputs in project structure to create navigable programming interfaces.
 
-* Restarting R frequently, with a blank slate.
+-   Restarting R frequently, with a blank slate.
 
 ## Why do we care about project management?
 
@@ -177,11 +167,11 @@ What [*Did*]{.important} They Forget <br> to Teach You?
 ::: {.column width="48%"}
 ### Portability
 
-_The ability to move the project without breaking code or needing adapting_
+*The ability to move the project without breaking code or needing adapting*
 
-- you will change computers
-- you will reorganise your file structure
-- you will share your code with others
+-   you will change computers
+-   you will reorganise your file structure
+-   you will share your code with others
 :::
 
 ::: {.column width="4%"}
@@ -189,12 +179,13 @@ _The ability to move the project without breaking code or needing adapting_
 
 ::: {.column .fragment width="48%"}
 ### Reproducibility
-_The ability to rerun the entire process from scratch_
 
-- not just for reviews
-- not just for best-practice science
-- also for future (or even present) you
-- and for your collaborators/helpers
+*The ability to rerun the entire process from scratch*
+
+-   not just for reviews
+-   not just for best-practice science
+-   also for future (or even present) you
+-   and for your collaborators/helpers
 :::
 :::
 
@@ -245,8 +236,7 @@ self-explaining `>>>` wordy, needy explainers
 :::
 
 ::: {.column width="45%"}
-&nbsp; file salad <br> 
-&nbsp; + an out of date README
+  file salad <br>   + an out of date README
 :::
 :::
 
@@ -263,11 +253,9 @@ self-explaining `>>>` wordy, needy explainers
 ::: {.fragment .column width="53%"}
 *PLOS Computational Biology*
 
-Wilson, Bryan, Cranston, Kitzes, Nederbragt, Teal  (2017)
-
+Wilson, Bryan, Cranston, Kitzes, Nederbragt, Teal (2017)
 
 <https://doi.org/10.1371/journal.pcbi.1005510>
-
 
 <http://bit.ly/good-enuff>
 :::
@@ -303,9 +291,8 @@ Wilson, Bryan, Cranston, Kitzes, Nederbragt, Teal  (2017)
 
 <br>
 
-::: {.columns}
+::: columns
 ::: {.column width="40%"}
-
 **CRAN, \~20k packages**
 
 ```{r, eval = FALSE, echo = TRUE}
@@ -320,7 +307,6 @@ library(remotes)
 :::
 
 ::: {.column .fragment width="58%"}
-
 **GitHub, ??? packages**
 
 ```{r, eval = FALSE, echo = TRUE}
@@ -331,7 +317,6 @@ library(wtfdbg)
 ```
 :::
 :::
-
 
 ::: footer
 we'll use `wtfdbg` later in *Debugging*
@@ -435,7 +420,6 @@ mtcars |>
 
 ## 🧐 Explore your R installation
 
-
 ```{r, eval=FALSE, echo=TRUE}
 install.packages("usethis")
 library(usethis)
@@ -446,17 +430,15 @@ use_course("rstats-wtf/wtf-explore-libraries")
 # https://github.com/rstats-wtf/wtf-explore-libraries
 ```
 
-
-::: {.small}
+::: small
 Read the `README.md` to get started.
 
-* `01_explore-libraries_spartan.R` <br> (directions to explore without suggested code)
+-   `01_explore-libraries_spartan.R` <br> (directions to explore without suggested code)
 
-* `01_explore-libraries_comfy.R`<br> (directions to explore with suggested code)
+-   `01_explore-libraries_comfy.R`<br> (directions to explore with suggested code)
 
-* `01_explore-libraries_solution.R`<br> (directions to explore with code solutions)
+-   `01_explore-libraries_solution.R`<br> (directions to explore with code solutions)
 :::
-
 
 ```{r}
 countdown(
@@ -467,5 +449,3 @@ countdown(
   bottom = "0%"
   )
 ```
-
-
