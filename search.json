@@ -263,14 +263,42 @@
     "href": "slides/04_package-management.html#r-package-managers",
     "title": "Project Structure",
     "section": "R package managers",
-    "text": "R package managers\n\nRStudio package manager\n\nRStudio enterprise solution\n\npackrat\n\none of the first\na little complicated to use, requiring some knowledge of package paths etc.\n\ncheckpoint\n\nI have no experience with it, but it looks decent\n\nrenv\n\nnew and widely used\ndeveloped by RStudio\ncreates fairly simple procedures to follow"
+    "text": "R package managers\n\nRStudio package manager\n\nRStudio enterprise solution\n\npackrat\n\none of the first\na little complicated to use, requiring some knowledge of package paths etc.\n\ncheckpoint\n\nI have no experience with it, but it looks great!\n\nrenv\n\nnew and widely used\ncreates fairly simple procedures to follow\ncan become complicated in some situations"
   },
   {
     "objectID": "slides/04_package-management.html#use-renv-to-make-your-r-projects-more",
     "href": "slides/04_package-management.html#use-renv-to-make-your-r-projects-more",
     "title": "Project Structure",
     "section": "Use renv to make your R projects more:",
-    "text": "Use renv to make your R projects more:\n\nIsolated\n\ninstalling or updating a package for one project won’t break other projects\ngives each project its own private package library\n\nPortable\n\ntransport your projects from one computer to another\nmakes it easy to install the packages your project depends on.\n\nReproducible\n\nrecords the exact package versions you depend on\nensures those exact versions are the ones that get installed wherever you go.\n\n\n\n\n\n−+\n15:00"
+    "text": "Use renv to make your R projects more:\n\nIsolated\n\ninstalling or updating a package for one project won’t break other projects\ngives each project its own private package library\n\nPortable\n\ntransport your projects from one computer to another\nmakes it easy to install the packages your project depends on.\n\nReproducible\n\nrecords the exact package versions you depend on\nensures those exact versions are the ones that get installed wherever you go."
+  },
+  {
+    "objectID": "slides/04_package-management.html#using-renv",
+    "href": "slides/04_package-management.html#using-renv",
+    "title": "Project Structure",
+    "section": "Using {renv}",
+    "text": "Using {renv}\n\nrenv should be used in projects\n\nIf you initiate renv when your not in a project, it will create one for you.\nTo initiate renv:\nrenv::init()"
+  },
+  {
+    "objectID": "slides/04_package-management.html#how-did-it-find-these-packages",
+    "href": "slides/04_package-management.html#how-did-it-find-these-packages",
+    "title": "Project Structure",
+    "section": "How did it find these packages?",
+    "text": "How did it find these packages?\nIt looks in all project files for:\n\nlibrary(package)\nrequire(package)\nrequireNamespace(\"package\")\npackage::function()\n\nWill also look for packages listed in the DESCRIPTON file, as “Depends”, or “Imports”."
+  },
+  {
+    "objectID": "slides/04_package-management.html#demo",
+    "href": "slides/04_package-management.html#demo",
+    "title": "Project Structure",
+    "section": "Demo",
+    "text": "Demo"
+  },
+  {
+    "objectID": "slides/04_package-management.html#your-turn",
+    "href": "slides/04_package-management.html#your-turn",
+    "title": "Project Structure",
+    "section": "Your turn",
+    "text": "Your turn\n\nCreate a report that adheres to project organization strategies.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"capro-uio/wtf-explore-renv\")\n# use_course(\"capro-uio/wtf-explore-renv\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/capro-uio/wtf-explore-renv\n\n\n&lt;br&gt; Read the README.md to get started.\n\n\n\n\n−+\n15:00"
   },
   {
     "objectID": "slides/01_project-oriented.html#adopt-a-project-oriented-workflow",
