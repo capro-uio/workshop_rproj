@@ -17,6 +17,10 @@ website:
             text: Project Structure
           - href: slides/04_package-management.html
             text: Package Management
+      - text: Collaborative docs
+        menu:
+          - href: https://hackmd.io/ff4vCPAQS_WFrb-CsF_GhA
+            text: Capro & OsloMet 2023
 
 format:
   html:
