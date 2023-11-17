@@ -1,7 +1,6 @@
 ## Preparations
 
-You might already have R and RStudio installed on your system.
-We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.
+You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.
 
 ::: callout-note
 ### Install summary
@@ -11,8 +10,7 @@ We highly recommend updating both of them to the latest version before the works
 -   install/update [RStudio](https://posit.co/download/rstudio-desktop/)
 :::
 
-A new version of RStudio and R is recommended. 
-Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.
+A new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.
 
 ### R packages
 

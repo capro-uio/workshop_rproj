@@ -165,7 +165,7 @@
     "href": "slides/00_introduction.html#checklist",
     "title": "Introduction",
     "section": "Checklist",
-    "text": "Checklist\n\n R installed? Pretty recent?\n     Recommended R ≥ 4.3.0\n RStudio installed?\n     I’m on 2023.06.1 Build 524     \n Packages?\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"usethis\", \"fs\", \"here\"))"
+    "text": "Checklist\n\n\n\n R installed? Pretty recent?\n     Recommended R ≥ 4.3.0\n RStudio installed?\n     I’m on 2023.06.1 Build 524     \n\n Packages?\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"     # data-wrangling\n))"
   },
   {
     "objectID": "slides/00_introduction.html#resources",
@@ -235,7 +235,7 @@
     "href": "slides/00_introduction.html#additional-packages",
     "title": "Introduction",
     "section": "Additional packages",
-    "text": "Additional packages\n\n\n\nCRAN, ~20k packages\n\n# install from CRAN\ninstall.packages(\"remotes\")\n# attach\nlibrary(remotes)\n\n\n\n\nGitHub, ??? packages\n\n# install via remotes\nremotes::install_github(\"rstats-wtf/wtfdbg\")\n# attach\nlibrary(wtfdbg)\n\n\n\n\nwe’ll use wtfdbg later in Debugging"
+    "text": "Additional packages\n\n\n\nCRAN, ~20k packages\n\n# install from CRAN\ninstall.packages(\"remotes\")\n# attach\nlibrary(remotes)\n\n\n\n\nGitHub, ??? packages\n\n# install via remotes\nremotes::install_github(\"rstats-wtf/wtfdbg\")\n# attach\nlibrary(wtfdbg)"
   },
   {
     "objectID": "slides/00_introduction.html#where-do-packages-live-locally",
@@ -530,5 +530,12 @@
     "title": "Project Structure",
     "section": "Your turn",
     "text": "Your turn\n\nCreate a report that adheres to project organization strategies.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-packages-report\")\n# use_course(\"rstats-wtf/wtf-packages-report\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-packages-report\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "slides/00_introduction.html#section-1",
+    "href": "slides/00_introduction.html#section-1",
+    "title": "Introduction",
+    "section": "",
+    "text": "What Did They Forget  to Teach You?"
   }
 ]

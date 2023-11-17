@@ -86,16 +86,6 @@ All good, ready to move on
 ```{r child="../sections/schedule.qmd"}
 ```
 
-# Completion survey
-
-<br>
-
-At the conclusion of the workshop, please submit <add survey link>.
-
-<br>
-
-Your feedback is crucial! Data from the survey informs curriculum and format decisions for future conf workshops, and we really appreciate you taking the time to provide it.
-
 # Go here now
 
 <br><br>
@@ -119,6 +109,8 @@ fa_fill <- "#CC4C4C"
 
 <br>
 
+::: columns
+::: {.column width="50%"}
 `r fontawesome::fa("check", fill = fa_fill)` R installed? Pretty recent?
 
      Recommended R ≥ 4.3.0
@@ -127,15 +119,25 @@ fa_fill <- "#CC4C4C"
 
      I'm on 2023.06.1 Build 524     
 
+:::
+
+::: {.column width="50%"}
 `r fontawesome::fa("check", fill = fa_fill)` Packages?
 
-`install.packages(c("tidyverse", "rmarkdown", "usethis", "fs", "here"))`
+``` r
+# Run in R
+install.packages(c(
+  "remotes",      # installing packages from GitHub
+  "rmarkdown",    # rendering reports
+  "fs",           # file system operations
+  "here",         # navigating paths
+  "usethis",      # for course materials
+  "tidyverse"     # data-wrangling
+))
+```
+:::
+:::
 
-## Resources
-
-<br>
-
-Book: [https://rstats.wtf](https://rstats.wtf/){target="_blank"}
 
 ## 
 
@@ -316,10 +318,6 @@ remotes::install_github("rstats-wtf/wtfdbg")
 library(wtfdbg)
 ```
 :::
-:::
-
-::: footer
-we'll use `wtfdbg` later in *Debugging*
 :::
 
 ## Where do packages live locally?

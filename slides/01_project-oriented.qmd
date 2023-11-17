@@ -28,8 +28,6 @@ library(countdown)
 fa_fill <- "#CC4C4C"
 ```
 
-# Project-oriented workflows
-
 ## Adopt a project-oriented workflow
 
 <br>
@@ -96,7 +94,7 @@ Project-oriented workflow designs this away. 🙌
 <https://rstats.wtf/project-oriented-workflow.html>
 :::
 
-## Which persist after rm(list = ls())?
+## Which persist after `rm(list = ls())`?
 
 | Option                               | Persists? |
 |--------------------------------------|-----------|
@@ -117,10 +115,10 @@ countdown(
   )
 ```
 
-## Which persist after rm(list = ls())?
+## Which persist after `rm(list = ls())`?
 
-| Option                               | Persists?                                    |
-|--------------------------------------|----------------------------------------------|
+| Option                               | Persists? |
+|--------------------------------------|-----------|
 | A. library(dplyr)                    | `r fontawesome::fa("check", fill = fa_fill)` |
 | B. summary \<- head                  | `r fontawesome::fa("xmark", fill = "white")` |
 | C. options(stringsAsFactors = FALSE) | `r fontawesome::fa("check", fill = fa_fill)` |
@@ -132,7 +130,7 @@ countdown(
 
 <br>
 
-RStudio leaves notes to itself in foo.Rproj
+RStudio leaves notes to itself in `foo.Rproj`
 
 . . .
 

@@ -20,7 +20,9 @@ website:
       - text: Collaborative docs
         menu:
           - href: https://hackmd.io/ff4vCPAQS_WFrb-CsF_GhA
-            text: Capro & OsloMet 2023
+            text: OsloMet 2023
+          - href: https://hackmd.io/@drmowinckels/2023-11-21-MPI
+            text: MPI - Nov. 2023
 
 format:
   html:

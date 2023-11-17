@@ -1,5 +1,5 @@
 ---
-title: "Project Structure"
+title: "Package Management"
 subtitle: "Working in R and RStudio"
 author: "Athanasia Mo Mowinckel"
 #logo: "img/wtf-logo-square-transparent.png"
@@ -131,7 +131,7 @@ Can be tricky, but the {[checkpoint](https://github.com/RevolutionAnalytics/chec
     -   new and widely used
 
     -   creates fairly simple procedures to follow
-    
+
     -   can become complicated in some situations
 
 ## Use renv to make your R projects more:
@@ -154,7 +154,7 @@ If you initiate renv when your not in a project, it will create one for you.
 
 To initiate renv:
 
-```r
+``` r
 renv::init()
 ```
 
@@ -162,12 +162,12 @@ renv::init()
 
 It looks in all project files for:
 
-- `library(package)`
-- `require(package)`
-- `requireNamespace("package")`
-- `package::function()`
+-   `library(package)`
+-   `require(package)`
+-   `requireNamespace("package")`
+-   `package::function()`
 
-Will also look for packages listed in the `DESCRIPTON` file, as "Depends",  or "Imports".
+Will also look for packages listed in the `DESCRIPTON` file, as "Depends", or "Imports".
 
 ## Demo
 
@@ -190,7 +190,6 @@ use_course("capro-uio/wtf-explore-renv")
 
 <br> Read the README.md to get started.
 
-```{r}
 countdown(
    minutes = 15,
    color_background = "#CC4C4C",

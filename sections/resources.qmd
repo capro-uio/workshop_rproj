@@ -1,6 +1,5 @@
 # Resources
 
--   Workshop website: <https://github.com/posit-conf-2023/wtf>
+-   Workshop website: <https://www.capro.dev/workshop_rproj/>
 -   [What They Forgot to Teach you about R](https://rstats.wtf/)
-- [Happy Git With R book](https://happygitwithr.com)
-
+-   [Happy Git With R book](https://happygitwithr.com)
