@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# R Project Management
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+This repo contains materials and resources for a 1-day course in project management in R.
+It is a quarto website, and as such adhered to basic [quarto conventions](https://quarto.org/docs/websites/).
+
+- `slides` contains the slides for the course
+- `sections` contains the child quarto sections reused in the materials
+- `_quarto.yaml` contains the quarto configuration for the course
+- `index.qmd` contains the course homepage
+
+The repo uses [renv](https://rstudio.github.io/renv/) to manage package dependencies.
+To install the packages used in this course, run `renv::restore()` from the project root.
+
+
+```{r child="sections/intro.qmd"}
+```
+
+```{r child="sections/aims.qmd"}
+```
+
+```{r child="sections/schedule.qmd"}
+```
+
+```{r child="sections/prep.qmd"}
+```
+
+```{r child="sections/resources.qmd"}
+```
+
+
+

@@ -23,4 +23,3 @@ author:
 
 ```{r child="sections/resources.qmd"}
 ```
-
