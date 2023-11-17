@@ -291,7 +291,7 @@
     "href": "slides/04_package-management.html#your-turn",
     "title": "Package Management",
     "section": "Your turn",
-    "text": "Your turn\n\nCreate a report that adheres to project organization strategies.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"capro-uio/wtf-explore-renv\")\n# use_course(\"capro-uio/wtf-explore-renv\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/capro-uio/wtf-explore-renv\n\n\n&lt;br&gt; Read the README.md to get started.\n\ncountdown(\n   minutes = 15,\n   color_background = \"#CC4C4C\",\n  color_text = \"#d2d2d2\",\n  color_finished_background = \"#CC4C4C\",\n  bottom = \"0%\"\n  )"
+    "text": "Your turn\n\nExplore the changes {renv} makes to a project.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"capro-uio/wtf-explore-renv\")\n# use_course(\"capro-uio/wtf-explore-renv\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/capro-uio/wtf-explore-renv\n\n\n&lt;br&gt; Read the README.md to get started.\n\ncountdown(\n   minutes = 15,\n   color_background = \"#CC4C4C\",\n  color_text = \"#d2d2d2\",\n  color_finished_background = \"#CC4C4C\",\n  bottom = \"0%\"\n  )"
   },
   {
     "objectID": "slides/01_project-oriented.html#adopt-a-project-oriented-workflow",
