@@ -19,10 +19,11 @@ website:
             text: Package Management
       - text: Collaborative docs
         menu:
-          - href: https://hackmd.io/ff4vCPAQS_WFrb-CsF_GhA
+          - href: https://hackmd.io/@drmowinckels/capro-oslomet-2023/edit
             text: OsloMet 2023
-          - href: https://hackmd.io/@drmowinckels/2023-11-21-MPI
+          - href: https://hackmd.io/@drmowinckels/2023-11-21-MPI/edit
             text: MPI - Nov. 2023
+
 
 format:
   html:
