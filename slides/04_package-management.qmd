@@ -175,7 +175,7 @@ Will also look for packages listed in the `DESCRIPTON` file, as "Depends", or "I
 
 <br>
 
-Create a report that adheres to project organization strategies.
+Explore the changes {renv} makes to a project.
 
 <br>
 
