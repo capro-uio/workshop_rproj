@@ -206,7 +206,7 @@ order = chronological or ... consider common sense
 
 ::: {.columns .v-center-container}
 ::: {.column width="40%"}
-![](img/jenny-chicken-broth.PNG)
+![](img/jenny-chicken-broth.png)
 :::
 
 ::: {.column width="4%"}
