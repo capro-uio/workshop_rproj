@@ -24,6 +24,7 @@ install.packages(c(
   "fs",           # file system operations
   "here",         # navigating paths
   "usethis",      # for course materials
-  "tidyverse"     # data-wrangling
+  "tidyverse",    # data-wrangling
+  "renv"          # package management
 ))
 ```

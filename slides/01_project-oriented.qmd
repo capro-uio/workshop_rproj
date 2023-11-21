@@ -91,7 +91,7 @@ Project-oriented workflow designs this away. 🙌
 
 <https://www.tidyverse.org/articles/2017/12/workflow-vs-script/>
 
-<https://rstats.wtf/project-oriented-workflow.html>
+<https://rstats.wtf/projects>
 :::
 
 ## Which persist after `rm(list = ls())`?
@@ -117,8 +117,8 @@ countdown(
 
 ## Which persist after `rm(list = ls())`?
 
-| Option                               | Persists? |
-|--------------------------------------|-----------|
+| Option                               | Persists?                                    |
+|------------------------------------------------------|------------------|
 | A. library(dplyr)                    | `r fontawesome::fa("check", fill = fa_fill)` |
 | B. summary \<- head                  | `r fontawesome::fa("xmark", fill = "white")` |
 | C. options(stringsAsFactors = FALSE) | `r fontawesome::fa("check", fill = fa_fill)` |
