@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "sections/aims.html",
-    "href": "sections/aims.html",
-    "title": "Project Oriented Workflows",
-    "section": "",
-    "text": "Aims\n\n\n\n\nUnderstand what a working environment is and how R deals with them\nSuccessfully implement a project-oriented workflow\nUnderstand best-practice naming of files\nKnow how to practice safe paths from R\nUnderstand basics of R package management"
-  },
-  {
-    "objectID": "sections/intro.html",
-    "href": "sections/intro.html",
-    "title": "Project Oriented Workflows",
-    "section": "",
-    "text": "As researchers grow in their skills, eventually the infrastructure surrounding the analysis will become an important catalyst for the reproducibility and longevity of analysis artefacts. Researchers are capable of creating complex and impressive projects, but it is unlikely to have benefited from any formal training or mentorship related to topics regarding project management. As a result of this, reproducibility and longevity of projects are likely to suffer. Learning aspects of project management is a vital, but rarely taught, skill when working on a project. While project management has some general guidelines that traverse fields, there are specific aspects to think about when working R, given R’s idiosyncrasies."
-  },
-  {
-    "objectID": "sections/resources.html",
-    "href": "sections/resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Resources\n\nWorkshop website: https://www.capro.dev/workshop_rproj/\nWhat They Forgot to Teach you about R\nHappy Git With R book"
-  },
-  {
     "objectID": "slides/03_project-structure.html#break-logic-and-output-into-pieces",
     "href": "slides/03_project-structure.html#break-logic-and-output-into-pieces",
     "title": "Project Structure",
@@ -75,6 +54,90 @@
     "title": "Project Structure",
     "section": "Your turn",
     "text": "Your turn\n\nCreate a report that adheres to project organization strategies.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-packages-report\")\n# use_course(\"rstats-wtf/wtf-packages-report\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-packages-report\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#section-1",
+    "href": "slides/02_file-naming.html#section-1",
+    "title": "Naming files",
+    "section": "",
+    "text": "’Tis but thy name that is my enemy; Thou art thyself, though not a Montague. What’s Montague? It is nor hand, nor foot, Nor arm, nor face, nor any other part Belonging to a man. O, be some other name! What’s in a name? That which we call a rose By any other name would smell as sweet; So Romeo would, were he not Romeo call’d, Retain that dear perfection which he owes Without that title. Romeo, doff thy name; And for thy name, which is no part of thee, Take all myself.\n\n\n\nThis\nis\nnot\ntrue\nfor\nfile\nnames.\n\n\n\nFrom Danielle Navarro’s Project Structure slides\nhttps://slides.djnavarro.net/"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-matter-1",
+    "href": "slides/02_file-naming.html#names-matter-1",
+    "title": "Naming files",
+    "section": "Names matter",
+    "text": "Names matter\n\nmachine readable\n\nhuman readable\n\nsort nicely"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#section-2",
+    "href": "slides/02_file-naming.html#section-2",
+    "title": "Naming files",
+    "section": "",
+    "text": "What features differentiate 😔 vs 😍?\n\n\n\n\n\n😔\n\n\n\n\n😍\n\n\n\n\nmyabstract.docx\nJoe’s Filenames Use Spaces and Punctuation.xlsx\nfigure 1.png\nhomework1.R\nJW7d^(2sl@deletethisandyourcareerisoverWx2*.txt\n\n2018-01_bryan-abstract-rstudio-conf.docx\njoes-filenames-are-getting-better.xlsx\nfig01_scatterplot-talk-length-vs-interest.png\nbryan_hw01.R\n1986-01-28_raw-data-from-challenger-o-rings.txt\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-machines-like",
+    "href": "slides/02_file-naming.html#names-machines-like",
+    "title": "Naming files",
+    "section": "Names machines like",
+    "text": "Names machines like\n\ndon’t leave white space\n\n\n\nuse letters, numbers, hyphens and underscores… that’s it  (characters like ^.*?+|$ can have a special meaning)\n\n\n\n\nbe consistent with case  (some operating systems treat a and A the same, some differently).\n\n\n\n\nuse separator characters wisely\n\n    use underscore _ to separate different chunks\n    use hyphen - for words in the same chunk\n\n\n\nThis creates names that are regular expression and globbing friendly, and easy to compute on! 🎉\n\nAdapted from  https://djnavarro.net/slides-project-structure/#1."
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-humans-like",
+    "href": "slides/02_file-naming.html#names-humans-like",
+    "title": "Naming files",
+    "section": "Names humans like",
+    "text": "Names humans like\n\nname contains info on content\nname anticipates context\nconcept of a slug 🐌 from user-friendly URLs\n\n1986-01-28_raw-data-from-challenger-o-rings.txt\nconcise, meaningful description\nusually appended to the end\n\n\nNote: A URL slug is the part of the URL after the last backslash - important for keyword SEO"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-that-sort-nicely",
+    "href": "slides/02_file-naming.html#names-that-sort-nicely",
+    "title": "Naming files",
+    "section": "Names that sort nicely",
+    "text": "Names that sort nicely\n\nput something numeric in there\nleft pad with zeros for constant width, nice sorting, 01\nuse the ISO 8601 standard for dates, YYYY-MM-DD\norder = chronological or … consider common sense"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#iso-8601",
+    "href": "slides/02_file-naming.html#iso-8601",
+    "title": "Naming files",
+    "section": "ISO 8601",
+    "text": "ISO 8601\n\n\n\n\n\n\n\nYYYY-MM-DD\nISO 8601\n\nhttps://www.iso.org/iso-8601-date-and-time-format.html\n\n\n\nhttps://twitter.com/JennyBryan/status/816143967695687684"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#file-names",
+    "href": "slides/02_file-naming.html#file-names",
+    "title": "Naming files",
+    "section": "👍 file names",
+    "text": "👍 file names\n\n\nAnyone can guess at file’s purpose"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#file-names-1",
+    "href": "slides/02_file-naming.html#file-names-1",
+    "title": "Naming files",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nEasy to filter in R (or the shell or whatever)"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#file-names-2",
+    "href": "slides/02_file-naming.html#file-names-2",
+    "title": "Naming files",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nIntentional delimiters means meta-data is easily recovered.\n_ delimits fields; - delimits words"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#file-names-3",
+    "href": "slides/02_file-naming.html#file-names-3",
+    "title": "Naming files",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nSorts in the same order as you  experience in real life."
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-matter-2",
+    "href": "slides/02_file-naming.html#names-matter-2",
+    "title": "Naming files",
+    "section": "Names matter",
+    "text": "Names matter\n\nmachine readable, human readable, and sort nicely\n\n\neasy to implement NOW\n\npayoffs accumulate as your skills evolve and  projects get more complex"
   },
   {
     "objectID": "slides/00_introduction.html#schedule-schedule-1",
@@ -182,6 +245,34 @@
     "text": "🧐 Explore your R installation\n\ninstall.packages(\"usethis\")\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-explore-libraries\")\n# use_course(\"rstats-wtf/wtf-explore-libraries\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-explore-libraries\n\n\nRead the README.md to get started.\n\n01_explore-libraries_spartan.R  (directions to explore without suggested code)\n01_explore-libraries_comfy.R (directions to explore with suggested code)\n01_explore-libraries_solution.R (directions to explore with code solutions)\n\n\n\n\n\n−+\n15:00"
   },
   {
+    "objectID": "sections/intro.html",
+    "href": "sections/intro.html",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "As researchers grow in their skills, eventually the infrastructure surrounding the analysis will become an important catalyst for the reproducibility and longevity of analysis artefacts. Researchers are capable of creating complex and impressive projects, but it is unlikely to have benefited from any formal training or mentorship related to topics regarding project management. As a result of this, reproducibility and longevity of projects are likely to suffer. Learning aspects of project management is a vital, but rarely taught, skill when working on a project. While project management has some general guidelines that traverse fields, there are specific aspects to think about when working R, given R’s idiosyncrasies."
+  },
+  {
+    "objectID": "sections/schedule.html",
+    "href": "sections/schedule.html",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "Saving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nLunch break\n30 minutes\n\n\nR package management\n1.5 hours"
+  },
+  {
+    "objectID": "sections/schedule.html#schedule-schedule-1",
+    "href": "sections/schedule.html#schedule-schedule-1",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "Saving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nLunch break\n30 minutes\n\n\nR package management\n1.5 hours"
+  },
+  {
+    "objectID": "sections/schedule.html#footnotes",
+    "href": "sections/schedule.html#footnotes",
+    "title": "Project Oriented Workflows",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R.↩︎"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Project management with R",
@@ -200,7 +291,7 @@
     "href": "index.html#preparations",
     "title": "Project management with R",
     "section": "Preparations",
-    "text": "Preparations\nYou might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\nR packages\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"     # data-wrangling\n))"
+    "text": "Preparations\nYou might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\nR packages\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\",    # data-wrangling\n  \"renv\"          # package management\n))"
   },
   {
     "objectID": "index.html#footnotes",
@@ -208,6 +299,34 @@
     "title": "Project management with R",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R.↩︎"
+  },
+  {
+    "objectID": "sections/aims.html",
+    "href": "sections/aims.html",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "Aims\n\n\n\n\nUnderstand what a working environment is and how R deals with them\nSuccessfully implement a project-oriented workflow\nUnderstand best-practice naming of files\nKnow how to practice safe paths from R\nUnderstand basics of R package management"
+  },
+  {
+    "objectID": "sections/resources.html",
+    "href": "sections/resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Resources\n\nWorkshop website: https://www.capro.dev/workshop_rproj/\nWhat They Forgot to Teach you about R\nHappy Git With R book"
+  },
+  {
+    "objectID": "sections/prep.html",
+    "href": "sections/prep.html",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\",    # data-wrangling\n  \"renv\"          # package management\n))"
+  },
+  {
+    "objectID": "sections/prep.html#preparations",
+    "href": "sections/prep.html#preparations",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\",    # data-wrangling\n  \"renv\"          # package management\n))"
   },
   {
     "objectID": "slides/04_package-management.html#what-are-packages-libraries-in-r",
@@ -242,7 +361,7 @@
     "href": "slides/04_package-management.html#common-package-issues-in-pipelines-3",
     "title": "Package Management",
     "section": "Common package issues in pipelines",
-    "text": "Common package issues in pipelines\nPreventative measures:\n\n\n\nload all libraries you need at the top of your scripts\nthis helps you control the order things are loaded and possible function masking\nmakes it clear to anyone else running the script what the dependencies are\n\n\n\nWhen introducing a new package to your script\nadd it to the top of the script\nrestart your R session so it is clean\nstart re-running your code to make sure everything still works as expected\nif it doesn’t, make sure its the first library to be loaded, and try again in a fresh R session"
+    "text": "Common package issues in pipelines\nPreventative measures:\n\n\n\nload all libraries you need at the top of your scripts\n\nthis helps you control the order things are loaded and possible function masking\nmakes it clear to anyone else running the script what the dependencies are\n\n\n\n\nWhen introducing a new package to your script\n\nadd it to the top of the script\nrestart your R session so it is clean\nstart re-running your code to make sure everything still works as expected\nif it doesn’t, make sure its the first library to be loaded, and try again in a fresh R session"
   },
   {
     "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-4",
@@ -291,7 +410,7 @@
     "href": "slides/04_package-management.html#your-turn",
     "title": "Package Management",
     "section": "Your turn",
-    "text": "Your turn\n\nExplore the changes {renv} makes to a project.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"capro-uio/wtf-explore-renv\")\n# use_course(\"capro-uio/wtf-explore-renv\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/capro-uio/wtf-explore-renv\n\n\n&lt;br&gt; Read the README.md to get started.\n\ncountdown(\n   minutes = 15,\n   color_background = \"#CC4C4C\",\n  color_text = \"#d2d2d2\",\n  color_finished_background = \"#CC4C4C\",\n  bottom = \"0%\"\n  )"
+    "text": "Your turn\n\nExplore the changes {renv} makes to a project.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"capro-uio/wtf-explore-renv\")\n# use_course(\"capro-uio/wtf-explore-renv\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/capro-uio/wtf-explore-renv\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
   },
   {
     "objectID": "slides/01_project-oriented.html#adopt-a-project-oriented-workflow",
@@ -312,7 +431,7 @@
     "href": "slides/01_project-oriented.html#if-the-top-of-your-script-is",
     "title": "Project Oriented Workflows",
     "section": "If the top of your script is",
-    "text": "If the top of your script is\n\n\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nrm(list = ls())\n\n\nJenny will come into your your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\nProject-oriented workflow designs this away. 🙌\n\n\nhttps://twitter.com/hadleywickham/status/940021008764846080\nhttps://www.tidyverse.org/articles/2017/12/workflow-vs-script/\nhttps://rstats.wtf/project-oriented-workflow.html"
+    "text": "If the top of your script is\n\n\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nrm(list = ls())\n\n\nJenny will come into your your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\nProject-oriented workflow designs this away. 🙌\n\n\nhttps://twitter.com/hadleywickham/status/940021008764846080\nhttps://www.tidyverse.org/articles/2017/12/workflow-vs-script/\nhttps://rstats.wtf/projects"
   },
   {
     "objectID": "slides/01_project-oriented.html#which-persist-after-rmlist-ls",
@@ -446,124 +565,5 @@
     "title": "Project Oriented Workflows",
     "section": "What if my data can’t live in my project directory?",
     "text": "What if my data can’t live in my project directory?\n\nAre you sure it can’t?\nReview the Good Enough Practices paper for tips.\nCreate a symbolic link to access the data. (fs::link_create(), fs::link_path())\nPut the data in an R package.\nUse pins.\nExplore other data warehousing options.\n\nRStudio Community threads:\n\nProject-oriented workflow; setwd(), rm(list = ls()) and computer fires\nBest way to define paths for a file running on a cron?"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#section-1",
-    "href": "slides/02_file-naming.html#section-1",
-    "title": "Naming files",
-    "section": "",
-    "text": "’Tis but thy name that is my enemy; Thou art thyself, though not a Montague. What’s Montague? It is nor hand, nor foot, Nor arm, nor face, nor any other part Belonging to a man. O, be some other name! What’s in a name? That which we call a rose By any other name would smell as sweet; So Romeo would, were he not Romeo call’d, Retain that dear perfection which he owes Without that title. Romeo, doff thy name; And for thy name, which is no part of thee, Take all myself.\n\n\n\nThis\nis\nnot\ntrue\nfor\nfile\nnames.\n\n\n\nFrom Danielle Navarro’s Project Structure slides\nhttps://slides.djnavarro.net/"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-matter-1",
-    "href": "slides/02_file-naming.html#names-matter-1",
-    "title": "Naming files",
-    "section": "Names matter",
-    "text": "Names matter\n\nmachine readable\n\nhuman readable\n\nsort nicely"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#section-2",
-    "href": "slides/02_file-naming.html#section-2",
-    "title": "Naming files",
-    "section": "",
-    "text": "What features differentiate 😔 vs 😍?\n\n\n\n\n\n😔\n\n\n\n\n😍\n\n\n\n\nmyabstract.docx\nJoe’s Filenames Use Spaces and Punctuation.xlsx\nfigure 1.png\nhomework1.R\nJW7d^(2sl@deletethisandyourcareerisoverWx2*.txt\n\n2018-01_bryan-abstract-rstudio-conf.docx\njoes-filenames-are-getting-better.xlsx\nfig01_scatterplot-talk-length-vs-interest.png\nbryan_hw01.R\n1986-01-28_raw-data-from-challenger-o-rings.txt\n\n\n\n\n\n−+\n02:00"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-machines-like",
-    "href": "slides/02_file-naming.html#names-machines-like",
-    "title": "Naming files",
-    "section": "Names machines like",
-    "text": "Names machines like\n\ndon’t leave white space\n\n\n\nuse letters, numbers, hyphens and underscores… that’s it  (characters like ^.*?+|$ can have a special meaning)\n\n\n\n\nbe consistent with case  (some operating systems treat a and A the same, some differently).\n\n\n\n\nuse separator characters wisely\n\n    use underscore _ to separate different chunks\n    use hyphen - for words in the same chunk\n\n\n\nThis creates names that are regular expression and globbing friendly, and easy to compute on! 🎉\n\nAdapted from  https://djnavarro.net/slides-project-structure/#1."
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-humans-like",
-    "href": "slides/02_file-naming.html#names-humans-like",
-    "title": "Naming files",
-    "section": "Names humans like",
-    "text": "Names humans like\n\nname contains info on content\nname anticipates context\nconcept of a slug 🐌 from user-friendly URLs\n\n1986-01-28_raw-data-from-challenger-o-rings.txt\nconcise, meaningful description\nusually appended to the end\n\n\nNote: A URL slug is the part of the URL after the last backslash - important for keyword SEO"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-that-sort-nicely",
-    "href": "slides/02_file-naming.html#names-that-sort-nicely",
-    "title": "Naming files",
-    "section": "Names that sort nicely",
-    "text": "Names that sort nicely\n\nput something numeric in there\nleft pad with zeros for constant width, nice sorting, 01\nuse the ISO 8601 standard for dates, YYYY-MM-DD\norder = chronological or … consider common sense"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#iso-8601",
-    "href": "slides/02_file-naming.html#iso-8601",
-    "title": "Naming files",
-    "section": "ISO 8601",
-    "text": "ISO 8601\n\n\n\n\n\n\n\nYYYY-MM-DD\nISO 8601\n\nhttps://www.iso.org/iso-8601-date-and-time-format.html\n\n\n\nhttps://twitter.com/JennyBryan/status/816143967695687684"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#file-names",
-    "href": "slides/02_file-naming.html#file-names",
-    "title": "Naming files",
-    "section": "👍 file names",
-    "text": "👍 file names\n\n\nAnyone can guess at file’s purpose"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#file-names-1",
-    "href": "slides/02_file-naming.html#file-names-1",
-    "title": "Naming files",
-    "section": "👍 file names",
-    "text": "👍 file names\n\nEasy to filter in R (or the shell or whatever)"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#file-names-2",
-    "href": "slides/02_file-naming.html#file-names-2",
-    "title": "Naming files",
-    "section": "👍 file names",
-    "text": "👍 file names\n\nIntentional delimiters means meta-data is easily recovered.\n_ delimits fields; - delimits words"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#file-names-3",
-    "href": "slides/02_file-naming.html#file-names-3",
-    "title": "Naming files",
-    "section": "👍 file names",
-    "text": "👍 file names\n\nSorts in the same order as you  experience in real life."
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-matter-2",
-    "href": "slides/02_file-naming.html#names-matter-2",
-    "title": "Naming files",
-    "section": "Names matter",
-    "text": "Names matter\n\nmachine readable, human readable, and sort nicely\n\n\neasy to implement NOW\n\npayoffs accumulate as your skills evolve and  projects get more complex"
-  },
-  {
-    "objectID": "sections/schedule.html",
-    "href": "sections/schedule.html",
-    "title": "Project Oriented Workflows",
-    "section": "",
-    "text": "Saving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nLunch break\n30 minutes\n\n\nR package management\n1.5 hours"
-  },
-  {
-    "objectID": "sections/schedule.html#schedule-schedule-1",
-    "href": "sections/schedule.html#schedule-schedule-1",
-    "title": "Project Oriented Workflows",
-    "section": "",
-    "text": "Saving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nLunch break\n30 minutes\n\n\nR package management\n1.5 hours"
-  },
-  {
-    "objectID": "sections/schedule.html#footnotes",
-    "href": "sections/schedule.html#footnotes",
-    "title": "Project Oriented Workflows",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R.↩︎"
-  },
-  {
-    "objectID": "sections/prep.html",
-    "href": "sections/prep.html",
-    "title": "Project Oriented Workflows",
-    "section": "",
-    "text": "You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"     # data-wrangling\n))"
-  },
-  {
-    "objectID": "sections/prep.html#preparations",
-    "href": "sections/prep.html#preparations",
-    "title": "Project Oriented Workflows",
-    "section": "",
-    "text": "You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"     # data-wrangling\n))"
   }
 ]
