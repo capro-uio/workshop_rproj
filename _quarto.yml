@@ -4,6 +4,7 @@ project:
   render:
     - "index.qmd"
     - "slides/*.qmd"
+    - "helper.qmd"
 
 website:
   page-navigation: true
