@@ -267,9 +267,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exercise-explore-your-r-installation" class="level4">
 <h4 class="anchored" data-anchor-id="exercise-explore-your-r-installation">Exercise: Explore your R installation</h4>
 <p>Learners should run this code:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"usethis"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">use_course</span>(<span class="st">"rstats-wtf/wtf-explore-libraries"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>The exercise is singular, but has three flavours (as most exercises for this course has).</p>
 <ul>
 <li><strong>solution</strong>: provides the solution to the exercise, for novices</li>
@@ -281,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="project-oriented-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="project-oriented-workflow">Project Oriented workflow</h3>
-<p>This section is about what project oriented workflows are and why we should adopt them. There are a fair few links to various important resources, that learners might want into the collarborative document, if they dont have the slides up while we instruct.</p>
+<p>This section is about what project oriented workflows are and why we should adopt them. There are a fair few links to various important resources, that learners might want into the collaborative document, if they don’t have the slides up while we instruct.</p>
 <p>If they ask for them, please do copy them in.</p>
 <p>The exercise is to create a new project, in the folder they downloaded in the previous exercise. Meaning, they should create a project in an existing folder, either through the RStudio GUI, or through the R console.</p>
 <p>They need to change this path to where the folder is <code>usethis::create_project("/path/to/folder")</code></p>
@@ -290,13 +292,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="file-naming" class="level3">
 <h3 class="anchored" data-anchor-id="file-naming">File naming</h3>
-<p>This section is all about names, and here we have no exercises, but rather some verbal discussion and shout-outs to the slides. Here to focus is to get them thinking about what file names are good and why some file names are worse.</p>
+<p>This section is all about names, and here we have no exercises, but rather some verbal discussion and shout-outs to the slides. Here the focus is to get them thinking about what file names are good and why some file names are worse.</p>
 </section>
 <section id="project-structure" class="level3">
 <h3 class="anchored" data-anchor-id="project-structure">Project Structure</h3>
 <p>In the project structure section, we talk about what constitutes a good project structure. There is no singular correct answer to this, but there are guidelines that are good to discuss and talk about.</p>
 <p>Mostly we here talk about how splitting a project into several parts is better than having one large singular script.</p>
-<p>In this exercise at the end, they are again instructed to download some exercise materials. This time, they should read the README for further instructions on what they should be doing during the exercise.</p>
+<p>In this exercise at the end, they are again instructed to download some exercise materials. This time, they should read the README for further instructions on what they should be doing during the exercise.<br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># saves project on desktop by default for most users</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">use_course</span>(<span class="st">"rstats-wtf/wtf-packages-report"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># use_course("rstats-wtf/wtf-packages-report", destdir = "my/new/location")</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># can alternatively download from </span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/rstats-wtf/wtf-packages-report</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>They should familiarise themselves with the project structure and how its set up. Then run sequentially through the three exercises in the <code>R/</code> folder. The expectation here is that most people will not be able to finish it all during the time allotted, but that is fine. We just have enough material so even experts can feel challenged.</p>
 </section>
 <section id="package-management" class="level3">
@@ -310,6 +321,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>then initiate the package manager,</li>
 <li>redo the exercise, noting the difference between the two</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># saves project on desktop by default for most users</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">use_course</span>(<span class="st">"capro-uio/wtf-explore-renv"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># use_course("capro-uio/wtf-explore-renv", destdir = "my/new/location")</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># can alternatively download from </span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/capro-uio/wtf-explore-renv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Here, we want to make a point of how the package manager changes where and how packages are stored.</p>
 
 
