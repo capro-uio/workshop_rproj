@@ -1,73 +1,339 @@
 [
   {
-    "objectID": "slides/educloud_prep.html#getting-onto-educloud",
-    "href": "slides/educloud_prep.html#getting-onto-educloud",
-    "title": "EduCloud preparations",
-    "section": "Getting onto EduCloud",
-    "text": "Getting onto EduCloud\nStart with opening EduCloud on Demand\n\nhttps://ondemand.educloud.no/pun/sys/dashboard"
+    "objectID": "helper.html",
+    "href": "helper.html",
+    "title": "Helper’s document",
+    "section": "",
+    "text": "In this file, all the code bits that need pasting into the collaborative doc will be, as well as some helpful tips to the helpers for this workshop. After a workshop has run, I’d greatly appreciate any help in improving the helper doc for future workshops, so if you have ideas let me know. If you are comfortable with GitHub, a PR directly to this repo with suggestions is highly appreciated."
   },
   {
-    "objectID": "slides/educloud_prep.html#working-on-educloud",
-    "href": "slides/educloud_prep.html#working-on-educloud",
-    "title": "EduCloud preparations",
-    "section": "Working on EduCloud",
-    "text": "Working on EduCloud\nYou have the option to\n\nwork in your own home directory\nwork in a project directory\n\nUnder `My Projects` you should see any educloud project you are a member of that has on demand ready (are connected to Fox).\n\n\nFor this workshop, we will work on our own home spaces."
+    "objectID": "helper.html#open-tabs",
+    "href": "helper.html#open-tabs",
+    "title": "Helper’s document",
+    "section": "Open tabs",
+    "text": "Open tabs\nDuring the workshop, I think its a good idea for helpers to have on their computers certain tabs open at all times, so you can easily navigate to them at need\n\nthe collaborative document\nthe workshop website\nthe slides the instructor is currently running through"
   },
   {
-    "objectID": "slides/03_project-structure.html#break-logic-and-output-into-pieces",
-    "href": "slides/03_project-structure.html#break-logic-and-output-into-pieces",
-    "title": "Project Structure",
-    "section": "Break logic and output into pieces",
-    "text": "Break logic and output into pieces"
+    "objectID": "helper.html#schedule-schedule-1",
+    "href": "helper.html#schedule-schedule-1",
+    "title": "Helper’s document",
+    "section": "Schedule 1",
+    "text": "Schedule 1\n\n\n\nSaving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nLunch break\n30 minutes\n\n\nR package management\n1.5 hours"
   },
   {
-    "objectID": "slides/03_project-structure.html#process",
-    "href": "slides/03_project-structure.html#process",
-    "title": "Project Structure",
-    "section": "Process",
-    "text": "Process\n\n\nhttps://r4ds.had.co.nz/introduction.html#what-you-will-learn"
+    "objectID": "helper.html#workshop-progression",
+    "href": "helper.html#workshop-progression",
+    "title": "Helper’s document",
+    "section": "Workshop progression",
+    "text": "Workshop progression\nIn this section, we have anything that is related to the workshop as it is progressing. Each section has its own subtitle here, and these should also match sections in the collaborative document. This way, helpers can easily navigate to the relevant section in the helper document.\n\nEduCloud flavour\nThis section is only when we run the course on EduCloud.\nThe project for the course i ec306, but that does not really matter. We wont by default be using the project space.\nLearners will first go to open on demand, and start an RStudio server https://ondemand.educloud.no/pun/sys/dashboard\n\n\nIntroduction\nThe introduction is meant to provide a basis of what we will be talking about during the workshop, to set expectations and provide everyone with an equal frame of reference.\nAt the end there is an exercise to get people to explore their R installation and get familiarized with it.\n\nExercise: Explore your R installation\nLearners should run this code:\ninstall.packages(\"usethis\")\nlibrary(usethis)\nuse_course(\"rstats-wtf/wtf-explore-libraries\")\nThe exercise is singular, but has three flavours (as most exercises for this course has).\n\nsolution: provides the solution to the exercise, for novices\ncomfy: provides example code to run, for intermediates\nspartan: provides no example code, for experts\n\nI will always walk through the solution once the exercise is done.\n\n\n\nProject Oriented workflow\nThis section is about what project oriented workflows are and why we should adopt them. There are a fair few links to various important resources, that learners might want into the collarborative document, if they dont have the slides up while we instruct.\nIf they ask for them, please do copy them in.\nThe exercise is to create a new project, in the folder they downloaded in the previous exercise. Meaning, they should create a project in an existing folder, either through the RStudio GUI, or through the R console.\nThey need to change this path to where the folder is usethis::create_project(\"/path/to/folder\")\nOR do\nFile -&gt; New Project -&gt; Existing Directory\n\n\nFile naming\nThis section is all about names, and here we have no exercises, but rather some verbal discussion and shout-outs to the slides. Here to focus is to get them thinking about what file names are good and why some file names are worse.\n\n\nProject Structure\nIn the project structure section, we talk about what constitutes a good project structure. There is no singular correct answer to this, but there are guidelines that are good to discuss and talk about.\nMostly we here talk about how splitting a project into several parts is better than having one large singular script.\nIn this exercise at the end, they are again instructed to download some exercise materials. This time, they should read the README for further instructions on what they should be doing during the exercise.\nThey should familiarise themselves with the project structure and how its set up. Then run sequentially through the three exercises in the R/ folder. The expectation here is that most people will not be able to finish it all during the time allotted, but that is fine. We just have enough material so even experts can feel challenged.\n\n\nPackage management\nThis section is all about package management, and how to manage packages in a project. This is by far the most advanced subject we are covering, and I expect some to feel a little overwhelmed. Nonetheless, this is a section a lot of people really appreciate, and even novices will be able to take away things to remember in the future when they get more comfortable. Package management is a known sore point for R users, particularly on shared resources like educloud!\nHere we talk about why package management in R can be tricky, and why we should care, and offer the current best practice solution.\nThe exercise here is a little different than what we have done before. It still contains the three flavours, but requires the learners to\n\ngo through the exercises,\nmake a note of the results,\nthen initiate the package manager,\nredo the exercise, noting the difference between the two\n\nHere, we want to make a point of how the package manager changes where and how packages are stored."
   },
   {
-    "objectID": "slides/03_project-structure.html#project-code",
-    "href": "slides/03_project-structure.html#project-code",
-    "title": "Project Structure",
-    "section": "Project code",
-    "text": "Project code\n\n\nsmell.test.R\nwrangle.R\nmodel.R\nmake-figs.R\nreport.Rmd\n\n\n&gt;&gt;&gt;\n\n\n    everything.R"
+    "objectID": "helper.html#footnotes",
+    "href": "helper.html#footnotes",
+    "title": "Helper’s document",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R.↩︎"
   },
   {
-    "objectID": "slides/03_project-structure.html#process-and-code",
-    "href": "slides/03_project-structure.html#process-and-code",
-    "title": "Project Structure",
-    "section": "Process and code",
-    "text": "Process and code"
+    "objectID": "slides/04_package-management.html#what-are-packages-libraries-in-r",
+    "href": "slides/04_package-management.html#what-are-packages-libraries-in-r",
+    "title": "Package Management",
+    "section": "What are packages / libraries in R?",
+    "text": "What are packages / libraries in R?\n\nExtensions to the programming language\n\ncontains functions & documentation of these\n\nstandardised for easier install and use across users\n\n\nOften written by other users to solve specific tasks in R\n\nsolving particular statistical problems\nnew types of data visualisation"
   },
   {
-    "objectID": "slides/03_project-structure.html#project-artifacts",
-    "href": "slides/03_project-structure.html#project-artifacts",
-    "title": "Project Structure",
-    "section": "Project artifacts",
-    "text": "Project artifacts\n\n\nraw-data.xlsx\ndata.csv\nfit.rds\nests.csv\n\n\n&gt;&gt;&gt;\n\n\n.Rdata"
+    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines",
+    "href": "slides/04_package-management.html#common-package-issues-in-pipelines",
+    "title": "Package Management",
+    "section": "Common package issues in pipelines",
+    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}"
   },
   {
-    "objectID": "slides/03_project-structure.html#process-and-artifacts",
-    "href": "slides/03_project-structure.html#process-and-artifacts",
-    "title": "Project Structure",
-    "section": "Process and artifacts",
-    "text": "Process and artifacts"
+    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-1",
+    "href": "slides/04_package-management.html#common-package-issues-in-pipelines-1",
+    "title": "Package Management",
+    "section": "Common package issues in pipelines",
+    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}\n\nsolution 1\nload libraries in reverse order of importance.\n\ni.e. load {dplyr} last, and its select() will be prioritised over the one from {MASS}.\n\nlibrary(MASS)\nlibrary(dplyr)"
   },
   {
-    "objectID": "slides/03_project-structure.html#a-humane-api-for-analysis",
-    "href": "slides/03_project-structure.html#a-humane-api-for-analysis",
-    "title": "Project Structure",
-    "section": "A humane API for analysis",
-    "text": "A humane API for analysis"
+    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-2",
+    "href": "slides/04_package-management.html#common-package-issues-in-pipelines-2",
+    "title": "Package Management",
+    "section": "Common package issues in pipelines",
+    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}\n\nsolution 2:\nif you only need a single function from another package, call the function directly, rather than loading the entire library.\n\ni.e. run MASS::lm.gls() rather than library(MASS); lm.gls().\nthe double colon :: enables you to access a library’s. functions without loading the entire library.\n\nthis is called namespacing"
   },
   {
-    "objectID": "slides/03_project-structure.html#your-turn",
-    "href": "slides/03_project-structure.html#your-turn",
-    "title": "Project Structure",
+    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-3",
+    "href": "slides/04_package-management.html#common-package-issues-in-pipelines-3",
+    "title": "Package Management",
+    "section": "Common package issues in pipelines",
+    "text": "Common package issues in pipelines\nPreventative measures:\n\n\n\nload all libraries you need at the top of your scripts\n\nthis helps you control the order things are loaded and possible function masking\nmakes it clear to anyone else running the script what the dependencies are\n\n\n\n\nWhen introducing a new package to your script\n\nadd it to the top of the script\nrestart your R session so it is clean\nstart re-running your code to make sure everything still works as expected\nif it doesn’t, make sure its the first library to be loaded, and try again in a fresh R session"
+  },
+  {
+    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-4",
+    "href": "slides/04_package-management.html#common-package-issues-in-pipelines-4",
+    "title": "Package Management",
+    "section": "Common package issues in pipelines",
+    "text": "Common package issues in pipelines\n\nThe package I used 1 year ago no longer exists\n\nThere are archives of packages, like MRAN, that will likely help you. But you’ll need to know which version you used, etc.\nCan be tricky, but the {checkpoint} package might be of great assistance!"
+  },
+  {
+    "objectID": "slides/04_package-management.html#r-package-managers",
+    "href": "slides/04_package-management.html#r-package-managers",
+    "title": "Package Management",
+    "section": "R package managers",
+    "text": "R package managers\n\nRStudio package manager\n\nRStudio enterprise solution\n\npackrat\n\none of the first\na little complicated to use, requiring some knowledge of package paths etc.\n\ncheckpoint\n\nI have no experience with it, but it looks great!\n\nrenv\n\nnew and widely used\ncreates fairly simple procedures to follow\ncan become complicated in some situations"
+  },
+  {
+    "objectID": "slides/04_package-management.html#use-renv-to-make-your-r-projects-more",
+    "href": "slides/04_package-management.html#use-renv-to-make-your-r-projects-more",
+    "title": "Package Management",
+    "section": "Use renv to make your R projects more:",
+    "text": "Use renv to make your R projects more:\n\nIsolated\n\ninstalling or updating a package for one project won’t break other projects\ngives each project its own private package library\n\nPortable\n\ntransport your projects from one computer to another\nmakes it easy to install the packages your project depends on.\n\nReproducible\n\nrecords the exact package versions you depend on\nensures those exact versions are the ones that get installed wherever you go."
+  },
+  {
+    "objectID": "slides/04_package-management.html#using-renv",
+    "href": "slides/04_package-management.html#using-renv",
+    "title": "Package Management",
+    "section": "Using {renv}",
+    "text": "Using {renv}\n\nrenv should be used in projects\n\nIf you initiate renv when your not in a project, it will create one for you.\nTo initiate renv:\nrenv::init()"
+  },
+  {
+    "objectID": "slides/04_package-management.html#how-did-it-find-these-packages",
+    "href": "slides/04_package-management.html#how-did-it-find-these-packages",
+    "title": "Package Management",
+    "section": "How did it find these packages?",
+    "text": "How did it find these packages?\nIt looks in all project files for:\n\nlibrary(package)\nrequire(package)\nrequireNamespace(\"package\")\npackage::function()\n\nWill also look for packages listed in the DESCRIPTON file, as “Depends”, or “Imports”."
+  },
+  {
+    "objectID": "slides/04_package-management.html#demo",
+    "href": "slides/04_package-management.html#demo",
+    "title": "Package Management",
+    "section": "Demo",
+    "text": "Demo"
+  },
+  {
+    "objectID": "slides/04_package-management.html#your-turn",
+    "href": "slides/04_package-management.html#your-turn",
+    "title": "Package Management",
     "section": "Your turn",
-    "text": "Your turn\n\nCreate a report that adheres to project organization strategies.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-packages-report\")\n# use_course(\"rstats-wtf/wtf-packages-report\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-packages-report\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
+    "text": "Your turn\n\nExplore the changes {renv} makes to a project.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"capro-uio/wtf-explore-renv\")\n# use_course(\"capro-uio/wtf-explore-renv\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/capro-uio/wtf-explore-renv\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#section-1",
+    "href": "slides/02_file-naming.html#section-1",
+    "title": "Naming files",
+    "section": "",
+    "text": "’Tis but thy name that is my enemy; Thou art thyself, though not a Montague. What’s Montague? It is nor hand, nor foot, Nor arm, nor face, nor any other part Belonging to a man. O, be some other name! What’s in a name? That which we call a rose By any other name would smell as sweet; So Romeo would, were he not Romeo call’d, Retain that dear perfection which he owes Without that title. Romeo, doff thy name; And for thy name, which is no part of thee, Take all myself.\n\n\n\nThis\nis\nnot\ntrue\nfor\nfile\nnames.\n\n\n\nFrom Danielle Navarro’s Project Structure slides\nhttps://slides.djnavarro.net/"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-matter-1",
+    "href": "slides/02_file-naming.html#names-matter-1",
+    "title": "Naming files",
+    "section": "Names matter",
+    "text": "Names matter\n\nmachine readable\n\nhuman readable\n\nsort nicely"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#section-2",
+    "href": "slides/02_file-naming.html#section-2",
+    "title": "Naming files",
+    "section": "",
+    "text": "What features differentiate 😔 vs 😍?\n\n\n\n\n\n😔\n\n\n\n\n😍\n\n\n\n\nmyabstract.docx\nJoe’s Filenames Use Spaces and Punctuation.xlsx\nfigure 1.png\nhomework1.R\nJW7d^(2sl@deletethisandyourcareerisoverWx2*.txt\n\n2018-01_bryan-abstract-rstudio-conf.docx\njoes-filenames-are-getting-better.xlsx\nfig01_scatterplot-talk-length-vs-interest.png\nbryan_hw01.R\n1986-01-28_raw-data-from-challenger-o-rings.txt\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-machines-like",
+    "href": "slides/02_file-naming.html#names-machines-like",
+    "title": "Naming files",
+    "section": "Names machines like",
+    "text": "Names machines like\n\ndon’t leave white space\n\n\n\nuse letters, numbers, hyphens and underscores… that’s it  (characters like ^.*?+|$ can have a special meaning)\n\n\n\n\nbe consistent with case  (some operating systems treat a and A the same, some differently).\n\n\n\n\nuse separator characters wisely\n\n    use underscore _ to separate different chunks\n    use hyphen - for words in the same chunk\n\n\n\nThis creates names that are regular expression and globbing friendly, and easy to compute on! 🎉\n\nAdapted from  https://djnavarro.net/slides-project-structure/#1."
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-humans-like",
+    "href": "slides/02_file-naming.html#names-humans-like",
+    "title": "Naming files",
+    "section": "Names humans like",
+    "text": "Names humans like\n\nname contains info on content\nname anticipates context\nconcept of a slug 🐌 from user-friendly URLs\n\n1986-01-28_raw-data-from-challenger-o-rings.txt\nconcise, meaningful description\nusually appended to the end\n\n\nNote: A URL slug is the part of the URL after the last backslash - important for keyword SEO"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-that-sort-nicely",
+    "href": "slides/02_file-naming.html#names-that-sort-nicely",
+    "title": "Naming files",
+    "section": "Names that sort nicely",
+    "text": "Names that sort nicely\n\nput something numeric in there\nleft pad with zeros for constant width, nice sorting, 01\nuse the ISO 8601 standard for dates, YYYY-MM-DD\norder = chronological or … consider common sense"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#iso-8601",
+    "href": "slides/02_file-naming.html#iso-8601",
+    "title": "Naming files",
+    "section": "ISO 8601",
+    "text": "ISO 8601\n\n\n\n\n\n\n\nYYYY-MM-DD\nISO 8601\n\nhttps://www.iso.org/iso-8601-date-and-time-format.html\n\n\n\nhttps://twitter.com/JennyBryan/status/816143967695687684"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#file-names",
+    "href": "slides/02_file-naming.html#file-names",
+    "title": "Naming files",
+    "section": "👍 file names",
+    "text": "👍 file names\n\n\nAnyone can guess at file’s purpose"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#file-names-1",
+    "href": "slides/02_file-naming.html#file-names-1",
+    "title": "Naming files",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nEasy to filter in R (or the shell or whatever)"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#file-names-2",
+    "href": "slides/02_file-naming.html#file-names-2",
+    "title": "Naming files",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nIntentional delimiters means meta-data is easily recovered.\n_ delimits fields; - delimits words"
+  },
+  {
+    "objectID": "slides/02_file-naming.html#file-names-3",
+    "href": "slides/02_file-naming.html#file-names-3",
+    "title": "Naming files",
+    "section": "👍 file names",
+    "text": "👍 file names\n\nSorts in the same order as you  experience in real life."
+  },
+  {
+    "objectID": "slides/02_file-naming.html#names-matter-2",
+    "href": "slides/02_file-naming.html#names-matter-2",
+    "title": "Naming files",
+    "section": "Names matter",
+    "text": "Names matter\n\nmachine readable, human readable, and sort nicely\n\n\neasy to implement NOW\n\npayoffs accumulate as your skills evolve and  projects get more complex"
+  },
+  {
+    "objectID": "slides/00_introduction.html#schedule-schedule-1",
+    "href": "slides/00_introduction.html#schedule-schedule-1",
+    "title": "Introduction",
+    "section": "Schedule 1",
+    "text": "Schedule 1\n\n\n\nSaving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nLunch break\n30 minutes\n\n\nR package management\n1.5 hours\n\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R."
+  },
+  {
+    "objectID": "slides/00_introduction.html#checklist",
+    "href": "slides/00_introduction.html#checklist",
+    "title": "Introduction",
+    "section": "Checklist",
+    "text": "Checklist\n\n\n\n R installed? Pretty recent?\n     Recommended R ≥ 4.3.0\n RStudio installed?\n     I’m on 2023.06.1 Build 524     \n\n Packages?\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"     # data-wrangling\n))"
+  },
+  {
+    "objectID": "slides/00_introduction.html#section",
+    "href": "slides/00_introduction.html#section",
+    "title": "Introduction",
+    "section": "",
+    "text": "What Did They Forget  to Teach You?"
+  },
+  {
+    "objectID": "slides/00_introduction.html#learning-objectives",
+    "href": "slides/00_introduction.html#learning-objectives",
+    "title": "Introduction",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nEstablish the concept of the project as the basic organizational unit of work.\nApply best practices in and leverage benefits of working in RStudio projects, including\n\n\nCreating robust file paths that travel well in time and space.\nConstructing human and machine readable file names that sort nicely.\nDifferentiating workflow elements, analysis inputs, and analysis outputs in project structure to create navigable programming interfaces.\nRestarting R frequently, with a blank slate."
+  },
+  {
+    "objectID": "slides/00_introduction.html#why-do-we-care-about-project-management",
+    "href": "slides/00_introduction.html#why-do-we-care-about-project-management",
+    "title": "Introduction",
+    "section": "Why do we care about project management?",
+    "text": "Why do we care about project management?\n\n\nPortability\nThe ability to move the project without breaking code or needing adapting\n\nyou will change computers\nyou will reorganise your file structure\nyou will share your code with others\n\n\n\n\n\nReproducibility\nThe ability to rerun the entire process from scratch\n\nnot just for reviews\nnot just for best-practice science\nalso for future (or even present) you\nand for your collaborators/helpers"
+  },
+  {
+    "objectID": "slides/00_introduction.html#be-organized-as-you-go-not-tomorrow",
+    "href": "slides/00_introduction.html#be-organized-as-you-go-not-tomorrow",
+    "title": "Introduction",
+    "section": "Be organized as you go,  not “tomorrow”",
+    "text": "Be organized as you go,  not “tomorrow”\n\n\nDon’t fret over past mistakes.\n\n\n\n\nRaise the bar for new work."
+  },
+  {
+    "objectID": "slides/00_introduction.html#be-organized-1",
+    "href": "slides/00_introduction.html#be-organized-1",
+    "title": "Introduction",
+    "section": "Be organized",
+    "text": "Be organized\n\n\n\nself-explaining &gt;&gt;&gt; wordy, needy explainers"
+  },
+  {
+    "objectID": "slides/00_introduction.html#be-organized-2",
+    "href": "slides/00_introduction.html#be-organized-2",
+    "title": "Introduction",
+    "section": "Be organized",
+    "text": "Be organized\n\n\n\n\n\n&gt;&gt;&gt;\n\n\n  file salad    + an out of date README"
+  },
+  {
+    "objectID": "slides/00_introduction.html#good-enough-practices-in-scientific-computing",
+    "href": "slides/00_introduction.html#good-enough-practices-in-scientific-computing",
+    "title": "Introduction",
+    "section": "Good enough practices in scientific computing",
+    "text": "Good enough practices in scientific computing\n\n\n\n\n\n\nPLOS Computational Biology\nWilson, Bryan, Cranston, Kitzes, Nederbragt, Teal (2017)\nhttps://doi.org/10.1371/journal.pcbi.1005510\nhttp://bit.ly/good-enuff"
+  },
+  {
+    "objectID": "slides/00_introduction.html#your-r-installation",
+    "href": "slides/00_introduction.html#your-r-installation",
+    "title": "Introduction",
+    "section": "Your R installation",
+    "text": "Your R installation\n\nR packages\n\nthe natural unit for distributing R code\n\n\n\nbase R\n\n14 base + 15 recommended packages\nships with all binary distributions of R\n\n\n\nFor example, have you used lattice recently? 🤷\n\nit came with your R installation, can use out of the box\nlibrary(lattice)"
+  },
+  {
+    "objectID": "slides/00_introduction.html#additional-packages",
+    "href": "slides/00_introduction.html#additional-packages",
+    "title": "Introduction",
+    "section": "Additional packages",
+    "text": "Additional packages\n\n\n\nCRAN, ~20k packages\n\n# install from CRAN\ninstall.packages(\"remotes\")\n# attach\nlibrary(remotes)\n\n\n\n\nGitHub, ??? packages\n\n# install via remotes\nremotes::install_github(\"rstats-wtf/wtfdbg\")\n# attach\nlibrary(wtfdbg)"
+  },
+  {
+    "objectID": "slides/00_introduction.html#where-do-packages-live-locally",
+    "href": "slides/00_introduction.html#where-do-packages-live-locally",
+    "title": "Introduction",
+    "section": "Where do packages live locally?",
+    "text": "Where do packages live locally?\n\nBy default, in the default library\n.Library\n\nAll libraries for the current session\n.libPaths()\n\nAll installed packages\ninstalled.packages()"
+  },
+  {
+    "objectID": "slides/00_introduction.html#syntax-aside-pipes",
+    "href": "slides/00_introduction.html#syntax-aside-pipes",
+    "title": "Introduction",
+    "section": "Syntax aside: pipes",
+    "text": "Syntax aside: pipes\n\n2014+ magrittr pipe %&gt;%\n2021+ (R \\(\\geq\\) 4.1.0) native R pipe |&gt;\n\n2022 Isabella Velásquez Understanding the native R pipe |&gt; https://ivelasq.rbind.io/blog/understanding-the-r-pipe/\n\n\n\n\n\nwhatever(arg1, arg2, arg3, ...)\narg1 |&gt;  \n  whatever(arg2, arg3)\n\n\n\n\n\nmean(0:10)\n0:10 |&gt; \n  mean()\n\n\n\n\nChange CTRL + Shift + M shortcut to native pipe:\nTools -&gt; Global Options -&gt; Code -&gt;\n   Editing -&gt; check Use Native Pipe Operator"
+  },
+  {
+    "objectID": "slides/00_introduction.html#syntax-aside-namespacing",
+    "href": "slides/00_introduction.html#syntax-aside-namespacing",
+    "title": "Introduction",
+    "section": "Syntax aside: namespacing",
+    "text": "Syntax aside: namespacing\ndplyr::select()\n\ntells R explicitly to use the function select from the package dplyr\ncan help to avoid name conflicts (e.g., MASS::select())\ndoes not require library(dplyr)\n\n\n\n\n\nlibrary(dplyr)\nselect(mtcars, mpg, cyl) \nmtcars |&gt;  \n  select(mpg, cyl) \n\n\n\n\n\n# library(dplyr) not needed\ndplyr::select(mtcars, mpg, cyl) \nmtcars |&gt;  \n  dplyr::select(mpg, cyl)"
+  },
+  {
+    "objectID": "slides/00_introduction.html#explore-your-r-installation",
+    "href": "slides/00_introduction.html#explore-your-r-installation",
+    "title": "Introduction",
+    "section": "🧐 Explore your R installation",
+    "text": "🧐 Explore your R installation\n\ninstall.packages(\"usethis\")\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-explore-libraries\")\n# use_course(\"rstats-wtf/wtf-explore-libraries\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-explore-libraries\n\n\nRead the README.md to get started.\n\n01_explore-libraries_spartan.R  (directions to explore without suggested code)\n01_explore-libraries_comfy.R (directions to explore with suggested code)\n01_explore-libraries_solution.R (directions to explore with code solutions)\n\n\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project management with R",
+    "section": "",
+    "text": "As researchers grow in their skills, eventually the infrastructure surrounding the analysis will become an important catalyst for the reproducibility and longevity of analysis artefacts. Researchers are capable of creating complex and impressive projects, but it is unlikely to have benefited from any formal training or mentorship related to topics regarding project management. As a result of this, reproducibility and longevity of projects are likely to suffer. Learning aspects of project management is a vital, but rarely taught, skill when working on a project. While project management has some general guidelines that traverse fields, there are specific aspects to think about when working R, given R’s idiosyncrasies."
+  },
+  {
+    "objectID": "index.html#schedule-schedule-1",
+    "href": "index.html#schedule-schedule-1",
+    "title": "Project management with R",
+    "section": "Schedule 1",
+    "text": "Schedule 1\n\n\n\nSaving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nLunch break\n30 minutes\n\n\nR package management\n1.5 hours"
+  },
+  {
+    "objectID": "index.html#preparations",
+    "href": "index.html#preparations",
+    "title": "Project management with R",
+    "section": "Preparations",
+    "text": "Preparations\nYou might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\nR packages\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\",    # data-wrangling\n  \"renv\"          # package management\n))\n\n\n\n\n\n\nImportant\n\n\n\nIf you are using a windows computer, you will also need to install RTools:\nhttps://cran.r-project.org/bin/windows/Rtools/\n\nRTools is an important addition to the R ecosystem.\n\nMost institutional software handlers will have RTools as an option to install."
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Project management with R",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R.↩︎"
   },
   {
     "objectID": "slides/01_project-oriented.html#adopt-a-project-oriented-workflow",
@@ -224,304 +490,73 @@
     "text": "What if my data can’t live in my project directory?\n\nAre you sure it can’t?\nReview the Good Enough Practices paper for tips.\nCreate a symbolic link to access the data. (fs::link_create(), fs::link_path())\nPut the data in an R package.\nUse pins.\nExplore other data warehousing options.\n\nRStudio Community threads:\n\nProject-oriented workflow; setwd(), rm(list = ls()) and computer fires\nBest way to define paths for a file running on a cron?"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Project management with R",
-    "section": "",
-    "text": "As researchers grow in their skills, eventually the infrastructure surrounding the analysis will become an important catalyst for the reproducibility and longevity of analysis artefacts. Researchers are capable of creating complex and impressive projects, but it is unlikely to have benefited from any formal training or mentorship related to topics regarding project management. As a result of this, reproducibility and longevity of projects are likely to suffer. Learning aspects of project management is a vital, but rarely taught, skill when working on a project. While project management has some general guidelines that traverse fields, there are specific aspects to think about when working R, given R’s idiosyncrasies."
+    "objectID": "slides/03_project-structure.html#break-logic-and-output-into-pieces",
+    "href": "slides/03_project-structure.html#break-logic-and-output-into-pieces",
+    "title": "Project Structure",
+    "section": "Break logic and output into pieces",
+    "text": "Break logic and output into pieces"
   },
   {
-    "objectID": "index.html#schedule-schedule-1",
-    "href": "index.html#schedule-schedule-1",
-    "title": "Project management with R",
-    "section": "Schedule 1",
-    "text": "Schedule 1\n\n\n\nSaving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nLunch break\n30 minutes\n\n\nR package management\n1.5 hours"
+    "objectID": "slides/03_project-structure.html#process",
+    "href": "slides/03_project-structure.html#process",
+    "title": "Project Structure",
+    "section": "Process",
+    "text": "Process\n\n\nhttps://r4ds.had.co.nz/introduction.html#what-you-will-learn"
   },
   {
-    "objectID": "index.html#preparations",
-    "href": "index.html#preparations",
-    "title": "Project management with R",
-    "section": "Preparations",
-    "text": "Preparations\nYou might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\nR packages\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\",    # data-wrangling\n  \"renv\"          # package management\n))\n\n\n\n\n\n\nImportant\n\n\n\nIf you are using a windows computer, you will also need to install RTools:\nhttps://cran.r-project.org/bin/windows/Rtools/\n\nRTools is an important addition to the R ecosystem.\n\nMost institutional software handlers will have RTools as an option to install."
+    "objectID": "slides/03_project-structure.html#project-code",
+    "href": "slides/03_project-structure.html#project-code",
+    "title": "Project Structure",
+    "section": "Project code",
+    "text": "Project code\n\n\nsmell.test.R\nwrangle.R\nmodel.R\nmake-figs.R\nreport.Rmd\n\n\n&gt;&gt;&gt;\n\n\n    everything.R"
   },
   {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "Project management with R",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R.↩︎"
+    "objectID": "slides/03_project-structure.html#process-and-code",
+    "href": "slides/03_project-structure.html#process-and-code",
+    "title": "Project Structure",
+    "section": "Process and code",
+    "text": "Process and code"
   },
   {
-    "objectID": "slides/00_introduction.html#schedule-schedule-1",
-    "href": "slides/00_introduction.html#schedule-schedule-1",
-    "title": "Introduction",
-    "section": "Schedule 1",
-    "text": "Schedule 1\n\n\n\nSaving source and blank slates\n1 hour\n\n\nProject-oriented workflow\n1 hour\n\n\nHow to name files & practicing safe paths\n1 hour\n\n\nLunch break\n30 minutes\n\n\nR package management\n1.5 hours\n\n\n\nThis course relies heavily on materials from What They Forgot to Teach you about R, which is an excellent resource to dig deeper into to improve the way you work in R."
+    "objectID": "slides/03_project-structure.html#project-artifacts",
+    "href": "slides/03_project-structure.html#project-artifacts",
+    "title": "Project Structure",
+    "section": "Project artifacts",
+    "text": "Project artifacts\n\n\nraw-data.xlsx\ndata.csv\nfit.rds\nests.csv\n\n\n&gt;&gt;&gt;\n\n\n.Rdata"
   },
   {
-    "objectID": "slides/00_introduction.html#checklist",
-    "href": "slides/00_introduction.html#checklist",
-    "title": "Introduction",
-    "section": "Checklist",
-    "text": "Checklist\n\n\n\n R installed? Pretty recent?\n     Recommended R ≥ 4.3.0\n RStudio installed?\n     I’m on 2023.06.1 Build 524     \n\n Packages?\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"     # data-wrangling\n))"
+    "objectID": "slides/03_project-structure.html#process-and-artifacts",
+    "href": "slides/03_project-structure.html#process-and-artifacts",
+    "title": "Project Structure",
+    "section": "Process and artifacts",
+    "text": "Process and artifacts"
   },
   {
-    "objectID": "slides/00_introduction.html#section",
-    "href": "slides/00_introduction.html#section",
-    "title": "Introduction",
-    "section": "",
-    "text": "What Did They Forget  to Teach You?"
+    "objectID": "slides/03_project-structure.html#a-humane-api-for-analysis",
+    "href": "slides/03_project-structure.html#a-humane-api-for-analysis",
+    "title": "Project Structure",
+    "section": "A humane API for analysis",
+    "text": "A humane API for analysis"
   },
   {
-    "objectID": "slides/00_introduction.html#learning-objectives",
-    "href": "slides/00_introduction.html#learning-objectives",
-    "title": "Introduction",
-    "section": "Learning objectives",
-    "text": "Learning objectives\n\nEstablish the concept of the project as the basic organizational unit of work.\nApply best practices in and leverage benefits of working in RStudio projects, including\n\n\nCreating robust file paths that travel well in time and space.\nConstructing human and machine readable file names that sort nicely.\nDifferentiating workflow elements, analysis inputs, and analysis outputs in project structure to create navigable programming interfaces.\nRestarting R frequently, with a blank slate."
-  },
-  {
-    "objectID": "slides/00_introduction.html#why-do-we-care-about-project-management",
-    "href": "slides/00_introduction.html#why-do-we-care-about-project-management",
-    "title": "Introduction",
-    "section": "Why do we care about project management?",
-    "text": "Why do we care about project management?\n\n\nPortability\nThe ability to move the project without breaking code or needing adapting\n\nyou will change computers\nyou will reorganise your file structure\nyou will share your code with others\n\n\n\n\n\nReproducibility\nThe ability to rerun the entire process from scratch\n\nnot just for reviews\nnot just for best-practice science\nalso for future (or even present) you\nand for your collaborators/helpers"
-  },
-  {
-    "objectID": "slides/00_introduction.html#be-organized-as-you-go-not-tomorrow",
-    "href": "slides/00_introduction.html#be-organized-as-you-go-not-tomorrow",
-    "title": "Introduction",
-    "section": "Be organized as you go,  not “tomorrow”",
-    "text": "Be organized as you go,  not “tomorrow”\n\n\nDon’t fret over past mistakes.\n\n\n\n\nRaise the bar for new work."
-  },
-  {
-    "objectID": "slides/00_introduction.html#be-organized-1",
-    "href": "slides/00_introduction.html#be-organized-1",
-    "title": "Introduction",
-    "section": "Be organized",
-    "text": "Be organized\n\n\n\nself-explaining &gt;&gt;&gt; wordy, needy explainers"
-  },
-  {
-    "objectID": "slides/00_introduction.html#be-organized-2",
-    "href": "slides/00_introduction.html#be-organized-2",
-    "title": "Introduction",
-    "section": "Be organized",
-    "text": "Be organized\n\n\n\n\n\n&gt;&gt;&gt;\n\n\n  file salad    + an out of date README"
-  },
-  {
-    "objectID": "slides/00_introduction.html#good-enough-practices-in-scientific-computing",
-    "href": "slides/00_introduction.html#good-enough-practices-in-scientific-computing",
-    "title": "Introduction",
-    "section": "Good enough practices in scientific computing",
-    "text": "Good enough practices in scientific computing\n\n\n\n\n\n\nPLOS Computational Biology\nWilson, Bryan, Cranston, Kitzes, Nederbragt, Teal (2017)\nhttps://doi.org/10.1371/journal.pcbi.1005510\nhttp://bit.ly/good-enuff"
-  },
-  {
-    "objectID": "slides/00_introduction.html#your-r-installation",
-    "href": "slides/00_introduction.html#your-r-installation",
-    "title": "Introduction",
-    "section": "Your R installation",
-    "text": "Your R installation\n\nR packages\n\nthe natural unit for distributing R code\n\n\n\nbase R\n\n14 base + 15 recommended packages\nships with all binary distributions of R\n\n\n\nFor example, have you used lattice recently? 🤷\n\nit came with your R installation, can use out of the box\nlibrary(lattice)"
-  },
-  {
-    "objectID": "slides/00_introduction.html#additional-packages",
-    "href": "slides/00_introduction.html#additional-packages",
-    "title": "Introduction",
-    "section": "Additional packages",
-    "text": "Additional packages\n\n\n\nCRAN, ~20k packages\n\n# install from CRAN\ninstall.packages(\"remotes\")\n# attach\nlibrary(remotes)\n\n\n\n\nGitHub, ??? packages\n\n# install via remotes\nremotes::install_github(\"rstats-wtf/wtfdbg\")\n# attach\nlibrary(wtfdbg)"
-  },
-  {
-    "objectID": "slides/00_introduction.html#where-do-packages-live-locally",
-    "href": "slides/00_introduction.html#where-do-packages-live-locally",
-    "title": "Introduction",
-    "section": "Where do packages live locally?",
-    "text": "Where do packages live locally?\n\nBy default, in the default library\n.Library\n\nAll libraries for the current session\n.libPaths()\n\nAll installed packages\ninstalled.packages()"
-  },
-  {
-    "objectID": "slides/00_introduction.html#syntax-aside-pipes",
-    "href": "slides/00_introduction.html#syntax-aside-pipes",
-    "title": "Introduction",
-    "section": "Syntax aside: pipes",
-    "text": "Syntax aside: pipes\n\n2014+ magrittr pipe %&gt;%\n2021+ (R \\(\\geq\\) 4.1.0) native R pipe |&gt;\n\n2022 Isabella Velásquez Understanding the native R pipe |&gt; https://ivelasq.rbind.io/blog/understanding-the-r-pipe/\n\n\n\n\n\nwhatever(arg1, arg2, arg3, ...)\narg1 |&gt;  \n  whatever(arg2, arg3)\n\n\n\n\n\nmean(0:10)\n0:10 |&gt; \n  mean()\n\n\n\n\nChange CTRL + Shift + M shortcut to native pipe:\nTools -&gt; Global Options -&gt; Code -&gt;\n   Editing -&gt; check Use Native Pipe Operator"
-  },
-  {
-    "objectID": "slides/00_introduction.html#syntax-aside-namespacing",
-    "href": "slides/00_introduction.html#syntax-aside-namespacing",
-    "title": "Introduction",
-    "section": "Syntax aside: namespacing",
-    "text": "Syntax aside: namespacing\ndplyr::select()\n\ntells R explicitly to use the function select from the package dplyr\ncan help to avoid name conflicts (e.g., MASS::select())\ndoes not require library(dplyr)\n\n\n\n\n\nlibrary(dplyr)\nselect(mtcars, mpg, cyl) \nmtcars |&gt;  \n  select(mpg, cyl) \n\n\n\n\n\n# library(dplyr) not needed\ndplyr::select(mtcars, mpg, cyl) \nmtcars |&gt;  \n  dplyr::select(mpg, cyl)"
-  },
-  {
-    "objectID": "slides/00_introduction.html#explore-your-r-installation",
-    "href": "slides/00_introduction.html#explore-your-r-installation",
-    "title": "Introduction",
-    "section": "🧐 Explore your R installation",
-    "text": "🧐 Explore your R installation\n\ninstall.packages(\"usethis\")\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-explore-libraries\")\n# use_course(\"rstats-wtf/wtf-explore-libraries\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-explore-libraries\n\n\nRead the README.md to get started.\n\n01_explore-libraries_spartan.R  (directions to explore without suggested code)\n01_explore-libraries_comfy.R (directions to explore with suggested code)\n01_explore-libraries_solution.R (directions to explore with code solutions)\n\n\n\n\n\n−+\n15:00"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#section-1",
-    "href": "slides/02_file-naming.html#section-1",
-    "title": "Naming files",
-    "section": "",
-    "text": "’Tis but thy name that is my enemy; Thou art thyself, though not a Montague. What’s Montague? It is nor hand, nor foot, Nor arm, nor face, nor any other part Belonging to a man. O, be some other name! What’s in a name? That which we call a rose By any other name would smell as sweet; So Romeo would, were he not Romeo call’d, Retain that dear perfection which he owes Without that title. Romeo, doff thy name; And for thy name, which is no part of thee, Take all myself.\n\n\n\nThis\nis\nnot\ntrue\nfor\nfile\nnames.\n\n\n\nFrom Danielle Navarro’s Project Structure slides\nhttps://slides.djnavarro.net/"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-matter-1",
-    "href": "slides/02_file-naming.html#names-matter-1",
-    "title": "Naming files",
-    "section": "Names matter",
-    "text": "Names matter\n\nmachine readable\n\nhuman readable\n\nsort nicely"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#section-2",
-    "href": "slides/02_file-naming.html#section-2",
-    "title": "Naming files",
-    "section": "",
-    "text": "What features differentiate 😔 vs 😍?\n\n\n\n\n\n😔\n\n\n\n\n😍\n\n\n\n\nmyabstract.docx\nJoe’s Filenames Use Spaces and Punctuation.xlsx\nfigure 1.png\nhomework1.R\nJW7d^(2sl@deletethisandyourcareerisoverWx2*.txt\n\n2018-01_bryan-abstract-rstudio-conf.docx\njoes-filenames-are-getting-better.xlsx\nfig01_scatterplot-talk-length-vs-interest.png\nbryan_hw01.R\n1986-01-28_raw-data-from-challenger-o-rings.txt\n\n\n\n\n\n−+\n02:00"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-machines-like",
-    "href": "slides/02_file-naming.html#names-machines-like",
-    "title": "Naming files",
-    "section": "Names machines like",
-    "text": "Names machines like\n\ndon’t leave white space\n\n\n\nuse letters, numbers, hyphens and underscores… that’s it  (characters like ^.*?+|$ can have a special meaning)\n\n\n\n\nbe consistent with case  (some operating systems treat a and A the same, some differently).\n\n\n\n\nuse separator characters wisely\n\n    use underscore _ to separate different chunks\n    use hyphen - for words in the same chunk\n\n\n\nThis creates names that are regular expression and globbing friendly, and easy to compute on! 🎉\n\nAdapted from  https://djnavarro.net/slides-project-structure/#1."
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-humans-like",
-    "href": "slides/02_file-naming.html#names-humans-like",
-    "title": "Naming files",
-    "section": "Names humans like",
-    "text": "Names humans like\n\nname contains info on content\nname anticipates context\nconcept of a slug 🐌 from user-friendly URLs\n\n1986-01-28_raw-data-from-challenger-o-rings.txt\nconcise, meaningful description\nusually appended to the end\n\n\nNote: A URL slug is the part of the URL after the last backslash - important for keyword SEO"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-that-sort-nicely",
-    "href": "slides/02_file-naming.html#names-that-sort-nicely",
-    "title": "Naming files",
-    "section": "Names that sort nicely",
-    "text": "Names that sort nicely\n\nput something numeric in there\nleft pad with zeros for constant width, nice sorting, 01\nuse the ISO 8601 standard for dates, YYYY-MM-DD\norder = chronological or … consider common sense"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#iso-8601",
-    "href": "slides/02_file-naming.html#iso-8601",
-    "title": "Naming files",
-    "section": "ISO 8601",
-    "text": "ISO 8601\n\n\n\n\n\n\n\nYYYY-MM-DD\nISO 8601\n\nhttps://www.iso.org/iso-8601-date-and-time-format.html\n\n\n\nhttps://twitter.com/JennyBryan/status/816143967695687684"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#file-names",
-    "href": "slides/02_file-naming.html#file-names",
-    "title": "Naming files",
-    "section": "👍 file names",
-    "text": "👍 file names\n\n\nAnyone can guess at file’s purpose"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#file-names-1",
-    "href": "slides/02_file-naming.html#file-names-1",
-    "title": "Naming files",
-    "section": "👍 file names",
-    "text": "👍 file names\n\nEasy to filter in R (or the shell or whatever)"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#file-names-2",
-    "href": "slides/02_file-naming.html#file-names-2",
-    "title": "Naming files",
-    "section": "👍 file names",
-    "text": "👍 file names\n\nIntentional delimiters means meta-data is easily recovered.\n_ delimits fields; - delimits words"
-  },
-  {
-    "objectID": "slides/02_file-naming.html#file-names-3",
-    "href": "slides/02_file-naming.html#file-names-3",
-    "title": "Naming files",
-    "section": "👍 file names",
-    "text": "👍 file names\n\nSorts in the same order as you  experience in real life."
-  },
-  {
-    "objectID": "slides/02_file-naming.html#names-matter-2",
-    "href": "slides/02_file-naming.html#names-matter-2",
-    "title": "Naming files",
-    "section": "Names matter",
-    "text": "Names matter\n\nmachine readable, human readable, and sort nicely\n\n\neasy to implement NOW\n\npayoffs accumulate as your skills evolve and  projects get more complex"
-  },
-  {
-    "objectID": "slides/04_package-management.html#what-are-packages-libraries-in-r",
-    "href": "slides/04_package-management.html#what-are-packages-libraries-in-r",
-    "title": "Package Management",
-    "section": "What are packages / libraries in R?",
-    "text": "What are packages / libraries in R?\n\nExtensions to the programming language\n\ncontains functions & documentation of these\n\nstandardised for easier install and use across users\n\n\nOften written by other users to solve specific tasks in R\n\nsolving particular statistical problems\nnew types of data visualisation"
-  },
-  {
-    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines",
-    "href": "slides/04_package-management.html#common-package-issues-in-pipelines",
-    "title": "Package Management",
-    "section": "Common package issues in pipelines",
-    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}"
-  },
-  {
-    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-1",
-    "href": "slides/04_package-management.html#common-package-issues-in-pipelines-1",
-    "title": "Package Management",
-    "section": "Common package issues in pipelines",
-    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}\n\nsolution 1\nload libraries in reverse order of importance.\n\ni.e. load {dplyr} last, and its select() will be prioritised over the one from {MASS}.\n\nlibrary(MASS)\nlibrary(dplyr)"
-  },
-  {
-    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-2",
-    "href": "slides/04_package-management.html#common-package-issues-in-pipelines-2",
-    "title": "Package Management",
-    "section": "Common package issues in pipelines",
-    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}\n\nsolution 2:\nif you only need a single function from another package, call the function directly, rather than loading the entire library.\n\ni.e. run MASS::lm.gls() rather than library(MASS); lm.gls().\nthe double colon :: enables you to access a library’s. functions without loading the entire library.\n\nthis is called namespacing"
-  },
-  {
-    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-3",
-    "href": "slides/04_package-management.html#common-package-issues-in-pipelines-3",
-    "title": "Package Management",
-    "section": "Common package issues in pipelines",
-    "text": "Common package issues in pipelines\nPreventative measures:\n\n\n\nload all libraries you need at the top of your scripts\n\nthis helps you control the order things are loaded and possible function masking\nmakes it clear to anyone else running the script what the dependencies are\n\n\n\n\nWhen introducing a new package to your script\n\nadd it to the top of the script\nrestart your R session so it is clean\nstart re-running your code to make sure everything still works as expected\nif it doesn’t, make sure its the first library to be loaded, and try again in a fresh R session"
-  },
-  {
-    "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-4",
-    "href": "slides/04_package-management.html#common-package-issues-in-pipelines-4",
-    "title": "Package Management",
-    "section": "Common package issues in pipelines",
-    "text": "Common package issues in pipelines\n\nThe package I used 1 year ago no longer exists\n\nThere are archives of packages, like MRAN, that will likely help you. But you’ll need to know which version you used, etc.\nCan be tricky, but the {checkpoint} package might be of great assistance!"
-  },
-  {
-    "objectID": "slides/04_package-management.html#r-package-managers",
-    "href": "slides/04_package-management.html#r-package-managers",
-    "title": "Package Management",
-    "section": "R package managers",
-    "text": "R package managers\n\nRStudio package manager\n\nRStudio enterprise solution\n\npackrat\n\none of the first\na little complicated to use, requiring some knowledge of package paths etc.\n\ncheckpoint\n\nI have no experience with it, but it looks great!\n\nrenv\n\nnew and widely used\ncreates fairly simple procedures to follow\ncan become complicated in some situations"
-  },
-  {
-    "objectID": "slides/04_package-management.html#use-renv-to-make-your-r-projects-more",
-    "href": "slides/04_package-management.html#use-renv-to-make-your-r-projects-more",
-    "title": "Package Management",
-    "section": "Use renv to make your R projects more:",
-    "text": "Use renv to make your R projects more:\n\nIsolated\n\ninstalling or updating a package for one project won’t break other projects\ngives each project its own private package library\n\nPortable\n\ntransport your projects from one computer to another\nmakes it easy to install the packages your project depends on.\n\nReproducible\n\nrecords the exact package versions you depend on\nensures those exact versions are the ones that get installed wherever you go."
-  },
-  {
-    "objectID": "slides/04_package-management.html#using-renv",
-    "href": "slides/04_package-management.html#using-renv",
-    "title": "Package Management",
-    "section": "Using {renv}",
-    "text": "Using {renv}\n\nrenv should be used in projects\n\nIf you initiate renv when your not in a project, it will create one for you.\nTo initiate renv:\nrenv::init()"
-  },
-  {
-    "objectID": "slides/04_package-management.html#how-did-it-find-these-packages",
-    "href": "slides/04_package-management.html#how-did-it-find-these-packages",
-    "title": "Package Management",
-    "section": "How did it find these packages?",
-    "text": "How did it find these packages?\nIt looks in all project files for:\n\nlibrary(package)\nrequire(package)\nrequireNamespace(\"package\")\npackage::function()\n\nWill also look for packages listed in the DESCRIPTON file, as “Depends”, or “Imports”."
-  },
-  {
-    "objectID": "slides/04_package-management.html#demo",
-    "href": "slides/04_package-management.html#demo",
-    "title": "Package Management",
-    "section": "Demo",
-    "text": "Demo"
-  },
-  {
-    "objectID": "slides/04_package-management.html#your-turn",
-    "href": "slides/04_package-management.html#your-turn",
-    "title": "Package Management",
+    "objectID": "slides/03_project-structure.html#your-turn",
+    "href": "slides/03_project-structure.html#your-turn",
+    "title": "Project Structure",
     "section": "Your turn",
-    "text": "Your turn\n\nExplore the changes {renv} makes to a project.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"capro-uio/wtf-explore-renv\")\n# use_course(\"capro-uio/wtf-explore-renv\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/capro-uio/wtf-explore-renv\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
+    "text": "Your turn\n\nCreate a report that adheres to project organization strategies.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-packages-report\")\n# use_course(\"rstats-wtf/wtf-packages-report\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-packages-report\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "slides/educloud_prep.html#getting-onto-educloud",
+    "href": "slides/educloud_prep.html#getting-onto-educloud",
+    "title": "EduCloud preparations",
+    "section": "Getting onto EduCloud",
+    "text": "Getting onto EduCloud\nStart with opening EduCloud on Demand\n\nhttps://ondemand.educloud.no/pun/sys/dashboard"
+  },
+  {
+    "objectID": "slides/educloud_prep.html#working-on-educloud",
+    "href": "slides/educloud_prep.html#working-on-educloud",
+    "title": "EduCloud preparations",
+    "section": "Working on EduCloud",
+    "text": "Working on EduCloud\nYou have the option to\n\nwork in your own home directory\nwork in a project directory\n\nUnder `My Projects` you should see any educloud project you are a member of that has on demand ready (are connected to Fox).\n\n\nFor this workshop, we will work on our own home spaces."
   }
 ]
