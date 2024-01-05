@@ -15,7 +15,15 @@ website:
 
   repo-url: https://capro-uio.github.io/workshop_rproj/
   repo-actions: [edit, issue]
+
   navbar:
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/drmowinckels/workshop_rproj
+        text: GitHub
+    style: docked
     left:
       - text: Slides
         menu:
@@ -39,6 +47,11 @@ website:
             text: MPI - Nov. 2023
           - href: https://hackmd.io/@drmowinckels/dsd_rproj/edit
             text: DS Days UiO - Jan. 2024
+    right:
+      - href: https://drmowinckels.io
+        icon: globe
+      - href: https://fosstodon.org/@Drmowinckels
+        icon: mastodon
 
 format:
   html:
