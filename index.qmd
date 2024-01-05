@@ -6,7 +6,7 @@ author:
     orcid: 0000-0002-5756-0223
     affiliations:
       - name: CAPRO
-        url: https://www.capro.dev/
+        url: https://capro.dev/
 ---
 
 ```{r child="sections/intro.qmd"}

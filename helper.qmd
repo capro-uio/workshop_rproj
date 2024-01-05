@@ -1,0 +1,119 @@
+---
+title: "Helper's document"
+---
+
+In this file, all the code bits that need pasting into the collaborative doc will be, as well as some helpful tips to the helpers for this workshop. After a workshop has run, I'd greatly appreciate any help in improving the helper doc for future workshops, so if you have ideas let me know. If you are comfortable with GitHub, a PR directly to this repo with suggestions is highly appreciated.
+
+## Open tabs
+
+During the workshop, I think its a good idea for helpers to have on their computers certain tabs open at all times, so you can easily navigate to them at need
+
+-   the collaborative document
+
+-   the workshop website
+
+-   the slides the instructor is currently running through
+
+```{r child="sections/schedule.qmd"}
+```
+
+## Workshop progression
+
+In this section, we have anything that is related to the workshop as it is progressing. 
+Each section has its own subtitle here, and these should also match sections in the collaborative document. 
+This way, helpers can easily navigate to the relevant section in the helper document.
+
+
+### EduCloud flavour
+This section is only when we run the course on EduCloud.
+
+The project for the course i `ec306`, but that does not really matter.
+We wont by default be using the project space.
+
+Learners will first go to open on demand, and start an RStudio server
+https://ondemand.educloud.no/pun/sys/dashboard
+
+
+
+### Introduction
+The introduction is meant to provide a basis of what we will be talking about during the workshop, to set expectations and provide everyone with an equal frame of reference. 
+
+At the end there is an exercise to get people to explore their R installation and get familiarized with it. 
+
+#### Exercise: Explore your R installation
+Learners should run this code:
+
+```r
+install.packages("usethis")
+library(usethis)
+use_course("rstats-wtf/wtf-explore-libraries")
+```
+The exercise is singular, but has three flavours (as most exercises for this course has).
+
+- **solution**: provides the solution to the exercise, for novices 
+- **comfy**: provides example code to run, for intermediates
+- **spartan**: provides no example code, for experts
+
+I will always walk through the solution once the exercise is done.
+
+### Project Oriented workflow
+
+This section is about what project oriented workflows are and why we should adopt them. 
+There are a fair few links to various important resources, that learners might want into the collarborative document, if they dont have the slides up while we instruct.
+
+If they ask for them, please do copy them in.
+
+The exercise is to create a new project, in the folder they downloaded in the previous exercise. 
+Meaning, they should create a project in an existing folder, either through the RStudio GUI, or through the R console.
+
+They need to change this path to where the folder is
+`usethis::create_project("/path/to/folder")`
+
+OR do
+
+`File -> New Project -> Existing Directory`
+
+
+### File naming
+
+This section is all about names, and here we have no exercises, but rather some verbal discussion and shout-outs to the slides.
+Here to focus is to get them thinking about what file names are good and why some file names are worse.
+
+### Project Structure
+
+In the project structure section, we talk about what constitutes a good project structure.
+There is no singular correct answer to this, but there are guidelines that are good to discuss and talk about.
+
+Mostly we here talk about how splitting a project into several parts is better than having one large singular script.
+
+In this exercise at the end, they are again instructed to download some exercise materials. 
+This time, they should read the README for further instructions on what they should be doing during the exercise. 
+
+They should familiarise themselves with the project structure and how its set up. 
+Then run sequentially through the three exercises in the `R/` folder.
+The expectation here is that most people will not be able to finish it all during the time allotted, but that is fine.
+We just have enough material so even experts can feel challenged.
+
+
+### Package management
+
+This section is all about package management, and how to manage packages in a project.
+This is by far the most advanced subject we are covering, and I expect some to feel a little overwhelmed.
+Nonetheless, this is a section a lot of people really appreciate, and even novices will be able to take away things to remember in the future when they get more comfortable.
+Package management is a known sore point for R users, particularly on shared resources like educloud!
+
+Here we talk about why package management in R can be tricky, and why we should care, and offer the current best practice solution.
+
+The exercise here is a little different than what we have done before. 
+It still contains the three flavours, but requires the learners to 
+
+- go through the exercises, 
+- make a note of the results, 
+- then initiate the package manager, 
+- redo the exercise, noting the difference between the two
+
+Here, we want to make a point of how the package manager changes where and how packages are stored. 
+
+
+
+

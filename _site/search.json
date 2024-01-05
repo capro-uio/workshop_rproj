@@ -4,7 +4,7 @@
     "href": "slides/01_project-oriented.html#adopt-a-project-oriented-workflow",
     "title": "Project Oriented Workflows",
     "section": "Adopt a project-oriented workflow",
-    "text": "Adopt a project-oriented workflow\n\n\n\nWhy\n\nwork on more than 1 thing at a time\ncollaborate, communicate, distribute\nstart and stop\n\n\n\n\n\nHow\n\ndedicated directory\nRStudio Project\nGit repo, probably syncing to a remote"
+    "text": "Adopt a project-oriented workflow\n\n\n\n\nWhy\n\nwork on more than 1 thing at a time\ncollaborate, communicate, distribute\nstart and stop\n\n\n\n\n\n\nHow\n\ndedicated directory\nRStudio Project\nGit repo, probably syncing to a remote"
   },
   {
     "objectID": "slides/01_project-oriented.html#project-workflows",
@@ -18,14 +18,14 @@
     "href": "slides/01_project-oriented.html#if-the-top-of-your-script-is",
     "title": "Project Oriented Workflows",
     "section": "If the top of your script is",
-    "text": "If the top of your script is\n\n\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nrm(list = ls())\n\n\nJenny will come into your your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\nProject-oriented workflow designs this away. 🙌\n\n\nhttps://twitter.com/hadleywickham/status/940021008764846080\nhttps://www.tidyverse.org/articles/2017/12/workflow-vs-script/\nhttps://rstats.wtf/project-oriented-workflow.html"
+    "text": "If the top of your script is\n\n\nsetwd(\"C:\\Users\\jenny\\path\\that\\only\\I\\have\")\nrm(list = ls())\n\n\nJenny will come into your your office and SET YOUR COMPUTER ON FIRE 🔥.\n\n\nProject-oriented workflow designs this away. 🙌\n\n\nhttps://twitter.com/hadleywickham/status/940021008764846080\nhttps://www.tidyverse.org/articles/2017/12/workflow-vs-script/\nhttps://rstats.wtf/projects"
   },
   {
     "objectID": "slides/01_project-oriented.html#which-persist-after-rmlist-ls",
     "href": "slides/01_project-oriented.html#which-persist-after-rmlist-ls",
     "title": "Project Oriented Workflows",
     "section": "Which persist after rm(list = ls())?",
-    "text": "Which persist after rm(list = ls())?\n\n\n\nOption\nPersists?\n\n\n\n\nA. library(dplyr)\n\n\n\nB. summary &lt;- head\n\n\n\nC. options(stringsAsFactors = FALSE)\n\n\n\nD. Sys.setenv(LANGUAGE = “fr”)\n\n\n\nE. x &lt;- 1:5\n\n\n\nF. attach(iris)\n\n\n\n\n\n\n\n−+\n03:00"
+    "text": "Which persist after rm(list = ls())?\n\n\n\nOption\nPersists?\n\n\n\n\nA. library(dplyr)\n\n\n\nB. summary &lt;- head\n\n\n\nC. options(stringsAsFactors = FALSE)\n\n\n\nD. Sys.setenv(LANGUAGE = “fr”)\n\n\n\nE. x &lt;- 1:5\n\n\n\nF. attach(iris)\n\n\n\n\n\ncountdown(\n  color_background = \"#CC4C4C\",\n  color_text = \"#d2d2d2\",\n  color_finished_background = \"#CC4C4C\",\n  minutes = 3,\n  bottom = \"0%\"\n  )\n\n\n−+\n03:00"
   },
   {
     "objectID": "slides/01_project-oriented.html#which-persist-after-rmlist-ls-1",
@@ -39,7 +39,7 @@
     "href": "slides/01_project-oriented.html#what-does-it-mean-to-be-an-rstudio-project",
     "title": "Project Oriented Workflows",
     "section": "What does it mean to be an RStudio Project?",
-    "text": "What does it mean to be an RStudio Project?\n\nRStudio leaves notes to itself in foo.Rproj\n\n\nOpen Project = dedicated instance of RStudio\n\ndedicated R process\nfile browser pointed at Project directory\nworking directory set to Project directory"
+    "text": "What does it mean to be an RStudio Project?\n\nRStudio leaves notes to itself in foo.Rproj\n. . .\n\nOpen Project = dedicated instance of RStudio\n\ndedicated R process\nfile browser pointed at Project directory\nworking directory set to Project directory"
   },
   {
     "objectID": "slides/01_project-oriented.html#many-projects-open",
@@ -67,7 +67,7 @@
     "href": "slides/01_project-oriented.html#project-initiation-the-local-case",
     "title": "Project Oriented Workflows",
     "section": "Project initiation: the local case",
-    "text": "Project initiation: the local case\n\nNew folder + make it an RStudio Project\n\n\nusethis::create_project(\"~/i_am_new\")\nFile -&gt; New Project -&gt; New Directory -&gt; New Project\n\n\n\nMake existing folder into an RStudio Project\n\n\nusethis::create_project(\"~/i_exist\")\nFile -&gt; New Project -&gt; Existing Directory\n\n\n\n\nTry option 2 now for wtf-explore-libraries.\n\n\n\n\n−+\n05:00"
+    "text": "Project initiation: the local case\n\nNew folder + make it an RStudio Project\n\n\nusethis::create_project(\"~/i_am_new\")\nFile -&gt; New Project -&gt; New Directory -&gt; New Project\n\n. . .\n\nMake existing folder into an RStudio Project\n\n\nusethis::create_project(\"~/i_exist\")\nFile -&gt; New Project -&gt; Existing Directory\n\n. . .\n\nTry option 2 now for wtf-explore-libraries.\n\n\ncountdown(\n  color_background = \"#CC4C4C\",\n  color_text = \"#d2d2d2\",\n  color_finished_background = \"#CC4C4C\",\n  minutes = 5,\n  bottom = \"0%\"\n  )\n\n\n−+\n05:00"
   },
   {
     "objectID": "slides/01_project-oriented.html#on-reproducibility-of-code",
@@ -95,21 +95,21 @@
     "href": "slides/01_project-oriented.html#packages-with-file-system-functions",
     "title": "Project Oriented Workflows",
     "section": "Packages with file system functions",
-    "text": "Packages with file system functions\n\n\ninstall.packages(\"fs\")\n\nfs = file path handling\n\n\n\ninstall.packages(\"here\")\n\nhere = project-relative paths"
+    "text": "Packages with file system functions\n\n\ninstall.packages(\"fs\")\n\nfs = file path handling\n\n. . .\n\ninstall.packages(\"here\")\n\nhere = project-relative paths"
   },
   {
     "objectID": "slides/01_project-oriented.html#examples-of-a-stable-base",
     "href": "slides/01_project-oriented.html#examples-of-a-stable-base",
     "title": "Project Oriented Workflows",
     "section": "Examples of a stable base",
-    "text": "Examples of a stable base\n\nProject directory\n\nhere::here(\"data\", \"raw-data.csv\")\nhere::here(\"data/raw-data.csv\")\n\nAutomatically complete paths with Tab.\n\n\nUser’s home directory\n\nfile.path(\"~\", ...)\nfs::path_home(...)\n\n\n\n\nOfficial location for installed software\n\nlibrary(thingy)\nsystem.file(..., package = \"thingy\")\n\nSee example in gapminder readme.\n\nsee where tilde goes with fs::path_expand(file.path(“~”))"
+    "text": "Examples of a stable base\n\nProject directory\n\nhere::here(\"data\", \"raw-data.csv\")\nhere::here(\"data/raw-data.csv\")\n\nAutomatically complete paths with Tab.\n\n. . .\nUser’s home directory\n\nfile.path(\"~\", ...)\nfs::path_home(...)\n\n. . .\n\nOfficial location for installed software\n\nlibrary(thingy)\nsystem.file(..., package = \"thingy\")\n\nSee example in gapminder readme.\n\nsee where tilde goes with fs::path_expand(file.path(“~”))"
   },
   {
     "objectID": "slides/01_project-oriented.html#absolute-paths",
     "href": "slides/01_project-oriented.html#absolute-paths",
     "title": "Project Oriented Workflows",
     "section": "Absolute paths",
-    "text": "Absolute paths\nI have nothing against absolute paths.\nSome of my best friends are absolute paths!\nBut don’t hard-wire them into your scripts.\nInstead, form at runtime relative to a stable base\n\n\n&gt; (BAD &lt;- \"/Users/shannon/tmp/test.csv\")\n[1] \"/Users/shannon/tmp/test.csv\"\n\n\n\n\n&gt; (GOOD &lt;- fs::path_home(\"tmp/test.csv\")\n[1] \"/Users/shannon/tmp/test.csv\""
+    "text": "Absolute paths\nI have nothing against absolute paths.\nSome of my best friends are absolute paths!\nBut don’t hard-wire them into your scripts.\nInstead, form at runtime relative to a stable base\n\n\n&gt; (BAD &lt;- \"/Users/shannon/tmp/test.csv\")\n[1] \"/Users/shannon/tmp/test.csv\"\n\n. . .\n\n\n&gt; (GOOD &lt;- fs::path_home(\"tmp/test.csv\")\n[1] \"/Users/shannon/tmp/test.csv\""
   },
   {
     "objectID": "slides/01_project-oriented.html#practice-safe-paths-1",
@@ -144,7 +144,7 @@
     "href": "slides/01_project-oriented.html#your-turn",
     "title": "Project Oriented Workflows",
     "section": "Your turn",
-    "text": "Your turn\n\nPractice calling here::here() in a project  to get a feel for it.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-fix-paths\")\n# use_course(\"rstats-wtf/wtf-fix-paths\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-fix-paths\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
+    "text": "Your turn\n\nPractice calling here::here() in a project  to get a feel for it.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-fix-paths\")\n# use_course(\"rstats-wtf/wtf-fix-paths\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-fix-paths\n\n Read the README.md to get started.\n\ncountdown(\n   minutes = 15,\n   color_background = \"#CC4C4C\",\n  color_text = \"#d2d2d2\",\n  color_finished_background = \"#CC4C4C\",\n  bottom = \"0%\"\n  )\n\n\n−+\n15:00"
   },
   {
     "objectID": "slides/01_project-oriented.html#what-if-my-data-cant-live-in-my-project-directory",
@@ -268,58 +268,58 @@
   {
     "objectID": "slides/04_package-management.html#what-are-packages-libraries-in-r",
     "href": "slides/04_package-management.html#what-are-packages-libraries-in-r",
-    "title": "Project Structure",
+    "title": "Package Management",
     "section": "What are packages / libraries in R?",
     "text": "What are packages / libraries in R?\n\nExtensions to the programming language\n\ncontains functions & documentation of these\n\nstandardised for easier install and use across users\n\n\nOften written by other users to solve specific tasks in R\n\nsolving particular statistical problems\nnew types of data visualisation"
   },
   {
     "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines",
     "href": "slides/04_package-management.html#common-package-issues-in-pipelines",
-    "title": "Project Structure",
+    "title": "Package Management",
     "section": "Common package issues in pipelines",
     "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}"
   },
   {
     "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-1",
     "href": "slides/04_package-management.html#common-package-issues-in-pipelines-1",
-    "title": "Project Structure",
+    "title": "Package Management",
     "section": "Common package issues in pipelines",
-    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}\n\nsolution 1\nload libraries in reverse order of importance.\n\ni.e. load {dplyr} last, and its select() will be prioritised over the one from {MASS}.\n\nlibrary(MASS)\nlibrary(dplyr)"
+    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}\n\n\nsolution 1\nload libraries in reverse order of importance.\n\ni.e. load {dplyr} last, and its select() will be prioritised over the one from {MASS}.\n\nlibrary(MASS)\nlibrary(dplyr)"
   },
   {
     "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-2",
     "href": "slides/04_package-management.html#common-package-issues-in-pipelines-2",
-    "title": "Project Structure",
+    "title": "Package Management",
     "section": "Common package issues in pipelines",
-    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}\n\nsolution 2:\nif you only need a single function from another package, call the function directly, rather than loading the entire library.\n\ni.e. run MASS::lm.gls() rather than library(MASS); lm.gls().\nthe double colon :: enables you to access a library’s. functions without loading the entire library.\n\nthis is called namespacing"
+    "text": "Common package issues in pipelines\n\nA package masks the function of another package I use**\n\n\nexample: select() from {dplyr} being masked by select() from {MASS}\n\n\nsolution 2:\nif you only need a single function from another package, call the function directly, rather than loading the entire library.\n\ni.e. run MASS::lm.gls() rather than library(MASS); lm.gls().\nthe double colon :: enables you to access a library’s. functions without loading the entire library.\n\nthis is called namespacing"
   },
   {
     "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-3",
     "href": "slides/04_package-management.html#common-package-issues-in-pipelines-3",
-    "title": "Project Structure",
+    "title": "Package Management",
     "section": "Common package issues in pipelines",
-    "text": "Common package issues in pipelines\nPreventative measures:\n\n\n\nload all libraries you need at the top of your scripts\nthis helps you control the order things are loaded and possible function masking\nmakes it clear to anyone else running the script what the dependencies are\n\n\n\nWhen introducing a new package to your script\nadd it to the top of the script\nrestart your R session so it is clean\nstart re-running your code to make sure everything still works as expected\nif it doesn’t, make sure its the first library to be loaded, and try again in a fresh R session"
+    "text": "Common package issues in pipelines\nPreventative measures:\n\n\n\nload all libraries you need at the top of your scripts\n\nthis helps you control the order things are loaded and possible function masking\nmakes it clear to anyone else running the script what the dependencies are\n\n\n\n\nWhen introducing a new package to your script\n\nadd it to the top of the script\nrestart your R session so it is clean\nstart re-running your code to make sure everything still works as expected\nif it doesn’t, make sure its the first library to be loaded, and try again in a fresh R session"
   },
   {
     "objectID": "slides/04_package-management.html#common-package-issues-in-pipelines-4",
     "href": "slides/04_package-management.html#common-package-issues-in-pipelines-4",
-    "title": "Project Structure",
+    "title": "Package Management",
     "section": "Common package issues in pipelines",
     "text": "Common package issues in pipelines\n\nThe package I used 1 year ago no longer exists\n\nThere are archives of packages, like MRAN, that will likely help you. But you’ll need to know which version you used, etc.\nCan be tricky, but the {checkpoint} package might be of great assistance!"
   },
   {
     "objectID": "slides/04_package-management.html#r-package-managers",
     "href": "slides/04_package-management.html#r-package-managers",
-    "title": "Project Structure",
+    "title": "Package Management",
     "section": "R package managers",
-    "text": "R package managers\n\nRStudio package manager\n\nRStudio enterprise solution\n\npackrat\n\none of the first\na little complicated to use, requiring some knowledge of package paths etc.\n\ncheckpoint\n\nI have no experience with it, but it looks decent\n\nrenv\n\nnew and widely used\ndeveloped by RStudio\ncreates fairly simple procedures to follow"
+    "text": "R package managers\n\nRStudio package manager\n\nRStudio enterprise solution\n\npackrat\n\none of the first\na little complicated to use, requiring some knowledge of package paths etc.\n\ncheckpoint\n\nI have no experience with it, but it looks great!\n\nrenv\n\nnew and widely used\ncreates fairly simple procedures to follow\ncan become complicated in some situations"
   },
   {
     "objectID": "slides/04_package-management.html#use-renv-to-make-your-r-projects-more",
     "href": "slides/04_package-management.html#use-renv-to-make-your-r-projects-more",
-    "title": "Project Structure",
+    "title": "Package Management",
     "section": "Use renv to make your R projects more:",
-    "text": "Use renv to make your R projects more:\n\nIsolated\n\ninstalling or updating a package for one project won’t break other projects\ngives each project its own private package library\n\nPortable\n\ntransport your projects from one computer to another\nmakes it easy to install the packages your project depends on.\n\nReproducible\n\nrecords the exact package versions you depend on\nensures those exact versions are the ones that get installed wherever you go.\n\n\n\n\n\n−+\n15:00"
+    "text": "Use renv to make your R projects more:\n\nIsolated\n\ninstalling or updating a package for one project won’t break other projects\ngives each project its own private package library\n\nPortable\n\ntransport your projects from one computer to another\nmakes it easy to install the packages your project depends on.\n\nReproducible\n\nrecords the exact package versions you depend on\nensures those exact versions are the ones that get installed wherever you go."
   },
   {
     "objectID": "sections/schedule.html",
@@ -354,21 +354,21 @@
     "href": "sections/prep.html",
     "title": "Project Oriented Workflows",
     "section": "",
-    "text": "You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"     # data-wrangling\n))"
+    "text": "You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\",    # data-wrangling\n  \"renv\"          # package management\n))"
   },
   {
     "objectID": "sections/prep.html#preparations",
     "href": "sections/prep.html#preparations",
     "title": "Project Oriented Workflows",
     "section": "",
-    "text": "You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"     # data-wrangling\n))"
+    "text": "You might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\n\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\",    # data-wrangling\n  \"renv\"          # package management\n))"
   },
   {
     "objectID": "sections/resources.html",
     "href": "sections/resources.html",
     "title": "Resources",
     "section": "",
-    "text": "Resources\n\nWorkshop website: https://github.com/posit-conf-2023/wtf\nWhat They Forgot to Teach you about R\nHappy Git With R book"
+    "text": "Resources\n\nWorkshop website: https://www.capro.dev/workshop_rproj/\nWhat They Forgot to Teach you about R\nHappy Git With R book"
   },
   {
     "objectID": "index.html",
@@ -389,7 +389,7 @@
     "href": "index.html#preparations",
     "title": "Project management with R",
     "section": "Preparations",
-    "text": "Preparations\nYou might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\nR packages\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\"     # data-wrangling\n))"
+    "text": "Preparations\nYou might already have R and RStudio installed on your system. We highly recommend updating both of them to the latest version before the workshop, to ensure you can follow along all the exercises.\n\n\n\n\n\n\nInstall summary\n\n\n\n\ninstall/update R\ninstall/update RStudio\n\n\n\nA new version of RStudio and R is recommended. Even if you have R and RStudio installed on your system, you should update all them before the workshop if you installed them longer than 2 months ago.\n\nR packages\nIn addition to R and RStudio, a series of R packages will also be needed to complete the workshop tasks.\n# Run in R\ninstall.packages(c(\n  \"remotes\",      # installing packages from GitHub\n  \"rmarkdown\",    # rendering reports\n  \"fs\",           # file system operations\n  \"here\",         # navigating paths\n  \"usethis\",      # for course materials\n  \"tidyverse\",    # data-wrangling\n  \"renv\"          # package management\n))\n\n\n\n\n\n\nImportant\n\n\n\nIf you are using a windows computer, you will also need to install RTools:\nhttps://cran.r-project.org/bin/windows/Rtools/\n\nRTools is an important addition to the R ecosystem.\n\nMost institutional software handlers will have RTools as an option to install."
   },
   {
     "objectID": "slides/02_file-naming.html#section-1",
@@ -410,14 +410,14 @@
     "href": "slides/02_file-naming.html#section-2",
     "title": "Naming files",
     "section": "",
-    "text": "What features differentiate 😔 vs 😍?\n\n\n\n\n\n😔\n\n\n\n\n😍\n\n\n\n\nmyabstract.docx\nJoe’s Filenames Use Spaces and Punctuation.xlsx\nfigure 1.png\nhomework1.R\nJW7d^(2sl@deletethisandyourcareerisoverWx2*.txt\n\n2018-01_bryan-abstract-rstudio-conf.docx\njoes-filenames-are-getting-better.xlsx\nfig01_scatterplot-talk-length-vs-interest.png\nbryan_hw01.R\n1986-01-28_raw-data-from-challenger-o-rings.txt\n\n\n\n\n\n−+\n02:00"
+    "text": "What features differentiate 😔 vs 😍?\n\n\n\n\n\n😔\n\n\n\n\n😍\n\n\n\n\nmyabstract.docx\nJoe’s Filenames Use Spaces and Punctuation.xlsx\nfigure 1.png\nhomework1.R\nJW7d^(2sl@deletethisandyourcareerisoverWx2*.txt\n\n2018-01_bryan-abstract-rstudio-conf.docx\njoes-filenames-are-getting-better.xlsx\nfig01_scatterplot-talk-length-vs-interest.png\nbryan_hw01.R\n1986-01-28_raw-data-from-challenger-o-rings.txt\n\n\n\ncountdown(\n   minutes = 2,\n   color_background = \"#CC4C4C\",\n  color_text = \"#d2d2d2\",\n  color_finished_background = \"#CC4C4C\",\n  bottom = \"0%\"\n  )\n\n\n−+\n02:00"
   },
   {
     "objectID": "slides/02_file-naming.html#names-machines-like",
     "href": "slides/02_file-naming.html#names-machines-like",
     "title": "Naming files",
     "section": "Names machines like",
-    "text": "Names machines like\n\ndon’t leave white space\n\n\n\nuse letters, numbers, hyphens and underscores… that’s it  (characters like ^.*?+|$ can have a special meaning)\n\n\n\n\nbe consistent with case  (some operating systems treat a and A the same, some differently).\n\n\n\n\nuse separator characters wisely\n\n    use underscore _ to separate different chunks\n    use hyphen - for words in the same chunk\n\n\n\nThis creates names that are regular expression and globbing friendly, and easy to compute on! 🎉\n\nAdapted from  https://djnavarro.net/slides-project-structure/#1."
+    "text": "Names machines like\n\ndon’t leave white space\n\n. . .\n\nuse letters, numbers, hyphens and underscores… that’s it  (characters like ^.*?+|$ can have a special meaning)\n\n. . .\n\nbe consistent with case  (some operating systems treat a and A the same, some differently).\n\n. . .\n\nuse separator characters wisely\n\n    use underscore _ to separate different chunks\n    use hyphen - for words in the same chunk\n. . .\n\nThis creates names that are regular expression and globbing friendly, and easy to compute on! 🎉\n\nAdapted from  https://djnavarro.net/slides-project-structure/#1."
   },
   {
     "objectID": "slides/02_file-naming.html#names-humans-like",
@@ -445,7 +445,7 @@
     "href": "slides/02_file-naming.html#file-names",
     "title": "Naming files",
     "section": "👍 file names",
-    "text": "👍 file names\n\n\nAnyone can guess at file’s purpose"
+    "text": "👍 file names\n\n. . .\nAnyone can guess at file’s purpose"
   },
   {
     "objectID": "slides/02_file-naming.html#file-names-1",
@@ -473,7 +473,7 @@
     "href": "slides/02_file-naming.html#names-matter-2",
     "title": "Naming files",
     "section": "Names matter",
-    "text": "Names matter\n\nmachine readable, human readable, and sort nicely\n\n\neasy to implement NOW\n\npayoffs accumulate as your skills evolve and  projects get more complex"
+    "text": "Names matter\n\nmachine readable, human readable, and sort nicely\n\n. . .\neasy to implement NOW\n\npayoffs accumulate as your skills evolve and  projects get more complex"
   },
   {
     "objectID": "slides/03_project-structure.html#break-logic-and-output-into-pieces",
@@ -529,7 +529,7 @@
     "href": "slides/03_project-structure.html#your-turn",
     "title": "Project Structure",
     "section": "Your turn",
-    "text": "Your turn\n\nCreate a report that adheres to project organization strategies.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-packages-report\")\n# use_course(\"rstats-wtf/wtf-packages-report\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-packages-report\n\n Read the README.md to get started.\n\n\n\n−+\n15:00"
+    "text": "Your turn\n\nCreate a report that adheres to project organization strategies.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"rstats-wtf/wtf-packages-report\")\n# use_course(\"rstats-wtf/wtf-packages-report\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/rstats-wtf/wtf-packages-report\n\n Read the README.md to get started.\n\ncountdown(\n   minutes = 15,\n   color_background = \"#CC4C4C\",\n  color_text = \"#d2d2d2\",\n  color_finished_background = \"#CC4C4C\",\n  bottom = \"0%\"\n  )\n\n\n−+\n15:00"
   },
   {
     "objectID": "slides/00_introduction.html#section-1",
@@ -537,5 +537,61 @@
     "title": "Introduction",
     "section": "",
     "text": "What Did They Forget  to Teach You?"
+  },
+  {
+    "objectID": "slides/01_project-oriented.html",
+    "href": "slides/01_project-oriented.html",
+    "title": "Project Oriented Workflows",
+    "section": "",
+    "text": "library(countdown)\n# fill for font awesome icons\nfa_fill &lt;- \"#CC4C4C\""
+  },
+  {
+    "objectID": "slides/02_file-naming.html",
+    "href": "slides/02_file-naming.html",
+    "title": "Naming files",
+    "section": "",
+    "text": "library(countdown)\n# fill for font awesome icons\nfa_fill &lt;- \"#CC4C4C\""
+  },
+  {
+    "objectID": "slides/04_package-management.html",
+    "href": "slides/04_package-management.html",
+    "title": "Package Management",
+    "section": "",
+    "text": "library(countdown)\n# fill for font awesome icons\nfa_fill &lt;- \"#CC4C4C\""
+  },
+  {
+    "objectID": "slides/04_package-management.html#using-renv",
+    "href": "slides/04_package-management.html#using-renv",
+    "title": "Package Management",
+    "section": "Using {renv}",
+    "text": "Using {renv}\n\nrenv should be used in projects\n\nIf you initiate renv when your not in a project, it will create one for you.\nTo initiate renv:\nrenv::init()"
+  },
+  {
+    "objectID": "slides/04_package-management.html#how-did-it-find-these-packages",
+    "href": "slides/04_package-management.html#how-did-it-find-these-packages",
+    "title": "Package Management",
+    "section": "How did it find these packages?",
+    "text": "How did it find these packages?\nIt looks in all project files for:\n\nlibrary(package)\nrequire(package)\nrequireNamespace(\"package\")\npackage::function()\n\nWill also look for packages listed in the DESCRIPTON file, as “Depends”, or “Imports”."
+  },
+  {
+    "objectID": "slides/04_package-management.html#demo",
+    "href": "slides/04_package-management.html#demo",
+    "title": "Package Management",
+    "section": "Demo",
+    "text": "Demo"
+  },
+  {
+    "objectID": "slides/04_package-management.html#your-turn",
+    "href": "slides/04_package-management.html#your-turn",
+    "title": "Package Management",
+    "section": "Your turn",
+    "text": "Your turn\n\nExplore the changes {renv} makes to a project.\n\n\nlibrary(usethis)\n# saves project on desktop by default for most users\nuse_course(\"capro-uio/wtf-explore-renv\")\n# use_course(\"capro-uio/wtf-explore-renv\", destdir = \"my/new/location\")\n# can alternatively download from \n# https://github.com/capro-uio/wtf-explore-renv\n\n Read the README.md to get started.\n\ncountdown(\n  minutes = 15,\n  color_background = \"#CC4C4C\",\n  color_text = \"#d2d2d2\",\n  color_finished_background = \"#CC4C4C\",\n  bottom = \"0%\"\n)\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "slides/03_project-structure.html",
+    "href": "slides/03_project-structure.html",
+    "title": "Project Structure",
+    "section": "",
+    "text": "library(countdown)\n# fill for font awesome icons\nfa_fill &lt;- \"#CC4C4C\""
   }
 ]

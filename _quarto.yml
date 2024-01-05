@@ -1,8 +1,19 @@
 project:
   type: website
+  output-dir: docs
+  render:
+    - "index.qmd"
+    - "slides/*.qmd"
 
 website:
+  page-navigation: true
+
   title: "Project Oriented Workflows"
+  description: "Workshop materials for 1 day workshop"
+  site-url: https://www.capro.dev/workshop_rproj/
+
+  repo-url: https://capro-uio.github.io/workshop_rproj/
+  repo-actions: [edit, issue]
   navbar:
     left:
       - text: Slides
@@ -17,18 +28,22 @@ website:
             text: Project Structure
           - href: slides/04_package-management.html
             text: Package Management
+          - href: slides/educloud_prep.html
+            text: EduCloud flavour
       - text: Collaborative docs
         menu:
           - href: https://hackmd.io/@drmowinckels/capro-oslomet-2023/edit
             text: OsloMet 2023
           - href: https://hackmd.io/@drmowinckels/2023-11-21-MPI/edit
             text: MPI - Nov. 2023
+          - href: https://hackmd.io/@drmowinckels/dsd_rproj/edit
+            text: DS Days UiO - Jan. 2024
 
 format:
   html:
     theme:
       - default
-      - styles.css
+      - capro_quarto.scss
     toc: true
 
 editor: visual

@@ -1,0 +1,65 @@
+---
+title: "EduCloud preparations"
+subtitle: "Working with RStudio server"
+author: "Athanasia Mo Mowinckel"
+format: 
+  revealjs: 
+    height: 900
+    width: 1600
+    theme: 
+      - night
+      - capro-reveal.scss
+    highlight-style: github-dark
+    transition: fade
+    slide-number: true
+    chalkboard: true
+execute:
+  freeze: auto
+---
+
+
+## Getting onto EduCloud
+
+Start with opening EduCloud on Demand
+
+> https://ondemand.educloud.no/pun/sys/dashboard
+
+---
+
+Here, you should start an RStudio server for your self:\
+
+![](images/clipboard-1267002657.png)
+
+---
+
+The default settings for the server should be ample for our workshop
+
+![](images/clipboard-1294974881.png)
+
+---
+
+Once you click launch, a server will be queued for you\
+![](images/clipboard-4283938000.png)\
+\
+
+---
+
+Once it is ready to use, it turns green, and you can connect to it\
+
+![](images/clipboard-2198545259.png)
+
+---
+
+This will launch an RStudio server for you to use, in the cloud.
+
+## Working on EduCloud
+
+You have the option to
+
+-   work in your own home directory
+
+-   work in a project directory
+
+    -   Under \`My Projects\` you should see any educloud project you are a member of that has on demand ready (are connected to Fox).
+
+For this workshop, we will work on our own home spaces.

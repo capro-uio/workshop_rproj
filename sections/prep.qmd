@@ -28,3 +28,12 @@ install.packages(c(
   "renv"          # package management
 ))
 ```
+
+::: callout-important
+If you are using a windows computer, you will also need to install RTools:\
+<https://cran.r-project.org/bin/windows/Rtools/>\
+\
+RTools is an important addition to the R ecosystem. \
+\
+Most institutional software handlers will have RTools as an option to install.
+:::

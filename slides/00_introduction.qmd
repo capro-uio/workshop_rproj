@@ -2,7 +2,6 @@
 title: "Introduction"
 subtitle: "Working in R and RStudio"
 author: "Athanasia Mo Mowinckel"
-#logo: "img/wtf-logo-square-transparent.png"
 format: 
   revealjs: 
     height: 900
@@ -14,7 +13,6 @@ format:
     transition: fade
     slide-number: true
     chalkboard: true
-editor: visual
 execute:
   freeze: auto
 ---

@@ -2,7 +2,6 @@
 title: "Project Oriented Workflows"
 subtitle: "Working in R and RStudio"
 author: "Athanasia Mo Mowinckel"
-#logo: "img/wtf-logo-square-transparent.png"
 format: 
   revealjs: 
     height: 900
@@ -118,7 +117,7 @@ countdown(
 ## Which persist after `rm(list = ls())`?
 
 | Option                               | Persists?                                    |
-|------------------------------------------------------|------------------|
+|--------------------------------------|----------------------------------------------|
 | A. library(dplyr)                    | `r fontawesome::fa("check", fill = fa_fill)` |
 | B. summary \<- head                  | `r fontawesome::fa("xmark", fill = "white")` |
 | C. options(stringsAsFactors = FALSE) | `r fontawesome::fa("check", fill = fa_fill)` |

@@ -2,7 +2,6 @@
 title: "Naming files"
 subtitle: "Working in R and RStudio"
 author: "Athanasia Mo Mowinckel"
-#logo: "img/wtf-logo-square-transparent.png"
 format: 
   revealjs: 
     height: 900
