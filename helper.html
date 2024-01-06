@@ -194,6 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#open-tabs" id="toc-open-tabs" class="nav-link active" data-scroll-target="#open-tabs">Open tabs</a></li>
   <li><a href="#schedule-schedule-1" id="toc-schedule-schedule-1" class="nav-link" data-scroll-target="#schedule-schedule-1">Schedule </a></li>
+  <li><a href="#frequently-seen-issues" id="toc-frequently-seen-issues" class="nav-link" data-scroll-target="#frequently-seen-issues">Frequently seen issues</a></li>
   <li><a href="#workshop-progression" id="toc-workshop-progression" class="nav-link" data-scroll-target="#workshop-progression">Workshop progression</a>
   <ul class="collapse">
   <li><a href="#educloud-flavour" id="toc-educloud-flavour" class="nav-link" data-scroll-target="#educloud-flavour">EduCloud flavour</a></li>
@@ -202,6 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#file-naming" id="toc-file-naming" class="nav-link" data-scroll-target="#file-naming">File naming</a></li>
   <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project Structure</a></li>
   <li><a href="#package-management" id="toc-package-management" class="nav-link" data-scroll-target="#package-management">Package management</a></li>
+  <li><a href="#ending-the-workshop" id="toc-ending-the-workshop" class="nav-link" data-scroll-target="#ending-the-workshop">Ending the workshop</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-git"></i></div><div class="action-links"><p><a href="https://capro-uio.github.io/workshop_rproj/edit/main/helper.qmd" class="toc-action">Edit this page</a></p><p><a href="https://capro-uio.github.io/workshop_rproj/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -232,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>During the workshop, I think its a good idea for helpers to have on their computers certain tabs open at all times, so you can easily navigate to them at need</p>
 <ul>
 <li><p>the collaborative document</p></li>
-<li><p>the workshop website</p></li>
+<li><p><a href="https://www.capro.dev/workshop_rproj/slides/00_introduction.html#/title-slide">the workshop website</a></p></li>
 <li><p>the slides the instructor is currently running through</p></li>
 </ul>
 </section>
@@ -263,19 +265,68 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
+<section id="frequently-seen-issues" class="level2">
+<h2 class="anchored" data-anchor-id="frequently-seen-issues">Frequently seen issues</h2>
+<ul>
+<li><strong>Some learners will create a project folder within another project folder, this is called a nested project, and is the root of much unexpected behaviour. </strong>
+<ul>
+<li>If you see this, make sure to tell them to not do this, and to move the nested project somewhere else.</li>
+<li>If several people do this, let me know, and we can have a quick discussion about it in the workshop.</li>
+</ul></li>
+<li><strong>Learners sometimes have a problem with the usethis package and where it stores the downloaded files. </strong>
+<ul>
+<li>If you see this, have a look in their console and help them actually read what is written there. The path the files are stored to are <em>always</em> outputed to the console.</li>
+<li>By default, it will place the files in the users Home-folder or their Desktop (somewhat system dependent)</li>
+</ul></li>
+<li><strong>They don’t understand what the exercise is asking them to do</strong>
+<ul>
+<li>If you see this, have a look at the exercise and see if you can help them understand what they are supposed to do.</li>
+<li>In all the exercises, the description of the exercise is written in the <code>README</code> of the downloaded files<br>
+</li>
+<li>If you can’t understand the exercise either, let me know and we can have a quick discussion about it in the workshop.</li>
+</ul></li>
+</ul>
+</section>
 <section id="workshop-progression" class="level2">
 <h2 class="anchored" data-anchor-id="workshop-progression">Workshop progression</h2>
 <p>In this section, we have anything that is related to the workshop as it is progressing. Each section has its own subtitle here, and these should also match sections in the collaborative document. This way, helpers can easily navigate to the relevant section in the helper document.</p>
 <section id="educloud-flavour" class="level3">
 <h3 class="anchored" data-anchor-id="educloud-flavour">EduCloud flavour</h3>
+<p>Slides: <a href="https://www.capro.dev/workshop_rproj/slides/educloud_prep.html#/title-slide">https://www.capro.dev/workshop_rproj/slides/educloud_prep.html#/title-slide</a></p>
 <p>This section is only when we run the course on EduCloud.</p>
 <p>The project for the course i <code>ec306</code>, but that does not really matter. We wont by default be using the project space.</p>
+<section id="what-you-should-be-doing" class="level4">
+<h4 class="anchored" data-anchor-id="what-you-should-be-doing">What you should be doing</h4>
+<ul>
+<li>Make sure people are able to log into EduCloud On demand<br>
+</li>
+<li>Make sure people are able to start an RStudio server<br>
+</li>
+<li>If these things are unavailable to them, make sure they have a local installation of R and RStudio on their computer</li>
+</ul>
+</section>
+<section id="exercise" class="level4">
+<h4 class="anchored" data-anchor-id="exercise">Exercise</h4>
 <p>Learners will first go to open on demand, and start an RStudio server https://ondemand.educloud.no/pun/sys/dashboard</p>
+</section>
 </section>
 <section id="introduction" class="level3">
 <h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Slides: <a href="https://www.capro.dev/workshop_rproj/slides/00_introduction.html">https://www.capro.dev/workshop_rproj/slides/00_introduction.html</a></p>
 <p>The introduction is meant to provide a basis of what we will be talking about during the workshop, to set expectations and provide everyone with an equal frame of reference.</p>
+<section id="what-you-should-be-doing-1" class="level4">
+<h4 class="anchored" data-anchor-id="what-you-should-be-doing-1">What you should be doing</h4>
+<ul>
+<li>Make sure everyone is able to access the collaborative document<br>
+</li>
+<li>Make sure everyone is able to access the slides/website<br>
+</li>
+<li>Keep an eye on the doc for anonymous questions<br>
+</li>
+<li>If there are questions, make sure they are answered either in the doc or by me if you think its a good question to take up in the workshop</li>
+</ul>
 <p>At the end there is an exercise to get people to explore their R installation and get familiarized with it.</p>
+</section>
 <section id="exercise-explore-your-r-installation" class="level4">
 <h4 class="anchored" data-anchor-id="exercise-explore-your-r-installation">Exercise: Explore your R installation</h4>
 <p>Learners should run this code:</p>
@@ -295,23 +346,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="project-oriented-workflow" class="level3">
 <h3 class="anchored" data-anchor-id="project-oriented-workflow">Project Oriented workflow</h3>
+<p>Slides: <a href="https://www.capro.dev/workshop_rproj/slides/01_project-oriented.html#/title-slide">https://www.capro.dev/workshop_rproj/slides/01_project-oriented.html#/title-slide</a></p>
 <p>This section is about what project oriented workflows are and why we should adopt them. There are a fair few links to various important resources, that learners might want into the collaborative document, if they don’t have the slides up while we instruct.</p>
-<p>If they ask for them, please do copy them in.</p>
+<section id="what-you-should-be-doing-2" class="level4">
+<h4 class="anchored" data-anchor-id="what-you-should-be-doing-2">What you should be doing</h4>
+<ul>
+<li>If they ask for link from the slides, either paste the link to the slides, or the links them selves<br>
+</li>
+<li>Keep an eye on the doc for anonymous questions<br>
+</li>
+<li>If there are questions, make sure they are answered either in the doc or by me if you think its a good question to take up in the workshop</li>
+</ul>
+</section>
+<section id="exercise-1" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-1">Exercise</h4>
 <p>The exercise is to create a new project, in the folder they downloaded in the previous exercise. Meaning, they should create a project in an existing folder, either through the RStudio GUI, or through the R console.</p>
-<p>They need to change this path to where the folder is <code>usethis::create_project("/path/to/folder")</code></p>
+<p>They need to change this path to where the folder is</p>
+<p><code>usethis::create_project("/path/to/folder")</code></p>
 <p>OR do</p>
 <p><code>File -&gt; New Project -&gt; Existing Directory</code></p>
 </section>
+</section>
 <section id="file-naming" class="level3">
 <h3 class="anchored" data-anchor-id="file-naming">File naming</h3>
+<p>Slides: <a href="https://www.capro.dev/workshop_rproj/slides/02_file-naming.html#/title-slide">https://www.capro.dev/workshop_rproj/slides/02_file-naming.html#/title-slide</a></p>
 <p>This section is all about names, and here we have no exercises, but rather some verbal discussion and shout-outs to the slides. Here the focus is to get them thinking about what file names are good and why some file names are worse.</p>
+<section id="what-you-should-be-doing-3" class="level4">
+<h4 class="anchored" data-anchor-id="what-you-should-be-doing-3">What you should be doing</h4>
+<ul>
+<li>Keep an eye on the doc for anonymous questions<br>
+</li>
+<li>If there are questions, make sure they are answered either in the doc or by me if you think its a good question to take up in the workshop<br>
+</li>
+<li>In particular, pay attention to anything related to file naming or silent discussions about these that are not voiced openly.</li>
+<li>If you overhear someone discussing something interesting, ask politely if they would like to share their thoughts with the group, or if you can share some of it for them.</li>
+</ul>
+</section>
 </section>
 <section id="project-structure" class="level3">
 <h3 class="anchored" data-anchor-id="project-structure">Project Structure</h3>
-<p>In the project structure section, we talk about what constitutes a good project structure. There is no singular correct answer to this, but there are guidelines that are good to discuss and talk about.</p>
-<p>Mostly we here talk about how splitting a project into several parts is better than having one large singular script.</p>
-<p>In this exercise at the end, they are again instructed to download some exercise materials. This time, they should read the README for further instructions on what they should be doing during the exercise.<br>
-</p>
+<p>Slides: <a href="https://www.capro.dev/workshop_rproj/slides/03_project-structure.html#/title-slide">https://www.capro.dev/workshop_rproj/slides/03_project-structure.html#/title-slide</a></p>
+<p>In the project structure section, we talk about what constitutes a good project structure. There is no singular correct answer to this, but there are guidelines that are good to discuss and talk about. Mostly we here talk about how splitting a project into several parts is better than having one large singular script.</p>
+<section id="what-you-should-be-doing-4" class="level4">
+<h4 class="anchored" data-anchor-id="what-you-should-be-doing-4">What you should be doing</h4>
+<ul>
+<li>Keep an eye on the doc for anonymous questions<br>
+</li>
+<li>If there are questions, make sure they are answered either in the doc or by me if you think its a good question to take up in the workshop</li>
+<li>Most researchers work in the “monolith” type of project structure, so this section will feel very unfamiliar to them and be a new consept about how to work.
+<ul>
+<li>If you see people struggling with this, or if you see people discussing this, ask them if they would like to share their thoughts with the group, or if you can share some of it for them.</li>
+</ul></li>
+</ul>
+</section>
+<section id="exercise-2" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-2">Exercise</h4>
+<p>In this exercise at the end, they are again instructed to download some exercise materials. This time, they should read the README for further instructions on what they should be doing during the exercise.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># saves project on desktop by default for most users</span></span>
@@ -322,10 +412,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>They should familiarise themselves with the project structure and how its set up. Then run sequentially through the three exercises in the <code>R/</code> folder. The expectation here is that most people will not be able to finish it all during the time allotted, but that is fine. We just have enough material so even experts can feel challenged.</p>
 </section>
+</section>
 <section id="package-management" class="level3">
 <h3 class="anchored" data-anchor-id="package-management">Package management</h3>
-<p>This section is all about package management, and how to manage packages in a project. This is by far the most advanced subject we are covering, and I expect some to feel a little overwhelmed. Nonetheless, this is a section a lot of people really appreciate, and even novices will be able to take away things to remember in the future when they get more comfortable. Package management is a known sore point for R users, particularly on shared resources like educloud!</p>
-<p>Here we talk about why package management in R can be tricky, and why we should care, and offer the current best practice solution.</p>
+<p>Slides: <a href="https://www.capro.dev/workshop_rproj/slides/04_package-management.html#/title-slide">https://www.capro.dev/workshop_rproj/slides/04_package-management.html#/title-slide</a></p>
+<p>This section is all about package management, and how to manage packages in a project. This is by far the most advanced subject we are covering, and I expect some to feel a little overwhelmed. Nonetheless, this is a section a lot of people really appreciate, and even novices will be able to take away things to remember in the future when they get more comfortable. Package management is a known sore point for R users, particularly on shared resources like EduCloud!</p>
+<p>Here we talk about why package management in R can be tricky, why we should care, and offer the current best practice solution.</p>
+<section id="what-you-should-be-doing-5" class="level4">
+<h4 class="anchored" data-anchor-id="what-you-should-be-doing-5">What you should be doing</h4>
+<ul>
+<li>Keep an eye on the doc for anonymous questions<br>
+</li>
+<li>This is an advanced topic, and I expect a lot of questions, please help me pick up on these and answer them as we go along.</li>
+</ul>
+</section>
+<section id="exercise-3" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-3">Exercise</h4>
 <p>The exercise here is a little different than what we have done before. It still contains the three flavours, but requires the learners to</p>
 <ul>
 <li>go through the exercises,</li>
@@ -342,6 +444,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># https://github.com/capro-uio/wtf-explore-renv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Here, we want to make a point of how the package manager changes where and how packages are stored.</p>
+</section>
+</section>
+<section id="ending-the-workshop" class="level3">
+<h3 class="anchored" data-anchor-id="ending-the-workshop">Ending the workshop</h3>
+<p>At the end we open for general questions, and try to walk through whatever the learners want to cover, as time allows. We focus on providing them links to the relevant resources, and try to make sure they know where to go to find more information.</p>
+<p>The collaborative document will contain a link to a post-workshop survey in most cases. Help the instructor remember to make a notice of this and ask the learners to fill it out. We also usually ask for positive and constructive feedback written on the sticky notes, as a quick feedback to the instructor.</p>
 
 
 </section>
