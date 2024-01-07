@@ -59,6 +59,8 @@ format:
       - default
       - capro_quarto.scss
     toc: true
+    code-copy: true
+
 
 editor: visual
 

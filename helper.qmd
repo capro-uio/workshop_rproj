@@ -19,10 +19,14 @@ During the workshop, I think its a good idea for helpers to have on their comput
 
 ## Frequently seen issues
 
-- **Some learners will create a project folder within another project folder, this is called a nested project, and is the root of much unexpected behaviour. **
+### The project is doing very strange and unexpected things
+Some learners will create a project folder within another project folder, this is called a nested project, and is the root of much unexpected behaviour.
   - If you see this, make sure to tell them to not do this, and to move the nested project somewhere else.
   - If several people do this, let me know, and we can have a quick discussion about it in the workshop.
-- **Learners sometimes have a problem with the usethis package and where it stores the downloaded files. **
+
+### Where did the downloaded files go?  
+Learners sometimes have a problem with the usethis package and where it stores the downloaded files. 
+
   - If you see this, have a look in their console and help them actually read what is written there. The path the files are stored to are _always_ outputed to the console.
   - By default, it will place the files in the users Home-folder or their Desktop (somewhat system dependent)
 - **They don't understand what the exercise is asking them to do**
