@@ -2,19 +2,7 @@
 title: "Introduction"
 subtitle: "Working in R and RStudio"
 author: "Athanasia Mo Mowinckel"
-format: 
-  revealjs: 
-    height: 900
-    width: 1600
-    theme: 
-      - night
-      - capro-reveal.scss
-    highlight-style: github-dark
-    transition: fade
-    slide-number: true
-    chalkboard: true
-execute:
-  freeze: auto
+format: revealjs
 ---
 
 ```{r}
@@ -116,7 +104,6 @@ fa_fill <- "#CC4C4C"
 `r fontawesome::fa("check", fill = fa_fill)` RStudio installed?
 
      I'm on 2023.06.1 Build 524     
-
 :::
 
 ::: {.column width="50%"}
@@ -135,7 +122,6 @@ install.packages(c(
 ```
 :::
 :::
-
 
 ## 
 

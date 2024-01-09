@@ -2,20 +2,7 @@
 title: "Package Management"
 subtitle: "Working in R and RStudio"
 author: "Athanasia Mo Mowinckel"
-format: 
-  revealjs: 
-    height: 900
-    width: 1600
-    theme: 
-      - night
-      - capro-reveal.scss
-    highlight-style: github-dark
-    transition: fade
-    slide-number: true
-    chalkboard: true
-editor: visual
-execute:
-  freeze: auto
+format: revealjs
 ---
 
 ```{r}

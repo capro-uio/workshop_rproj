@@ -60,7 +60,18 @@ format:
       - capro_quarto.scss
     toc: true
     code-copy: true
-
+  revealjs:
+    height: 900
+    width: 1600
+    theme:
+      - night
+      - scss/capro_revealjs.scss
+    highlight-style: github-dark
+    transition: fade
+    chalkboard: true
+    slide-number: c/t
+    incremental: true
+    logo: https://www.capro.dev/images/capro_logo_dark.png
 
 editor: visual
 

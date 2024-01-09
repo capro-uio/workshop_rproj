@@ -2,20 +2,7 @@
 title: "Project Oriented Workflows"
 subtitle: "Working in R and RStudio"
 author: "Athanasia Mo Mowinckel"
-format: 
-  revealjs: 
-    height: 900
-    width: 1600
-    theme: 
-      - night
-      - capro-reveal.scss
-    highlight-style: github-dark
-    transition: fade
-    slide-number: true
-    chalkboard: true
-editor: visual
-execute:
-  freeze: auto
+format: revealjs
 ---
 
 ```{r}
@@ -117,7 +104,7 @@ countdown(
 ## Which persist after `rm(list = ls())`?
 
 | Option                               | Persists?                                    |
-|--------------------------------------|----------------------------------------------|
+|---------------------------------|---------------------------------------|
 | A. library(dplyr)                    | `r fontawesome::fa("check", fill = fa_fill)` |
 | B. summary \<- head                  | `r fontawesome::fa("xmark", fill = "white")` |
 | C. options(stringsAsFactors = FALSE) | `r fontawesome::fa("check", fill = fa_fill)` |
