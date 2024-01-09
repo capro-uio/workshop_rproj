@@ -1,10 +1,10 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: "_site"
   render:
-    - "index.qmd"
     - "slides/*.qmd"
     - "helper.qmd"
+    - "index.qmd"
 
 website:
   page-navigation: true
@@ -57,7 +57,7 @@ format:
   html:
     theme:
       - default
-      - capro_quarto.scss
+      - scss/capro_quarto.scss
     toc: true
     code-copy: true
   revealjs:
@@ -72,6 +72,4 @@ format:
     slide-number: c/t
     incremental: true
     logo: https://www.capro.dev/images/capro_logo_dark.png
-
-editor: visual
 

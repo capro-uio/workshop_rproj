@@ -3,3 +3,6 @@
 .Rproj.user
 _freeze/
 docs/
+_site
+site_libs/
+**_files/
